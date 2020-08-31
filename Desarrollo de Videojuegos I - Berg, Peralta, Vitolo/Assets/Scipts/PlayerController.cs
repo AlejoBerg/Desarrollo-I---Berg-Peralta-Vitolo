@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     private Vector3 playerMovement;
     private Rigidbody rb;
-    private bool isGrounded = true;
+    private int jumpAttempts  = 0;
     public float jumpHight;
     
     void Start()
@@ -37,94 +37,85 @@ public class PlayerController : MonoBehaviour
 
     private void Animation()
     {
-        if (vertical != 0 && Input.GetKey(KeyCode.LeftShift) == false)
-        {
-            playerAnimator.SetBool("OnIdle", false);
+        if (vertical != 0) // Movimiento adelante y atrás (Caminata)
+        {   
+            playerSpeed = 2;
             playerAnimator.SetBool("Walk", true);
+            playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
-            playerSpeed = 2;
-            playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
-            transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
-          
-            if (Input.GetKey(KeyCode.Space) == true && isGrounded == true)
+            
+            if (Input.GetKey(KeyCode.LeftShift)) // Correr
+            {
+                playerSpeed = 5;
+                playerAnimator.SetBool("Run", true);
+                playerAnimator.SetBool("Jump", false);
+                playerAnimator.SetBool("Walk", false);
+                playerAnimator.SetBool("Rigth", false);
+                playerAnimator.SetBool("Left", false);
+                playerAnimator.SetBool("OnIdle", false);
+            }
+            
+            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
             {
                 playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Walk", false);
-                playerSpeed = 2;
-                playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
-                transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
-                rb.velocity = transform.up * jumpHight;
-                isGrounded = false;
-            }
-
-            if (Input.GetKeyUp(KeyCode.Space) == true)
-            {
-                playerAnimator.SetBool("Jump", false);
-                playerAnimator.SetBool("Walk", true);
-            }
-        }
-        else if(Input.GetKey(KeyCode.LeftShift) == true && vertical != 0 )
-        {
-            playerAnimator.SetBool("OnIdle", false);
-            playerAnimator.SetBool("Walk", false);
-            playerAnimator.SetBool("Run", true);
-            playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Rigth", false);
-            playerAnimator.SetBool("Left", false);
-            playerSpeed = 5;
-            playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
-            transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
-            
-            if (Input.GetKey(KeyCode.Space) == true && isGrounded == true)
-            {
-                playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Run", false);
-                playerSpeed = 5;
-                playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
-                transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
+                playerAnimator.SetBool("Rigth", false);
+                playerAnimator.SetBool("Left", false);
+                playerAnimator.SetBool("OnIdle", false);
                 rb.velocity = transform.up * jumpHight;
-                isGrounded = false;
-            }
-
-            if (Input.GetKeyUp(KeyCode.Space) == true)
-            {
-                playerAnimator.SetBool("Jump", false);
-                playerAnimator.SetBool("Run", true);
-            }
+                jumpAttempts++;
+            } 
         }
-        else if (Input.GetKey(KeyCode.Space) == true && vertical == 0  && Input.GetKey(KeyCode.LeftShift) == false && isGrounded == true)
+     
+        else if (horizontal == -1) //Movimiento Izquierda
         {
-            playerAnimator.SetBool("Jump", true);
-            playerAnimator.SetBool("OnIdle", false);
-            playerAnimator.SetBool("Run", false);
-            playerAnimator.SetBool("Walk", false);
-            playerAnimator.SetBool("Rigth", false);
-            playerAnimator.SetBool("Left", false);
-            rb.velocity = transform.up * jumpHight;
-            isGrounded = false;
-        }
-        else if (horizontal == 1 && vertical == 0)
-        {
-            playerAnimator.SetBool("Rigth", true);
-            playerAnimator.SetBool("Left", false);
             playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Walk", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
-        }
-        else if (horizontal == -1  && vertical == 0)
-        {
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", true);
+            playerSpeed = 2;
+            
+            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
+            {
+                playerAnimator.SetBool("Jump", true);
+                playerAnimator.SetBool("Walk", false);
+                playerAnimator.SetBool("Run", false);
+                playerAnimator.SetBool("Rigth", false);
+                playerAnimator.SetBool("Left", false);
+                playerAnimator.SetBool("OnIdle", false);
+                rb.velocity = transform.up * jumpHight;
+                jumpAttempts++;
+            } 
+        }
+        else if (horizontal == 1) //Movimiento derecha
+        {
+            playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Walk", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("OnIdle", false);
+            playerAnimator.SetBool("Rigth", true);
+            playerAnimator.SetBool("Left", false);
+            playerSpeed = 2;
+            
+            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
+            {
+                playerAnimator.SetBool("Jump", true);
+                playerAnimator.SetBool("Walk", false);
+                playerAnimator.SetBool("Run", false);
+                playerAnimator.SetBool("Rigth", false);
+                playerAnimator.SetBool("Left", false);
+                playerAnimator.SetBool("OnIdle", false);
+                rb.velocity = transform.up * jumpHight;
+                jumpAttempts++;
+            } 
         }
-        else
+        else // Entra al idle
         {
             playerAnimator.SetBool("OnIdle", true);
             playerAnimator.SetBool("Walk", false);
@@ -132,13 +123,25 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Jump", false);
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
+            
+            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
+            {
+                playerAnimator.SetBool("Jump", true);
+                playerAnimator.SetBool("Walk", false);
+                playerAnimator.SetBool("Run", false);
+                playerAnimator.SetBool("Rigth", false);
+                playerAnimator.SetBool("Left", false);
+                playerAnimator.SetBool("OnIdle", false);
+                rb.velocity = transform.up * jumpHight;
+                jumpAttempts++;
+            }  
         }
     }
     private void OnCollisionEnter (Collision other)  
     {
         if (other.gameObject.tag.Equals("Floor"))
         {
-            isGrounded = true;
+            jumpAttempts = 0;
         }
     }
 }
