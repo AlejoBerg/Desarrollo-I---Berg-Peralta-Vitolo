@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,10 +10,15 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     private float horizontal;
     private Vector3 playerMovement;
+    private Rigidbody rb;
+    private bool isGrounded = true;
+    public float jumpHight;
     
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        rb = transform.GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -27,20 +33,12 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         playerMovement = new Vector3(horizontal, 0f, vertical) * playerSpeed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
-
-    
-        Debug.Log("horizontal" + horizontal);
-       
-        
     }
 
     private void Animation()
     {
-      
-       
         if (vertical != 0 && Input.GetKey(KeyCode.LeftShift) == false)
         {
-           
             playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Walk", true);
             playerAnimator.SetBool("Run", false);
@@ -48,16 +46,18 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
             playerSpeed = 2;
-            playerMovement = new Vector3(0, 0, vertical) * playerSpeed * Time.deltaTime;
+            playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
             transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
           
-            if (Input.GetKey(KeyCode.Space) == true)
+            if (Input.GetKey(KeyCode.Space) == true && isGrounded == true)
             {
                 playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Walk", false);
                 playerSpeed = 2;
-                playerMovement = new Vector3(0, 0, vertical) * playerSpeed * Time.deltaTime;
+                playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
                 transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
+                rb.velocity = transform.up * jumpHight;
+                isGrounded = false;
             }
 
             if (Input.GetKeyUp(KeyCode.Space) == true)
@@ -75,17 +75,18 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
             playerSpeed = 5;
-            playerMovement = new Vector3(0, 0, vertical) * playerSpeed * Time.deltaTime;
+            playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
             transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
             
-            
-            if (Input.GetKey(KeyCode.Space) == true)
+            if (Input.GetKey(KeyCode.Space) == true && isGrounded == true)
             {
                 playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Run", false);
                 playerSpeed = 5;
-                playerMovement = new Vector3(0, 0, vertical) * playerSpeed * Time.deltaTime;
+                playerMovement = new Vector3(horizontal, 0, vertical) * playerSpeed * Time.deltaTime;
                 transform.Translate(playerMovement * playerSpeed * Time.deltaTime);
+                rb.velocity = transform.up * jumpHight;
+                isGrounded = false;
             }
 
             if (Input.GetKeyUp(KeyCode.Space) == true)
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetBool("Run", true);
             }
         }
-        else if (Input.GetKey(KeyCode.Space) == true && vertical == 0  && Input.GetKey(KeyCode.LeftShift) == false)
+        else if (Input.GetKey(KeyCode.Space) == true && vertical == 0  && Input.GetKey(KeyCode.LeftShift) == false && isGrounded == true)
         {
             playerAnimator.SetBool("Jump", true);
             playerAnimator.SetBool("OnIdle", false);
@@ -102,8 +103,10 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Walk", false);
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
+            rb.velocity = transform.up * jumpHight;
+            isGrounded = false;
         }
-        else if (horizontal == 1 && vertical == 0 && Input.GetKey(KeyCode.D))
+        else if (horizontal == 1 && vertical == 0)
         {
             playerAnimator.SetBool("Rigth", true);
             playerAnimator.SetBool("Left", false);
@@ -112,8 +115,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
         }
-        
-        else if (horizontal == -1  && vertical == 0 && Input.GetKey(KeyCode.A))
+        else if (horizontal == -1  && vertical == 0)
         {
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", true);
@@ -130,6 +132,13 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("Jump", false);
             playerAnimator.SetBool("Rigth", false);
             playerAnimator.SetBool("Left", false);
+        }
+    }
+    private void OnCollisionEnter (Collision other)  
+    {
+        if (other.gameObject.tag.Equals("Floor"))
+        {
+            isGrounded = true;
         }
     }
 }
