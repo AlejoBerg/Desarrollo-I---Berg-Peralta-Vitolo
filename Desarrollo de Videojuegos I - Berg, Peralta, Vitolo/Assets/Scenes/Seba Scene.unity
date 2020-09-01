@@ -520,11 +520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5886059425517016114, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5883559599264165438, guid: 0bc7c6309f882ac46b1921e9490a43c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -587,43 +582,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6f3dbfc35523b8046815f0a6c0c55b5c, type: 2}
     - target: {fileID: 5884370854432905195, guid: 0bc7c6309f882ac46b1921e9490a43c8,
         type: 3}
-      propertyPath: jumpHight
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5884370854432905195, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5835362016524432194, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_Controller
+      propertyPath: camRef
       value: 
-      objectReference: {fileID: 9100000, guid: 5db3764478bed2f46874baf1a29ceda1, type: 2}
-    - target: {fileID: 5884370854432905192, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883444637303342028, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883444637303342028, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5888979648978365868, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5888979648978365868, guid: 0bc7c6309f882ac46b1921e9490a43c8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.000000010948543
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 281836423}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc7c6309f882ac46b1921e9490a43c8, type: 3}
