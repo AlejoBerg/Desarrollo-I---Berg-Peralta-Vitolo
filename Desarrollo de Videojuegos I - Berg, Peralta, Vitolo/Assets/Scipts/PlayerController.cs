@@ -13,12 +13,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private int jumpAttempts  = 0;
     public float jumpHight;
+    Vector3 direction = Vector3.zero;
+    private Camera camRef;
     
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         rb = transform.GetComponent<Rigidbody>();
+        camRef = Camera.main;
     }
 
     private void Update()
@@ -31,21 +34,25 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
-        playerMovement = new Vector3(horizontal, 0f, vertical) * playerSpeed * Time.deltaTime;
-        transform.Translate(playerMovement, Space.Self);
+        
+        if (horizontal !=0 || vertical !=0)
+        {
+            direction.x = horizontal;
+            direction.z = vertical;
+            rb.velocity = direction * playerSpeed;
+            transform.forward = Vector3.Lerp(transform.forward, direction, 0.51f);
+        }
     }
 
     private void Animation()
     {
-        if (vertical != 0) // Movimiento adelante y atrás (Caminata)
+        if (vertical != 0 || horizontal != 0) // Movimiento adelante, atras y laterales
         {   
             playerSpeed = 2;
             playerAnimator.SetBool("Walk", true);
             playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Rigth", false);
-            playerAnimator.SetBool("Left", false);
             
             if (Input.GetKey(KeyCode.LeftShift)) // Correr
             {
@@ -53,86 +60,35 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetBool("Run", true);
                 playerAnimator.SetBool("Jump", false);
                 playerAnimator.SetBool("Walk", false);
-                playerAnimator.SetBool("Rigth", false);
-                playerAnimator.SetBool("Left", false);
                 playerAnimator.SetBool("OnIdle", false);
             }
             
-            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
+            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1) // Salto
             {
                 playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Walk", false);
                 playerAnimator.SetBool("Run", false);
-                playerAnimator.SetBool("Rigth", false);
-                playerAnimator.SetBool("Left", false);
                 playerAnimator.SetBool("OnIdle", false);
-                rb.velocity = transform.up * jumpHight;
+                rb.AddForce(new Vector3(0f,jumpHight,0f),ForceMode.Impulse);
                 jumpAttempts++;
             } 
         }
-     
-        else if (horizontal == -1) //Movimiento Izquierda
-        {
-            playerAnimator.SetBool("OnIdle", false);
-            playerAnimator.SetBool("Walk", false);
-            playerAnimator.SetBool("Run", false);
-            playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Rigth", false);
-            playerAnimator.SetBool("Left", true);
-            playerSpeed = 2;
-            
-            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
-            {
-                playerAnimator.SetBool("Jump", true);
-                playerAnimator.SetBool("Walk", false);
-                playerAnimator.SetBool("Run", false);
-                playerAnimator.SetBool("Rigth", false);
-                playerAnimator.SetBool("Left", false);
-                playerAnimator.SetBool("OnIdle", false);
-                rb.velocity = transform.up * jumpHight;
-                jumpAttempts++;
-            } 
-        }
-        else if (horizontal == 1) //Movimiento derecha
-        {
-            playerAnimator.SetBool("Rigth", true);
-            playerAnimator.SetBool("OnIdle", false);
-            playerAnimator.SetBool("Walk", false);
-            playerAnimator.SetBool("Run", false);
-            playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Left", false);
-            playerSpeed = 2;
-            
-            if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
-            {
-                playerAnimator.SetBool("Jump", true);
-                playerAnimator.SetBool("Walk", false);
-                playerAnimator.SetBool("Run", false);
-                playerAnimator.SetBool("Rigth", false);
-                playerAnimator.SetBool("Left", false);
-                playerAnimator.SetBool("OnIdle", false);
-                rb.velocity = transform.up * jumpHight;
-                jumpAttempts++;
-            } 
-        }
+        
         else // Entra al idle
         {
+            playerSpeed = 2;
             playerAnimator.SetBool("OnIdle", true);
             playerAnimator.SetBool("Walk", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Rigth", false);
-            playerAnimator.SetBool("Left", false);
             
             if (Input.GetKey(KeyCode.Space) && jumpAttempts < 1)
             {
                 playerAnimator.SetBool("Jump", true);
                 playerAnimator.SetBool("Walk", false);
                 playerAnimator.SetBool("Run", false);
-                playerAnimator.SetBool("Rigth", false);
-                playerAnimator.SetBool("Left", false);
                 playerAnimator.SetBool("OnIdle", false);
-                rb.velocity = transform.up * jumpHight;
+                rb.AddForce(new Vector3(0f,jumpHight,0f),ForceMode.Impulse);
                 jumpAttempts++;
             }  
         }
