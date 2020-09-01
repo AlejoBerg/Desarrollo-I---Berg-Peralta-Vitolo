@@ -32,7 +32,7 @@ public class ThirdPersonCamera : MonoBehaviour
         currentX -= Input.GetAxis("Mouse Y");
         currentY += Input.GetAxis("Mouse X");
         currentX = Mathf.Clamp(currentX, minXAngle, maxXAngle);
-        playerRef.transform.rotation = Quaternion.Euler(0, currentY, 0);
+        //playerRef.transform.rotation = Quaternion.Euler(0, currentY, 0);
     }
 
     private void CalculateCameraPosition()
