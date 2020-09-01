@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-        vertical = Input.GetAxisRaw("Vertical"); // Z
+        vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
         playerMovement = new Vector3(horizontal, 0f, vertical) * playerSpeed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
@@ -95,11 +95,11 @@ public class PlayerController : MonoBehaviour
         }
         else if (horizontal == 1) //Movimiento derecha
         {
+            playerAnimator.SetBool("Rigth", true);
             playerAnimator.SetBool("OnIdle", false);
             playerAnimator.SetBool("Walk", false);
             playerAnimator.SetBool("Run", false);
             playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("Rigth", true);
             playerAnimator.SetBool("Left", false);
             playerSpeed = 2;
             
