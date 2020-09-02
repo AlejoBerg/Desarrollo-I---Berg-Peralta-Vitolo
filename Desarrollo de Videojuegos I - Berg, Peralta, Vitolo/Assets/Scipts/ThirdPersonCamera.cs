@@ -36,8 +36,7 @@ public class ThirdPersonCamera : MonoBehaviour
     }
 
     private void CalculateCameraPosition()
-    {
-      
+    {      
         Vector3 direction = new Vector3(0, 0, -distanceBetweenPlayer);
         Quaternion rotation = Quaternion.Euler(currentX, currentY, 0);
         cameraTransform.position = playerRef.transform.position + rotation * direction; //Pongo la camara arriba del player, luego le doy la rotacion y luego lo alejo por una constante
