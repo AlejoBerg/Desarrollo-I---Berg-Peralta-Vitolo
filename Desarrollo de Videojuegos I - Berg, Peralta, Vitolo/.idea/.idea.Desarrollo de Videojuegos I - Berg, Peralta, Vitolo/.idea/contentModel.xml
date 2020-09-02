@@ -29,6 +29,15 @@
             </e>
           </e>
         </e>
+        <e p="Assets" t="Include">
+          <e p="Toby Fredson" t="Include">
+            <e p="Pack de piedras" t="Include">
+              <e p="Legacy Project" t="Include">
+                <e p="Legacy Project_Read Me!.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scipts" t="Include">
           <e p="PlayerController.cs" t="Include" />
           <e p="ThirdPersonCamera.cs" t="Include" />
