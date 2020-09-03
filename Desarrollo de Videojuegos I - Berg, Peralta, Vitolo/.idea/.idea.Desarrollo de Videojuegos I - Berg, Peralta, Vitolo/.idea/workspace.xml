@@ -20,20 +20,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_High Cliff_Large/Mesh/MRL_High Cliff_Large_LOD 0.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Assets/3PupperStudios.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/Credits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/Credits.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Assets/OldHandTorch.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Assets/OldHandTorch.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Icon.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Icon/Torch.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Icon/Torch.PNG.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Material.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Material/OldHandTorch.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Material/OldHandTorch.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Prefaps.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Prefaps/OldHandTorch.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Prefaps/OldHandTorch.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_AlbedoTransparency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_AlbedoTransparency.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_MetallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_MetallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/OldHandTorch/Textures/OldHandTorch_OldHandTorch_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/Scenes/PropTest.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HandTorch/Scenes/PropTest.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonCamera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdPersonCamera.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/HQ Rocks/_TerrainAutoUpgrade.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/_TerrainAutoUpgrade.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scipts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +78,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Levels/LevelObjects.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/LifeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/PowerUp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -56,6 +94,9 @@
         <option value="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scipts/CamaraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scipts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ToggleLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
       </list>
     </option>
   </component>
@@ -108,6 +149,7 @@
       <workItem from="1598925433787" duration="621000" />
       <workItem from="1598965929418" duration="15973000" />
       <workItem from="1598995109511" duration="9758000" />
+      <workItem from="1599132621222" duration="13717000" />
     </task>
     <servers />
   </component>
