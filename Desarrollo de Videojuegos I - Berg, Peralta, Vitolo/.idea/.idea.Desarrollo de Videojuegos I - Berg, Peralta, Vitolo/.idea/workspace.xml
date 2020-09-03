@@ -24,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +38,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Levels/Level1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Levels/LevelObjects.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/LifeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/PowerUp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -53,6 +57,7 @@
         <option value="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scipts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToggleLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
       </list>
     </option>
@@ -108,6 +113,7 @@
       <workItem from="1598995109511" duration="9758000" />
       <workItem from="1599132621222" duration="13909000" />
       <workItem from="1599159045151" duration="1056000" />
+      <workItem from="1599162905010" duration="6597000" />
     </task>
     <servers />
   </component>

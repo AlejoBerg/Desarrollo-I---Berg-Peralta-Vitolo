@@ -601,6 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRef: {fileID: 1304015804}
+  distanceBetweenPlayer: 10
+  cameraHeight: {x: 0, y: 0, z: 0}
 --- !u!81 &281836425
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1011,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637389194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.234, y: 0.25, z: -10.415}
+  m_LocalPosition: {x: -20.234, y: 0.26, z: -10.415}
   m_LocalScale: {x: 0.7, y: 0.1, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1034,8 +1036,9 @@ MonoBehaviour:
   - {fileID: 1323577122}
   - {fileID: 2111536641}
   - {fileID: 1818546914}
-  secondPlatform: {fileID: 974099747}
+  secondPlatform: {fileID: 974099752}
   eliminateWall: {fileID: 1977346887}
+  isActivated: 0
 --- !u!1001 &779549722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1190,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974099747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.305, y: 0.25, z: -10.277}
+  m_LocalPosition: {x: -24.305, y: 0.26, z: -10.277}
   m_LocalScale: {x: 0.7, y: 0.1, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1213,8 +1216,9 @@ MonoBehaviour:
   - {fileID: 241706793}
   - {fileID: 1109738617}
   - {fileID: 1100088371}
-  secondPlatform: {fileID: 637389194}
+  secondPlatform: {fileID: 637389199}
   eliminateWall: {fileID: 1977346887}
+  isActivated: 0
 --- !u!1001 &1012131237
 PrefabInstance:
   m_ObjectHideFlags: 0

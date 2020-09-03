@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
@@ -9,14 +11,26 @@ public class LigthsOn : MonoBehaviour
 {
     [SerializeField] private float platformSpeed;
     [SerializeField] private GameObject []Spot1ight;
-    [SerializeField] private GameObject secondPlatform;
+    [SerializeField] private LigthsOn secondPlatform;
     [SerializeField] private GameObject eliminateWall;
     private float currentLightsOnTime;
     private float LightsOnSpawnTime = 2f;
+    private Vector3 initialPlatformPosition = Vector3.zero;
+    private Vector3 endPlatformPosition = Vector3.zero;
+    private float speed = 1f;
+    private float step;
+    private float time = 0f;
+    public bool isActivated = false;
 
+    private void Start()
+    {
+        initialPlatformPosition = transform.position;
+        endPlatformPosition = initialPlatformPosition + new Vector3(0,-0.1f,0);
+    }
+    
     private void Update()
     {
-        if (transform.position.y == 0.16f && secondPlatform.transform.position.y == 0.16f)
+        if (isActivated && secondPlatform.isActivated == true)
         {
             AllLigthsOn();
             eliminateWall.SetActive(false);
@@ -27,10 +41,11 @@ public class LigthsOn : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Rocks"))
         {
-            if(this.gameObject.transform.position.y != 0.16f){transform.Translate(new Vector3(0,-1f,0) *  platformSpeed);}
+            PlatformAnimation();
+            isActivated = true;
         }
     }
-
+    
     void AllLigthsOn()
     {
         for (int i = 0; i < Spot1ight.Length; i++)
@@ -40,12 +55,16 @@ public class LigthsOn : MonoBehaviour
                 Spot1ight[i].SetActive(true);
                 currentLightsOnTime = 0;
             }
-         
             else
             {
                 currentLightsOnTime += Time.deltaTime;
             }
-         
         }
+    }
+    
+    private void PlatformAnimation()
+    {
+        time += Time.deltaTime * 0.5f;
+        transform.position = new Vector3(initialPlatformPosition.x, (Mathf.Lerp(initialPlatformPosition.y, endPlatformPosition.y , time)), initialPlatformPosition.z);
     }
 }
