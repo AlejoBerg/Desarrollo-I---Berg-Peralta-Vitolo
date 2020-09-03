@@ -30,6 +30,9 @@
           </e>
         </e>
         <e p="Assets" t="Include">
+          <e p="HandTorch" t="Include">
+            <e p="Credits.txt" t="Include" />
+          </e>
           <e p="Toby Fredson" t="Include">
             <e p="Pack de piedras" t="Include">
               <e p="Legacy Project" t="Include">
@@ -37,9 +40,6 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="HandTorch" t="Include">
-          <e p="Credits.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="LigthsOn.cs" t="Include" />

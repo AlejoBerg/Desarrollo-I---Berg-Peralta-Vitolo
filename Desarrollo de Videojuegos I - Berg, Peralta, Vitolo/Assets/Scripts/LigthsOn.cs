@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
@@ -10,6 +11,8 @@ public class LigthsOn : MonoBehaviour
     [SerializeField] private GameObject []Spot1ight;
     [SerializeField] private GameObject secondPlatform;
     [SerializeField] private GameObject eliminateWall;
+    private float currentLightsOnTime;
+    private float LightsOnSpawnTime = 2f;
 
     private void Update()
     {
@@ -32,7 +35,17 @@ public class LigthsOn : MonoBehaviour
     {
         for (int i = 0; i < Spot1ight.Length; i++)
         {
-            Spot1ight[i].SetActive(true);
+            if (currentLightsOnTime >= LightsOnSpawnTime)
+            {
+                Spot1ight[i].SetActive(true);
+                currentLightsOnTime = 0;
+            }
+         
+            else
+            {
+                currentLightsOnTime += Time.deltaTime;
+            }
+         
         }
     }
 }
