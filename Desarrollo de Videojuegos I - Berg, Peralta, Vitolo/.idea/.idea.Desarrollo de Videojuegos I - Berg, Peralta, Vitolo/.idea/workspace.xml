@@ -20,20 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_High Cliff_Large/Mesh/MRL_High Cliff_Large_LOD 0.fbm.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/HQ Rocks/_TerrainAutoUpgrade.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Toby Fredson/_TerrainAutoUpgrade.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +34,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Levels/Level1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/Levels/LevelObjects.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/LifeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/ioo-corona-game/ioo-corona-game/Corona Game - Parcial 2 - Berg - Peralta - Vitolo/Game/PowerUp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -56,6 +51,9 @@
         <option value="$PROJECT_DIR$/Assets/Scipts/ThirdPersonCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scipts/CamaraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scipts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scipts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ToggleLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
       </list>
     </option>
   </component>
@@ -108,6 +106,8 @@
       <workItem from="1598925433787" duration="621000" />
       <workItem from="1598965929418" duration="15973000" />
       <workItem from="1598995109511" duration="9758000" />
+      <workItem from="1599132621222" duration="13909000" />
+      <workItem from="1599159045151" duration="1056000" />
     </task>
     <servers />
   </component>
