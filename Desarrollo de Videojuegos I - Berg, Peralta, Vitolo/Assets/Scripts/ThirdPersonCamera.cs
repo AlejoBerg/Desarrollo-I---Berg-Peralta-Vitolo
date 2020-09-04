@@ -6,7 +6,7 @@ using UnityEditor;
 public class ThirdPersonCamera : MonoBehaviour
 {
     [SerializeField] private GameObject playerRef = null;
-    [SerializeField] private float distanceBetweenPlayer = 10f;
+    [SerializeField] private float distanceBetweenPlayer = 3;
     [SerializeField] private Vector3 cameraHeight = Vector3.zero;
 
     private Transform cameraTransform = null;
