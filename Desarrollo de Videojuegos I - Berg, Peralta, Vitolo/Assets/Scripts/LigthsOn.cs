@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
