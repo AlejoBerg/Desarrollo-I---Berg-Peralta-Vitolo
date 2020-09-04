@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private float playerSpeed = 2;
     private float playerSpeedForAnimation;
-    private Animator playerAnimator;
+    private Animator playerAnimator = null;
     private float vertical;
     private float horizontal;
-    private Rigidbody rb;
+    private Rigidbody rb = null;
     private bool isGrounded = true;
     private float jumpForce = 5;
-    private Vector3 direction;
+    private Vector3 direction = Vector3.zero;
 
     void Start()
     {

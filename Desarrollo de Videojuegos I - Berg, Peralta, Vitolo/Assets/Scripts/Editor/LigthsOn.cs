@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Threading;
-using UnityEditor.Experimental.GraphView;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
 public class LigthsOn : MonoBehaviour
 {
-    [SerializeField] private float platformSpeed;
-    [SerializeField] private GameObject []Spot1ight;
-    [SerializeField] private LigthsOn secondPlatform;
-    [SerializeField] private GameObject eliminateWall;
+    [SerializeField] private float platformSpeed = 0;
+    [SerializeField] private GameObject []Spot1ight ;
+    [SerializeField] private LigthsOn secondPlatform = null;
+    [SerializeField] private GameObject eliminateWall = null;
+    [SerializeField] private bool isActivated = false;
     private float currentLightsOnTime;
     private float LightsOnSpawnTime = 2f;
     private Vector3 initialPlatformPosition = Vector3.zero;
     private Vector3 endPlatformPosition = Vector3.zero;
-    private float speed = 1f;
-    private float step;
     private float time = 0f;
-    public bool isActivated = false;
 
     private void Start()
     {

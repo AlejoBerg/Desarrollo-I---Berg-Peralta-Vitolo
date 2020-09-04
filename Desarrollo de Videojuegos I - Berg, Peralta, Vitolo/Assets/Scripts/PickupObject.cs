@@ -6,33 +6,33 @@ using UnityEngine;
 public class PickupObject : MonoBehaviour
 {
   public GameObject itemToPickUp;
-  public GameObject PickedObject;
+  public GameObject pickedObject;
   public Transform interactionZone; // donde quiero que deje el objeto
 
   private void Update()
   {
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
-        PickedObject == null)
+        pickedObject == null)
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        PickedObject = itemToPickUp;
-        PickedObject.GetComponent<PickeableObject>().isPickeable = false;
-        PickedObject.transform.SetParent(interactionZone);
-        PickedObject.transform.position = interactionZone.position;
-        PickedObject.GetComponent<Rigidbody>().useGravity = false;
-        PickedObject.GetComponent<Rigidbody>().isKinematic = true;
+        pickedObject = itemToPickUp;
+        pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+        pickedObject.transform.SetParent(interactionZone);
+        pickedObject.transform.position = interactionZone.position;
+        pickedObject.GetComponent<Rigidbody>().useGravity = false;
+        pickedObject.GetComponent<Rigidbody>().isKinematic = true;
       }
     }
-    else if (PickedObject != null)
+    else if (pickedObject != null)
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        PickedObject.GetComponent<PickeableObject>().isPickeable = true;
-        PickedObject.transform.SetParent(null);
-        PickedObject.GetComponent<Rigidbody>().useGravity = true;
-        PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-        PickedObject = null;
+        pickedObject.GetComponent<PickeableObject>().isPickeable = true;
+        pickedObject.transform.SetParent(null);
+        pickedObject.GetComponent<Rigidbody>().useGravity = true;
+        pickedObject.GetComponent<Rigidbody>().isKinematic = false;
+        pickedObject = null;
       }
     }
   }

@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
-    [SerializeField] public GameObject playerRef;
+    [SerializeField] private GameObject playerRef = null;
     [SerializeField] private float distanceBetweenPlayer = 10f;
-    [SerializeField] private Vector3 cameraHeight;
+    [SerializeField] private Vector3 cameraHeight = Vector3.zero;
 
-    private Transform cameraTransform;
-    private Camera camera;
+    private Transform cameraTransform = null;
+    private Camera camera = null;
 
     private const float minXAngle = 0f;
     private const float maxXAngle = 50f;
