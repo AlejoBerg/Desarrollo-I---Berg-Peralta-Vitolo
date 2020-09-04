@@ -8,6 +8,7 @@ TagManager:
   - DetectItem
   - TagLight
   - Rocks
+  - Platforms
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,7 @@ public class PickeableObject : MonoBehaviour
 {
    public bool isPickeable = true;
    private Rigidbody rb;
+   
 
    private void Start()
    {
@@ -34,6 +35,14 @@ public class PickeableObject : MonoBehaviour
       if (other.gameObject.tag.Equals("DetectItem"))
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = null;
+      }
+   }
+   
+   private void OnCollisionStay(Collision other)
+   {
+      if (other.gameObject.tag.Equals("Platforms"))
+      {
+         isPickeable = false;
       }
    }
 }

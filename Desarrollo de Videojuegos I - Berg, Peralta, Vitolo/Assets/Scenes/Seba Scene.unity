@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 637389199}
   m_Layer: 0
   m_Name: Plataforma 2
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 974099752}
   m_Layer: 0
   m_Name: Plataforma 1
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
