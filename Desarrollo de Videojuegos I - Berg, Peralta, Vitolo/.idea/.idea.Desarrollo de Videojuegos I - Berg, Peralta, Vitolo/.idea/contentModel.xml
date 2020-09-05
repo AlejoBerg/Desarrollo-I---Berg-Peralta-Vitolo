@@ -55,7 +55,7 @@
           <e p="PickeableObject.cs" t="Include" />
           <e p="PickupObject.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
-          <e p="ThirdPersonCamera.cs" t="Include" />
+          <e p="ThirdCameraController.cs" t="Include" />
         </e>
       </e>
       <e p="Desarrollo de Videojuegos I - Berg, Peralta, Vitolo.sln" t="IncludeFlat" />

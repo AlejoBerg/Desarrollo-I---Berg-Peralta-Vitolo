@@ -1,72 +1,112 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float playerSpeed = 2;
+    private float horizontalMove;
+    private float verticalMove;
+    private float playerSpeed = 0;
+    public CharacterController player;
+    private Vector3 playerInput;
+    public Camera mainCamera;
+    private Vector3 camForward;
+    private Vector3 camRight;
+    private Vector3 directionMovePlayer;
+    private float gravity = 9.8f;
+    private float fallVelocity = 3;
+    private float jumpForce = 4;
+    private Animator playerAnimator;
     private float playerSpeedForAnimation;
-    private Animator playerAnimator = null;
-    private float vertical;
-    private float horizontal;
-    private Rigidbody rb = null;
-    private bool isGrounded = true;
-    private float jumpForce = 5;
-    private Vector3 direction = Vector3.zero;
-
+    
     void Start()
     {
+        player = GetComponent<CharacterController>();
         playerAnimator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    void Update()
     {
         Movement();
     }
 
-    private void Movement()
+    void Movement()
     {
-        vertical = Input.GetAxisRaw("Vertical") * playerSpeed; //Adelante y Atras
-        horizontal = Input.GetAxisRaw("Horizontal") * playerSpeed; //Izquierda y derecha
-        playerAnimator.SetFloat("Speed", Math.Abs(playerSpeedForAnimation));
-
-        if (horizontal !=0 || vertical !=0)
-        {
-            playerSpeed = 2;
-            playerSpeedForAnimation = playerSpeed;
-
+        horizontalMove = Input.GetAxis("Horizontal") ;
+        verticalMove = Input.GetAxis("Vertical");
+        
+        playerInput = new Vector3(horizontalMove,0f,verticalMove);
+        playerInput = Vector3.ClampMagnitude(playerInput,1);
+        
+        if(horizontalMove != 0 || verticalMove !=0)
+        {   
+            playerAnimator.SetFloat("SpeedZ", Math.Abs(verticalMove));
+            playerAnimator.SetFloat("SpeedX", Math.Abs(horizontalMove));
+            playerSpeed = 3;
+            
             if (Input.GetKey(KeyCode.LeftShift) == true)
             {
-                playerSpeed = 3;
-                playerSpeedForAnimation = playerSpeed;
+                playerSpeed = 4;
+                playerAnimator.SetFloat("SpeedZ", 2);
+                playerAnimator.SetFloat("SpeedX", 2);
             }
-                
-            direction.x = horizontal;
-            direction.z = vertical;
-            transform.Translate (direction.normalized * Time.deltaTime * playerSpeed, Space.World);
-            transform.forward = direction;
+            
+            if (Input.GetKeyUp(KeyCode.LeftShift) == true)
+            {
+                playerSpeed = 3;
+                playerAnimator.SetFloat("SpeedZ", 1);
+                playerAnimator.SetFloat("SpeedX", 1);
+            }
         }
         else
         {
-            playerSpeedForAnimation = 0;
+                playerAnimator.SetFloat("SpeedZ", verticalMove);
+                playerAnimator.SetFloat("SpeedX", horizontalMove);
         }
+        
+        CamDirection();
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        directionMovePlayer = playerInput.x * camRight + playerInput.z * camForward;
+        
+        player.transform.LookAt(player.transform.position + directionMovePlayer);
+        
+        SetGravity();
+        
+        if (player.isGrounded && Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-            playerAnimator.SetBool("IsGrounded", isGrounded);
+            fallVelocity = jumpForce;
+            directionMovePlayer.y = fallVelocity;
         }
+        
+        player.Move(directionMovePlayer * playerSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter (Collision other) 
+    void CamDirection()
     {
-        if (other.gameObject.tag.Equals("Floor"))
+        camForward = mainCamera.transform.forward;
+        camRight = mainCamera.transform.right;
+
+        camForward.y = 0;
+        camRight.y = 0;
+
+        camForward = camForward.normalized;
+        camRight = camRight.normalized;
+    }
+
+    void SetGravity()
+    {
+        if (player.isGrounded)
         {
-            isGrounded = true;
-            playerAnimator.SetBool("IsGrounded", isGrounded);
+            fallVelocity = -gravity * Time.deltaTime;
+            directionMovePlayer.y = fallVelocity;
+            playerAnimator.SetBool("IsGrounded", true);
+        }
+        else
+        {
+            fallVelocity -= gravity * Time.deltaTime;
+            directionMovePlayer.y = fallVelocity;
+            playerAnimator.SetBool("IsGrounded", false);
         }
     }
 }
