@@ -636,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 6813863927669946252, guid: 9b239cd961cd32d4a8b2cf6fc9888af9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.115
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6813863927669946252, guid: 9b239cd961cd32d4a8b2cf6fc9888af9,
         type: 3}
@@ -687,6 +687,14 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1710506024}
+    - target: {fileID: 181745491, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 181745491, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
 --- !u!1001 &553918392
@@ -2145,9 +2153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d33f14d0fefe147867b1dbd888611f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 7, z: -10}
+  offset: {x: 0, y: 3, z: -6}
   lerpValue: 0.5
-  sensibility: 5
+  sensibility: 2
 --- !u!1 &1818546914
 GameObject:
   m_ObjectHideFlags: 0

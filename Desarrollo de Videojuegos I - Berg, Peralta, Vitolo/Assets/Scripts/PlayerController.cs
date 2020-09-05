@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<CharacterController>();
         playerAnimator = GetComponent<Animator>();
+        playerAnimator.SetBool("IsOnStart", true);
     }
 
     void Update()
@@ -77,6 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             fallVelocity = jumpForce;
             directionMovePlayer.y = fallVelocity;
+            playerAnimator.SetBool("IsOnStart", false);
         }
         
         player.Move(directionMovePlayer * playerSpeed * Time.deltaTime);
