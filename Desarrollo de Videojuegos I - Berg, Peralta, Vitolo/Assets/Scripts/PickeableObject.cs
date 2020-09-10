@@ -7,6 +7,7 @@ public class PickeableObject : MonoBehaviour
 {
    public bool isPickeable = true;
    private Rigidbody rb;
+   public string tagName;
 
    private void Start()
    {
@@ -26,6 +27,7 @@ public class PickeableObject : MonoBehaviour
       if (other.gameObject.tag.Equals("DetectItem"))
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = this.gameObject;
+         tagName = tag;
       }
    }
 

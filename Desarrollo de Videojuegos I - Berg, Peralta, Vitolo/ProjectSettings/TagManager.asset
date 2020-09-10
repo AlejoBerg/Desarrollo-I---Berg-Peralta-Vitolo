@@ -8,6 +8,8 @@ TagManager:
   - DetectItem
   - TagLight
   - Rocks
+  - Parchments
+  - Collectable
   layers:
   - Default
   - TransparentFX

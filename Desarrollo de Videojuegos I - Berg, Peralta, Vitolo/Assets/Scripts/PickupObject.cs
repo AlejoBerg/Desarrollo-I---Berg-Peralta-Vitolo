@@ -7,12 +7,14 @@ public class PickupObject : MonoBehaviour
 {
   public GameObject itemToPickUp;
   public GameObject pickedObject;
-  public Transform interactionZone; // donde quiero que deje el objeto
-
+  [SerializeField] private Transform interactionZone; // donde quiero que deje el objeto
+  [SerializeField] private GameObject textToShow;
+  private bool hudOff = false;
+ 
   private void Update()
   {
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
-        pickedObject == null)
+        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName != "Parchments")
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
@@ -33,6 +35,26 @@ public class PickupObject : MonoBehaviour
         pickedObject.GetComponent<Rigidbody>().useGravity = true;
         pickedObject.GetComponent<Rigidbody>().isKinematic = false;
         pickedObject = null;
+      }
+    }
+
+    if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
+        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Parchments") 
+    { 
+      if (Input.GetKeyDown(KeyCode.E))
+      {
+        pickedObject = itemToPickUp;
+        pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+        textToShow.SetActive(true);
+        hudOff = true;
+      }
+    }
+    else if (hudOff)
+    {
+      if (Input.GetKeyDown(KeyCode.Tab))
+      { 
+        textToShow.SetActive(false);
+        Destroy(pickedObject);
       }
     }
   }

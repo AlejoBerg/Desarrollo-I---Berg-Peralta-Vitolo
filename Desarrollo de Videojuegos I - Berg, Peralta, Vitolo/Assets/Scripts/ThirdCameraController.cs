@@ -8,6 +8,7 @@ public class ThirdCameraController : MonoBehaviour
     private Transform target;
     public float lerpValue;
     public float sensibility;
+    private float y;
     
     void Start()
     {
@@ -16,7 +17,11 @@ public class ThirdCameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        y -= Input.GetAxis("Mouse Y");
+        y = Mathf.Clamp(y, 1, 6); //Limito la camara en el eje Y
+        
         transform.position = Vector3.Lerp(transform.position, target.position + offset, lerpValue);
+        offset.y = y;
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * sensibility, Vector3.up) * offset;
 
         transform.LookAt(target);

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 4;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
+    private bool jumpActive = false;
     
     void Start()
     {
@@ -39,31 +40,28 @@ public class PlayerController : MonoBehaviour
         
         playerInput = new Vector3(horizontalMove,0f,verticalMove);
         playerInput = Vector3.ClampMagnitude(playerInput,1);
-        
-        if(horizontalMove != 0 || verticalMove !=0)
+
+       if(horizontalMove != 0 || verticalMove !=0)
         {   
-            playerAnimator.SetFloat("SpeedZ", Math.Abs(verticalMove));
-            playerAnimator.SetFloat("SpeedX", Math.Abs(horizontalMove));
+            playerSpeedForAnimation = 0.2f; 
+            playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             playerSpeed = 3;
             
             if (Input.GetKey(KeyCode.LeftShift) == true)
             {
                 playerSpeed = 4;
-                playerAnimator.SetFloat("SpeedZ", 2);
-                playerAnimator.SetFloat("SpeedX", 2);
+                playerSpeedForAnimation = 1.2f;
+                playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
             if (Input.GetKeyUp(KeyCode.LeftShift) == true)
             {
                 playerSpeed = 3;
-                playerAnimator.SetFloat("SpeedZ", 1);
-                playerAnimator.SetFloat("SpeedX", 1);
             }
         }
         else
-        {
-                playerAnimator.SetFloat("SpeedZ", verticalMove);
-                playerAnimator.SetFloat("SpeedX", horizontalMove);
+        {   playerSpeedForAnimation = 0; 
+            playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
         }
         
         CamDirection();
@@ -74,7 +72,7 @@ public class PlayerController : MonoBehaviour
         
         SetGravity();
         
-        if (player.isGrounded && Input.GetKey(KeyCode.Space))
+        if (player.isGrounded && jumpActive && Input.GetKey(KeyCode.Space))
         {
             fallVelocity = jumpForce;
             directionMovePlayer.y = fallVelocity;
@@ -109,6 +107,19 @@ public class PlayerController : MonoBehaviour
             fallVelocity -= gravity * Time.deltaTime;
             directionMovePlayer.y = fallVelocity;
             playerAnimator.SetBool("IsGrounded", false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Parchments"))
+        {
+            jumpActive = true;
+        }
+        
+        if (other.gameObject.tag.Equals("Collectable"))
+        {
+            Debug.Log("Agarraste un coleccionable");
         }
     }
 }
