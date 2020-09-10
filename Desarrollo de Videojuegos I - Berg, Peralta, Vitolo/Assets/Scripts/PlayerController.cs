@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 directionMovePlayer;
     private float gravity = 9.8f;
     private float fallVelocity = 3;
-    private float jumpForce = 4;
+    private float jumpForce = 4f;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private bool jumpActive = false;
