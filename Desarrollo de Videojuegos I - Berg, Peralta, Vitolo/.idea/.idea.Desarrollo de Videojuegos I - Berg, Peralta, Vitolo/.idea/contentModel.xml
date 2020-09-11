@@ -50,12 +50,25 @@
             </e>
           </e>
         </e>
+        <e p="Samples" t="Include">
+          <e p="Polybrush" t="Include">
+            <e p="1.0.2" t="Include">
+              <e p="Shader Examples (Standard)" t="Include">
+                <e p="Shader" t="Include">
+                  <e p="StandardTextureBlend.shader" t="Include" />
+                  <e p="StandardVertexColor.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="LigthsOn.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />
           <e p="PickupObject.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ThirdCameraController.cs" t="Include" />
+          <e p="TurnLightsOnWhenEnter.cs" t="Include" />
         </e>
       </e>
       <e p="Desarrollo de Videojuegos I - Berg, Peralta, Vitolo.sln" t="IncludeFlat" />

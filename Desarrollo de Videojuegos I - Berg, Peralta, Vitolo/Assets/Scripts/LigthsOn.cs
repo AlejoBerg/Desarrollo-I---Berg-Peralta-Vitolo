@@ -10,7 +10,7 @@ public class LigthsOn : MonoBehaviour
     [SerializeField] private GameObject []Spot1ight ;
     [SerializeField] private LigthsOn secondPlatform = null;
     [SerializeField] private GameObject eliminateWall = null;
-    [SerializeField] private bool isActivated = false;
+    private bool isActivated = false;
     private float currentLightsOnTime;
     private float LightsOnSpawnTime = 2f;
     private Vector3 initialPlatformPosition = Vector3.zero;
@@ -38,6 +38,7 @@ public class LigthsOn : MonoBehaviour
         {
             PlatformAnimation();
             isActivated = true;
+            
         }
     }
     

@@ -774,6 +774,10 @@ PrefabInstance:
       propertyPath: textToShow
       value: 
       objectReference: {fileID: 1058523525}
+    - target: {fileID: 1304015810, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1899663555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
 --- !u!1001 &553918392
@@ -949,7 +953,7 @@ GameObject:
   - component: {fileID: 637389199}
   m_Layer: 0
   m_Name: Plataforma 2
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1129,7 +1133,7 @@ GameObject:
   - component: {fileID: 974099752}
   m_Layer: 0
   m_Name: Plataforma 1
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2883,6 +2887,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1864630804}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899663555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 181745492, guid: 9b239cd961cd32d4a8b2cf6fc9888af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 489057033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3e75f802fe36e458721b194b701bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977346887
 GameObject:
   m_ObjectHideFlags: 0

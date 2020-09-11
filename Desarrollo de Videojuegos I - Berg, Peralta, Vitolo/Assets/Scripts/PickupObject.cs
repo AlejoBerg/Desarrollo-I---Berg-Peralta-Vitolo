@@ -9,8 +9,14 @@ public class PickupObject : MonoBehaviour
   public GameObject pickedObject;
   [SerializeField] private Transform interactionZone; // donde quiero que deje el objeto
   [SerializeField] private GameObject textToShow;
+  [SerializeField] private PlayerController player;
   private bool hudOff = false;
- 
+
+  private void Start()
+  {
+    player = GetComponent<PlayerController>();
+  }
+
   private void Update()
   {
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
@@ -55,6 +61,7 @@ public class PickupObject : MonoBehaviour
       { 
         textToShow.SetActive(false);
         Destroy(pickedObject);
+        player.jumpActive = true;
       }
     }
   }

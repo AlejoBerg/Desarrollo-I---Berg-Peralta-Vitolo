@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 4f;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
-    private bool jumpActive = false;
+    public bool jumpActive = false;
     
     void Start()
     {
@@ -112,11 +112,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Parchments"))
-        {
-            jumpActive = true;
-        }
-        
         if (other.gameObject.tag.Equals("Collectable"))
         {
             Debug.Log("Agarraste un coleccionable");

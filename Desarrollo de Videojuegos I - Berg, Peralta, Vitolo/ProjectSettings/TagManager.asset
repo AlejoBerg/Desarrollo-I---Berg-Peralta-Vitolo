@@ -10,6 +10,7 @@ TagManager:
   - Rocks
   - Parchments
   - Collectable
+  - Platforms
   layers:
   - Default
   - TransparentFX
