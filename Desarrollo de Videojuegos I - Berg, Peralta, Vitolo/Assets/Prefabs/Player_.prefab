@@ -1841,8 +1841,6 @@ MonoBehaviour:
   itemToPickUp: {fileID: 0}
   pickedObject: {fileID: 0}
   interactionZone: {fileID: 205346376}
-  textToShow: {fileID: 0}
-  player: {fileID: 0}
 --- !u!143 &181745491
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1875,7 +1873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 181745491}
   mainCamera: {fileID: 0}
-  jumpActive: 0
 --- !u!1 &6811225707267614296
 GameObject:
   m_ObjectHideFlags: 0
