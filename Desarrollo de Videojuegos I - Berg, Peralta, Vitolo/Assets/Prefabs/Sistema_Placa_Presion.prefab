@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 1532060059748589108}
   m_Layer: 0
   m_Name: PlacaPresionIzq (1)
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,10 +267,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformSpeed: 0.03
-  Spot1ight: []
+  Spot1ight:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   secondPlatform: {fileID: 6540650576732018604}
   eliminateWall: {fileID: 1962022830300174759}
-  isActivated: 0
 --- !u!1 &4710029266863970343
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +337,7 @@ GameObject:
   - component: {fileID: 6540650576732018604}
   m_Layer: 0
   m_Name: PlacaPresionDer (1)
-  m_TagString: Floor
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +428,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformSpeed: 0.03
-  Spot1ight: []
+  Spot1ight:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   secondPlatform: {fileID: 1532060059748589108}
   eliminateWall: {fileID: 1962022830300174759}
-  isActivated: 0
