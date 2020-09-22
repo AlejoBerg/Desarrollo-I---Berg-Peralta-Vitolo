@@ -13,13 +13,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 camForward;
     private Vector3 camRight;
     private Vector3 directionMovePlayer;
-    public float jumpForce = 5f;
+    [SerializeField]private float jumpForce = 5f;
     private bool canJump = true;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private Rigidbody rb;
     public bool jumpActive = false;
-    private float test;
     
     void Start()
     {
@@ -37,25 +36,25 @@ public class PlayerController : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
        
-        playerInput = new Vector3(horizontalMove * playerSpeed, rb.velocity.y ,verticalMove * playerSpeed);
+        playerInput = new Vector3(horizontalMove * playerSpeed, rb.velocity.y ,verticalMove * playerSpeed) ;
         //playerInput = Vector3.ClampMagnitude(playerInput,1);
-
+        
         if (horizontalMove != 0 || verticalMove != 0)
         { 
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerSpeed = 4;
+            playerSpeed = 5;
             
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                playerSpeed = 5;
+                playerSpeed = 7;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                playerSpeed = 4;
+                playerSpeed = 5;
                 playerSpeedForAnimation = 0.2f; 
             }
         }
