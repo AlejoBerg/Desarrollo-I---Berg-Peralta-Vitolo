@@ -8,8 +8,8 @@ public class PickupObject : MonoBehaviour
   public GameObject itemToPickUp;
   public GameObject pickedObject;
   [SerializeField] private Transform interactionZone; // donde quiero que deje el objeto
-  [SerializeField] private GameObject textToShow;
   [SerializeField] private PlayerController player;
+  [SerializeField] private Parchments _parchments;
   private bool hudOff = false;
 
   private void Start()
@@ -51,7 +51,7 @@ public class PickupObject : MonoBehaviour
       {
         pickedObject = itemToPickUp;
         pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-        textToShow.SetActive(true);
+        _parchments.textToShow.SetActive(true);
         hudOff = true;
       }
     }
@@ -59,7 +59,7 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.Tab))
       { 
-        textToShow.SetActive(false);
+        _parchments.textToShow.SetActive(false);
         Destroy(pickedObject);
         player.jumpActive = true;
       }

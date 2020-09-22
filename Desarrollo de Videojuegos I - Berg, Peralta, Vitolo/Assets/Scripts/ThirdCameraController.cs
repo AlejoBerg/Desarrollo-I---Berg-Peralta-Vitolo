@@ -4,27 +4,51 @@ using UnityEngine;
 
 public class ThirdCameraController : MonoBehaviour
 {
-    public Vector3 offset;
-    private Transform target;
-    public float lerpValue;
-    public float sensibilityX;
-    public float sensibilityY;
-    private float y;
-    
-    void Start()
+    [SerializeField] private GameObject playerRef = null;
+    [SerializeField] private float distanceBetweenPlayer = 3;
+    [SerializeField] private float sensitivity;
+    [SerializeField] private Camera camera = null;
+    private Transform cameraTransform = null;
+    private const float minXAngle = 12f;
+    private const float maxXAngle = 50f;
+    private float currentX = 0f;
+    private float currentY = 0f;
+    private float minFov = 20f;
+    private float maxFov = 50f;
+
+    private void Start()
     {
-        target = GameObject.Find("Player").transform;
+        cameraTransform = this.transform;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    private void Update()
     {
-        y -= Input.GetAxis("Mouse Y") * sensibilityY;
-        y = Mathf.Clamp(y, 1, 2); //Limito la camara en el eje Y
-        
-        transform.position = Vector3.Lerp(transform.position, target.position + offset, lerpValue);
-        offset.y = y;
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * sensibilityX, Vector3.up) * offset;
+        RelativePositionFromMouse();
+        CalculateCameraPosition();
+        CameraZoom();
+    }
 
-        transform.LookAt(target);
+    private void RelativePositionFromMouse()
+    {
+        currentX -= Input.GetAxis("Mouse Y");
+        currentY += Input.GetAxis("Mouse X");
+        currentX = Mathf.Clamp(currentX, minXAngle, maxXAngle);
+    }
+
+    private void CalculateCameraPosition()
+    {      
+        Vector3 direction = new Vector3(0, 0, -distanceBetweenPlayer);
+        Quaternion rotation = Quaternion.Euler(currentX,currentY ,0 );
+        cameraTransform.position = playerRef.transform.position + rotation * direction;
+        cameraTransform.LookAt(playerRef.transform.position + new Vector3(0,1,0));
+    }
+    
+    void CameraZoom()
+    {
+        var fov = camera.fieldOfView;
+        fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity; 
+        fov = Mathf.Clamp(fov, minFov, maxFov);
+        camera.fieldOfView = fov;
     }
 }

@@ -7,25 +7,24 @@ public class PlayerController : MonoBehaviour
 {
     private float horizontalMove;
     private float verticalMove;
-    private float playerSpeed = 0;
-    public CharacterController player;
+    private float playerSpeed;
     private Vector3 playerInput;
     public Camera mainCamera;
     private Vector3 camForward;
     private Vector3 camRight;
     private Vector3 directionMovePlayer;
-    private float gravity = 9.8f;
-    private float fallVelocity = 3;
-    private float jumpForce = 2.4f;
+    public float jumpForce = 5f;
+    private bool canJump = true;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
+    private Rigidbody rb;
     public bool jumpActive = false;
+    private float test;
     
     void Start()
     {
-        player = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
-        playerAnimator.SetBool("IsOnStart", true);
     }
 
     void Update()
@@ -35,51 +34,50 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
-        horizontalMove = Input.GetAxis("Horizontal") ;
-        verticalMove = Input.GetAxis("Vertical");
-        
-        playerInput = new Vector3(horizontalMove,0f,verticalMove);
-        playerInput = Vector3.ClampMagnitude(playerInput,1);
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+        verticalMove = Input.GetAxisRaw("Vertical");
+       
+        playerInput = new Vector3(horizontalMove * playerSpeed, rb.velocity.y ,verticalMove * playerSpeed);
+        //playerInput = Vector3.ClampMagnitude(playerInput,1);
 
-       if(horizontalMove != 0 || verticalMove !=0)
-        {   
+        if (horizontalMove != 0 || verticalMove != 0)
+        { 
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerSpeed = 3;
+            playerSpeed = 4;
             
-            if (Input.GetKey(KeyCode.LeftShift) == true)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                playerSpeed = 4;
+                playerSpeed = 5;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
-            if (Input.GetKeyUp(KeyCode.LeftShift) == true)
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                playerSpeed = 3;
+                playerSpeed = 4;
+                playerSpeedForAnimation = 0.2f; 
             }
         }
         else
-        {   playerSpeedForAnimation = 0; 
+        {   playerSpeedForAnimation = 0;
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
         }
         
         CamDirection();
 
         directionMovePlayer = playerInput.x * camRight + playerInput.z * camForward;
+       
+        transform.LookAt(transform.position + directionMovePlayer);
         
-        player.transform.LookAt(player.transform.position + directionMovePlayer);
+        rb.AddForce(directionMovePlayer);
         
-        SetGravity();
-        
-        if (player.isGrounded && jumpActive && Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && canJump && jumpActive)
         {
-            fallVelocity = jumpForce;
-            directionMovePlayer.y = fallVelocity;
-            playerAnimator.SetBool("IsOnStart", false);
+            rb.velocity += Vector3.up * jumpForce;
+            playerAnimator.SetBool("IsGrounded", false);
+            canJump = false;
         }
-        
-        player.Move(directionMovePlayer * playerSpeed * Time.deltaTime);
     }
 
     void CamDirection()
@@ -93,28 +91,13 @@ public class PlayerController : MonoBehaviour
         camForward = camForward.normalized;
         camRight = camRight.normalized;
     }
-
-    void SetGravity()
+    
+    private void OnCollisionEnter(Collision other)
     {
-        if (player.isGrounded)
+        if (other.gameObject.tag.Equals("Floor"))
         {
-            fallVelocity = -gravity * Time.deltaTime;
-            directionMovePlayer.y = fallVelocity;
             playerAnimator.SetBool("IsGrounded", true);
-        }
-        else
-        {
-            fallVelocity -= gravity * Time.deltaTime;
-            directionMovePlayer.y = fallVelocity;
-            playerAnimator.SetBool("IsGrounded", false);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Collectable"))
-        {
-            Debug.Log("Agarraste un coleccionable");
+            canJump = true;
         }
     }
 }

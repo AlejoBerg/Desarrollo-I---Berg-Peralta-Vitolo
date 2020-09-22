@@ -6,6 +6,39 @@
     <e p="D:\GitHub\Desarrollo-I---Berg-Peralta-Vitolo\Desarrollo de Videojuegos I - Berg, Peralta, Vitolo" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_Assets" t="Include">
+          <e p="Antorcha" t="Include">
+            <e p="Credits.txt" t="Include" />
+          </e>
+          <e p="LVL1 Ground" t="Include">
+            <e p="_Samples" t="Include">
+              <e p="Terrain Tools" t="Include">
+                <e p="0.1.0-preview" t="Include">
+                  <e p="Terrain Assets" t="Include">
+                    <e p="ThirdPartyNotices.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Samples" t="Include">
+              <e p="Polybrush" t="Include">
+                <e p="1.0.2" t="Include">
+                  <e p="Shader Examples (Standard)" t="Include">
+                    <e p="Shader" t="Include">
+                      <e p="StandardTextureBlend.shader" t="Include" />
+                      <e p="StandardVertexColor.shader" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Pack de piedras" t="Include">
+            <e p="Legacy Project" t="Include">
+              <e p="Legacy Project_Read Me!.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Animations" t="Include">
           <e p="Rokoko" t="Include">
             <e p="MotionLibrary" t="Include">
@@ -29,41 +62,9 @@
             </e>
           </e>
         </e>
-        <e p="Assets" t="Include">
-          <e p="HandTorch" t="Include">
-            <e p="Credits.txt" t="Include" />
-          </e>
-          <e p="Samples" t="Include">
-            <e p="Terrain Tools" t="Include">
-              <e p="0.1.0-preview" t="Include">
-                <e p="Terrain Assets" t="Include">
-                  <e p="ThirdPartyNotices.txt" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="Toby Fredson" t="Include">
-            <e p="Pack de piedras" t="Include">
-              <e p="Legacy Project" t="Include">
-                <e p="Legacy Project_Read Me!.txt" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
-        <e p="Samples" t="Include">
-          <e p="Polybrush" t="Include">
-            <e p="1.0.2" t="Include">
-              <e p="Shader Examples (Standard)" t="Include">
-                <e p="Shader" t="Include">
-                  <e p="StandardTextureBlend.shader" t="Include" />
-                  <e p="StandardVertexColor.shader" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="LigthsOn.cs" t="Include" />
+          <e p="Parchments.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />
           <e p="PickupObject.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
