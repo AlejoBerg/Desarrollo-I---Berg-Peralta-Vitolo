@@ -4,16 +4,16 @@ using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
+{    
+    [SerializeField]private Camera mainCamera;
+    [SerializeField]private float jumpForce = 5f;
     private float horizontalMove;
     private float verticalMove;
     private float playerSpeed;
     private Vector3 playerInput;
-    public Camera mainCamera;
     private Vector3 camForward;
     private Vector3 camRight;
     private Vector3 directionMovePlayer;
-    [SerializeField]private float jumpForce = 5f;
     private bool canJump = true;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;

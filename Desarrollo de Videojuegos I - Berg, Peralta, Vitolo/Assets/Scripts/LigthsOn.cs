@@ -38,7 +38,6 @@ public class LigthsOn : MonoBehaviour
         {
             PlatformAnimation();
             isActivated = true;
-            
         }
     }
     

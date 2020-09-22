@@ -7,7 +7,7 @@ public class PickupObject : MonoBehaviour
 {
   public GameObject itemToPickUp;
   public GameObject pickedObject;
-  [SerializeField] private Transform interactionZone; // donde quiero que deje el objeto
+  [SerializeField] private Transform interactionZone;
   [SerializeField] private PlayerController player;
   [SerializeField] private Parchments _parchments;
   private bool hudOff = false;
