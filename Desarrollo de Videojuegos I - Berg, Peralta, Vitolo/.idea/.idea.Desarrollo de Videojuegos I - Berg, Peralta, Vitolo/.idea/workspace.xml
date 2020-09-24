@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="" />
+    <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +41,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/lala/Test/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TurnLightsOnWhenEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -51,13 +56,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ToggleLight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Test/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControllerNew.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/test1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/cameratest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/test2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
@@ -124,7 +129,8 @@
       <workItem from="1600695400859" duration="7623000" />
       <workItem from="1600721329464" duration="12569000" />
       <workItem from="1600800951874" duration="1446000" />
-      <workItem from="1600813265754" duration="3738000" />
+      <workItem from="1600813265754" duration="4216000" />
+      <workItem from="1600962137662" duration="9196000" />
     </task>
     <servers />
   </component>

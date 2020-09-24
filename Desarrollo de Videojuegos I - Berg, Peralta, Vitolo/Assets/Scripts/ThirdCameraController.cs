@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ public class ThirdCameraController : MonoBehaviour
     private float currentY = 0f;
     private float minFov = 20f;
     private float maxFov = 50f;
-
+ 
     private void Start()
     {
         cameraTransform = this.transform;
@@ -50,5 +51,5 @@ public class ThirdCameraController : MonoBehaviour
         fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity; 
         fov = Mathf.Clamp(fov, minFov, maxFov);
         camera.fieldOfView = fov;
-    }
+    }   
 }

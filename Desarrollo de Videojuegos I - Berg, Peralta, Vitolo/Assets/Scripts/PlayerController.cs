@@ -9,11 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float jumpForce = 5f;
     private float horizontalMove;
     private float verticalMove;
-    private float playerSpeed;
+    private float playerSpeed = 3f;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
-    private Vector3 directionMovePlayer;
     private bool canJump = true;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
@@ -36,25 +35,24 @@ public class PlayerController : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
        
-        playerInput = new Vector3(horizontalMove * playerSpeed, rb.velocity.y ,verticalMove * playerSpeed) ;
-        //playerInput = Vector3.ClampMagnitude(playerInput,1);
+        playerInput = new Vector3(horizontalMove * playerSpeed, rb.velocity.y ,verticalMove * playerSpeed);
         
         if (horizontalMove != 0 || verticalMove != 0)
         { 
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerSpeed = 5;
+            playerSpeed = 3;
             
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                playerSpeed = 7;
+                playerSpeed = 4;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                playerSpeed = 5;
+                playerSpeed = 3;
                 playerSpeedForAnimation = 0.2f; 
             }
         }
@@ -65,11 +63,11 @@ public class PlayerController : MonoBehaviour
         
         CamDirection();
 
-        directionMovePlayer = playerInput.x * camRight + playerInput.z * camForward;
-       
-        transform.LookAt(transform.position + directionMovePlayer);
+        playerInput = playerInput.x * camRight + playerInput.z * camForward;
+        transform.LookAt(transform.position + playerInput);
         
-        rb.AddForce(directionMovePlayer);
+        playerInput.y = rb.velocity.y;
+        rb.velocity = playerInput;
         
         if (Input.GetKey(KeyCode.Space) && canJump && jumpActive)
         {
@@ -79,7 +77,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void CamDirection()
+   void CamDirection()
     {
         camForward = mainCamera.transform.forward;
         camRight = mainCamera.transform.right;
