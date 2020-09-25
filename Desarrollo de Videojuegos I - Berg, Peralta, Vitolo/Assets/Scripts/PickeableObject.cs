@@ -8,7 +8,7 @@ public class PickeableObject : MonoBehaviour
    public bool isPickeable = true;
    private Rigidbody rb;
    public string tagName;
-  
+   [SerializeField] private GameObject pickUpTextToShow;
    private void Start()
    {
       rb = GetComponent<Rigidbody>();
@@ -21,12 +21,21 @@ public class PickeableObject : MonoBehaviour
          rb.WakeUp();
       }
    }
-   
+
+   private void Update()
+   {
+      if (isPickeable == false)
+      {
+         pickUpTextToShow.SetActive(false);
+      }
+   }
+
    private void OnTriggerEnter(Collider other)
    {
       if (other.gameObject.tag.Equals("DetectItem"))
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = this.gameObject;
+         pickUpTextToShow.SetActive(true);
          tagName = tag;
       }
    }
@@ -44,6 +53,7 @@ public class PickeableObject : MonoBehaviour
       if (other.gameObject.tag.Equals("DetectItem"))
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = null;
+         pickUpTextToShow.SetActive(false);
       }
    }
 }

@@ -5,4 +5,5 @@ using UnityEngine;
 public class Parchments : MonoBehaviour
 {
     [SerializeField] public GameObject textToShow;
+ 
 }
