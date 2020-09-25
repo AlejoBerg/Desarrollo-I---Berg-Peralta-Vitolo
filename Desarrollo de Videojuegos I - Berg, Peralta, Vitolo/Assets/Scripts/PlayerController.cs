@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float jumpForce = 5f;
     private float horizontalMove;
     private float verticalMove;
-    private float playerSpeed = 3f;
+    private float playerSpeed = 1.5f;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
@@ -41,18 +41,18 @@ public class PlayerController : MonoBehaviour
         { 
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerSpeed = 3;
+            playerSpeed = 1.5f;
             
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                playerSpeed = 4;
+                playerSpeed = 3f;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                playerSpeed = 3;
+                playerSpeed = 1.5f;
                 playerSpeedForAnimation = 0.2f; 
             }
         }
