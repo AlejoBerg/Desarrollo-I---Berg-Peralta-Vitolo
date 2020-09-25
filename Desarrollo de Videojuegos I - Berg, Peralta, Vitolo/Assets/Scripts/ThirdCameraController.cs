@@ -51,5 +51,5 @@ public class ThirdCameraController : MonoBehaviour
         fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity; 
         fov = Mathf.Clamp(fov, minFov, maxFov);
         camera.fieldOfView = fov;
-    }   
+    }
 }

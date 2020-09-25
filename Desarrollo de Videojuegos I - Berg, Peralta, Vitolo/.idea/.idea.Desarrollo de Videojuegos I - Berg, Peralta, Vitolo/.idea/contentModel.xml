@@ -63,6 +63,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraCollider.cs" t="Include" />
           <e p="LigthsOn.cs" t="Include" />
           <e p="Parchments.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />
