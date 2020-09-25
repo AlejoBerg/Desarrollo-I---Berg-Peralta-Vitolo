@@ -7,8 +7,9 @@ public class PickeableObject : MonoBehaviour
 {
    public bool isPickeable = true;
    private Rigidbody rb;
+   private bool active = true;
    public string tagName;
-   [SerializeField] private GameObject pickUpTextToShow;
+   [SerializeField] public GameObject pickUpTextToShow;
    private void Start()
    {
       rb = GetComponent<Rigidbody>();
@@ -37,6 +38,7 @@ public class PickeableObject : MonoBehaviour
       if (other.gameObject.tag.Equals("Platforms"))
       {
          isPickeable = false;
+         active = true;
       }
    }
 

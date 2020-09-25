@@ -30,6 +30,7 @@ public class PickupObject : MonoBehaviour
         pickedObject.transform.position = interactionZone.position;
         pickedObject.GetComponent<Rigidbody>().useGravity = false;
         pickedObject.GetComponent<Rigidbody>().isKinematic = true;
+        itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
     }
     else if (pickedObject != null)
@@ -53,6 +54,7 @@ public class PickupObject : MonoBehaviour
         pickedObject.GetComponent<PickeableObject>().isPickeable = false;
         _parchments.textToShow.SetActive(true);
         hudOff = true;
+        itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
     }
     else if (hudOff)
