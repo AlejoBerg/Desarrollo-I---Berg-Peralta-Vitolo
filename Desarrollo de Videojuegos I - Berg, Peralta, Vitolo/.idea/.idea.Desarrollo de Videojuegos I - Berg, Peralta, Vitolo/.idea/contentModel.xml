@@ -38,6 +38,9 @@
               <e p="Legacy Project_Read Me!.txt" t="Include" />
             </e>
           </e>
+          <e p="Spider2D" t="Include">
+            <e p="SpiderBlinking.cs" t="Include" />
+          </e>
         </e>
         <e p="Animations" t="Include">
           <e p="Rokoko" t="Include">

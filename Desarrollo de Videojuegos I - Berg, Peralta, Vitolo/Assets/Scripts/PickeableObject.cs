@@ -21,18 +21,10 @@ public class PickeableObject : MonoBehaviour
          rb.WakeUp();
       }
    }
-
-   private void Update()
-   {
-      if (isPickeable == false)
-      {
-         pickUpTextToShow.SetActive(false);
-      }
-   }
-
+   
    private void OnTriggerEnter(Collider other)
    {
-      if (other.gameObject.tag.Equals("DetectItem"))
+      if (other.gameObject.tag.Equals("DetectItem") && isPickeable)
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = this.gameObject;
          pickUpTextToShow.SetActive(true);
