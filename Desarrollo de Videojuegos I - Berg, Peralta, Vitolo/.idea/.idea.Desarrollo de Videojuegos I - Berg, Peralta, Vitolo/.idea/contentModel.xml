@@ -67,11 +67,15 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraCollider.cs" t="Include" />
+          <e p="Collectionables.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="LigthsOn.cs" t="Include" />
           <e p="Parchments.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />
           <e p="PickupObject.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="ScoreHUD.cs" t="Include" />
+          <e p="TextFader.cs" t="Include" />
           <e p="ThirdCameraController.cs" t="Include" />
           <e p="TurnLightsOnWhenEnter.cs" t="Include" />
         </e>

@@ -10,6 +10,8 @@ public class PickeableObject : MonoBehaviour
    private bool active = true;
    public string tagName;
    [SerializeField] public GameObject pickUpTextToShow;
+   [SerializeField] public Parchments _parchments;
+   [SerializeField] private Collectionables _collectionables;
    private void Start()
    {
       rb = GetComponent<Rigidbody>();

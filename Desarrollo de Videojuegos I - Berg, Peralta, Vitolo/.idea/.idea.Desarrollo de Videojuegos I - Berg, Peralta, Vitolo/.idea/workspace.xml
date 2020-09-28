@@ -20,7 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,15 +43,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Parchments.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextFader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TurnLightsOnWhenEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,10 +75,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +96,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3492647" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29963234" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -89,10 +111,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11424">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11424" />
       <method v="2" />
     </configuration>
   </component>
@@ -133,6 +155,7 @@
       <workItem from="1601045460024" duration="3289000" />
       <workItem from="1601071477616" duration="390000" />
       <workItem from="1601072062138" duration="295000" />
+      <workItem from="1601299409394" duration="11612000" />
     </task>
     <servers />
   </component>
@@ -158,6 +181,70 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="938" height="68" key="GridCell.Tab.0.bottom" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.0.center" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.0.left" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.0.right" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.1.bottom" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.1.center" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.1.left" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.1.right" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.2.bottom" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.2.center" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.2.left" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.2.right" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.3.bottom" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.3.center" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.3.left" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
+    <state width="938" height="68" key="GridCell.Tab.3.right" timestamp="1601314836532">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="68" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601314836532" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1598541877404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

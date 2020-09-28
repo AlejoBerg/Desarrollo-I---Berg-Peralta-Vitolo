@@ -35,8 +35,7 @@ public class PlayerController : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
         
-        playerInput = new Vector3(horizontalMove, rb.velocity.y ,verticalMove).normalized;
-        playerInput = new Vector3(playerInput.x * playerSpeed, rb.velocity.y ,playerInput.z * playerSpeed);
+        playerInput = new Vector3(horizontalMove, 0 ,verticalMove).normalized * playerSpeed;
         
         if (horizontalMove != 0 || verticalMove != 0)
         { 
