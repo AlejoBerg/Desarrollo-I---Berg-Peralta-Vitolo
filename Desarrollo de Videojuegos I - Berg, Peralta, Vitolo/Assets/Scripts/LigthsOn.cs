@@ -10,12 +10,14 @@ public class LigthsOn : MonoBehaviour
     [SerializeField] private GameObject []Spot1ight ;
     [SerializeField] private LigthsOn secondPlatform = null;
     [SerializeField] private GameObject eliminateWall = null;
+    [SerializeField] private FadeOutParticles particlesWall = null;
     private bool isActivated = false;
     private float currentLightsOnTime;
     private float LightsOnSpawnTime = 2f;
     private Vector3 initialPlatformPosition = Vector3.zero;
     private Vector3 endPlatformPosition = Vector3.zero;
     private float time = 0f;
+    private bool wallWasFaded = false;
 
     private void Start()
     {
@@ -28,6 +30,11 @@ public class LigthsOn : MonoBehaviour
         if (isActivated && secondPlatform.isActivated == true)
         {
             AllLigthsOn();
+            if (wallWasFaded == false)
+            {
+                wallWasFaded = true;
+                particlesWall.ExecuteFadeParticle();
+            }
             eliminateWall.SetActive(false);
         }
     }
