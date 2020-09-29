@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class CameraCollider : MonoBehaviour
 {
-    [SerializeField] private Transform posCamera;
-    RaycastHit hit;
-	private Vector3 cameraOffset;
-   	void Start ()
+    public float minDistance = 0f;
+	public float maxDistance = 3f;
+	public float smooth;
+	Vector3 dollyDir;
+	float distance; 
+	
+   	void Awake ()
     {
-	    cameraOffset = posCamera.localPosition;
+	    dollyDir = transform.localPosition.normalized;
+	    distance = transform.localPosition.magnitude;
     }
    	
-   	void Update () 
+   	void Update ()
     {
-	    if (Physics.Linecast (transform.position, transform.position + transform.localRotation*cameraOffset, out hit))
+	    Vector3 desiredCameraPos = transform.TransformPoint(dollyDir * maxDistance);
+	    RaycastHit hit;
+
+	    if (Physics.Linecast(transform.position, desiredCameraPos, out hit))
 	    {
-		    posCamera.localPosition = new Vector3(0, 0, Vector3.Distance(transform.position, hit.point));
-		    Debug.Log("hay colision");
-	    } 
+		    distance = Mathf.Clamp(hit.distance, minDistance, maxDistance);
+	    }
 	    else
 	    {
-		    posCamera.localPosition = Vector3.Lerp(posCamera.localPosition,cameraOffset,Time.deltaTime);
-		    Debug.Log("no hay colision");
+		    distance = maxDistance;
 	    }
+	    transform.localPosition = Vector3.Lerp( transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
     }
 }

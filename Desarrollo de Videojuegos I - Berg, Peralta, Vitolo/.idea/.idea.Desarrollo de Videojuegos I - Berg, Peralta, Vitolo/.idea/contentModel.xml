@@ -68,6 +68,7 @@
         <e p="Scripts" t="Include">
           <e p="CameraCollider.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
+          <e p="FadeOutParticles.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="LigthsOn.cs" t="Include" />
           <e p="Parchments.cs" t="Include" />
