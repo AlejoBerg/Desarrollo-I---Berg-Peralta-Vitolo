@@ -29,7 +29,7 @@ public class LigthsOn : MonoBehaviour
     {
         if (isActivated && secondPlatform.isActivated == true)
         {
-            AllLigthsOn();
+            //AllLigthsOn();
             if (wallWasFaded == false)
             {
                 wallWasFaded = true;
