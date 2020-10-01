@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="" />
+    <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,8 +75,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
       </list>
     </option>
   </component>
@@ -152,6 +157,7 @@
       <workItem from="1601571783824" duration="2331000" />
       <workItem from="1601580464233" duration="839000" />
       <workItem from="1601581447712" duration="7460000" />
+      <workItem from="1601591328009" duration="1246000" />
     </task>
     <servers />
   </component>

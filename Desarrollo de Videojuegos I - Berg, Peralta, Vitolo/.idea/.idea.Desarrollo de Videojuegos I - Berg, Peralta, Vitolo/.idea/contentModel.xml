@@ -69,6 +69,7 @@
           <e p="CameraCollider.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />
+          <e p="FallingRocks.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Parchments.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />
