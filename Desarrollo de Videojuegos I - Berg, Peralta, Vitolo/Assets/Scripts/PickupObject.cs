@@ -43,6 +43,7 @@ public class PickupObject : MonoBehaviour
       {
         torchObject = itemToPickUp;
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
+        torchObject.transform.rotation = Quaternion.Euler(0,0,0);
         torchObject.transform.SetParent(backpackZone);
         torchObject.transform.position = backpackZone.position;
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);

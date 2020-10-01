@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Parchments : MonoBehaviour
 {
-    public GameObject textToShow;
     [SerializeField] private Text textDisplay;
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
