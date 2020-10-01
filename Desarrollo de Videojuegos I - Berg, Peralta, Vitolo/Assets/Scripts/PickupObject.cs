@@ -43,7 +43,6 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         torchObject = itemToPickUp;
-        originalScale = torchObject.transform.localScale;
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
         torchObject.transform.SetParent(backpackZone);
         torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
