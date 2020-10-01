@@ -11,7 +11,8 @@ public class PickupObject : MonoBehaviour
   [HideInInspector] public GameObject itemToPickUp;
   [HideInInspector] public GameObject pickedObject;
   [HideInInspector] public GameObject torchObject;
-  
+  [SerializeField] private Vector3 torchPosition;
+  [SerializeField] private Vector3 torchAngleRotation;
   private void Start()
   {
     player = GetComponent<PlayerController>();
@@ -42,10 +43,12 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         torchObject = itemToPickUp;
+        originalScale = torchObject.transform.localScale;
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
-        torchObject.transform.rotation = Quaternion.Euler(0,0,0);
         torchObject.transform.SetParent(backpackZone);
-        torchObject.transform.position = backpackZone.position;
+        torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
+        torchObject.transform.localScale = new Vector3(2.2f,1,2f);
+        torchObject.transform.localPosition = torchPosition;
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
     }
