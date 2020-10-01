@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class Parchments : MonoBehaviour
 {
-    [SerializeField] private Text textDisplay;
+    [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
     private int index;
     private bool finish = false;
     private float currentTextTime;
     private float TextExitTime = 1f;
+    private Text textDisplayReference;
     [HideInInspector] public bool activeType = false;
 
     private void Update()
@@ -21,12 +22,14 @@ public class Parchments : MonoBehaviour
         {
             transform.position = new Vector3(-1,-1,-1);
             StartCoroutine(Type());
+            textDisplay.GetComponent<TextFader>().Fade();
             activeType = false;
         }
         
         if (finish && currentTextTime >= TextExitTime)
         {
-            textDisplay.text = "";
+            textDisplay.GetComponent<TextFader>().Fade();
+            textDisplay.GetComponent<Text>().text = "";
             Destroy(gameObject);
         }
         else
@@ -39,7 +42,7 @@ public class Parchments : MonoBehaviour
     {
         foreach (char letter in sentences[index].ToCharArray())
         {
-            textDisplay.text += letter;
+            textDisplay.GetComponent<Text>().text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
         currentTextTime = 0;
