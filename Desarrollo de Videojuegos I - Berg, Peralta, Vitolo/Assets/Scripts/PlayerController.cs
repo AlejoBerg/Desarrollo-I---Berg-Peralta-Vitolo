@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private Rigidbody rb;
-    public bool jumpActive = false;
+    [HideInInspector] public bool jumpActive = false;
     
     void Start()
     {

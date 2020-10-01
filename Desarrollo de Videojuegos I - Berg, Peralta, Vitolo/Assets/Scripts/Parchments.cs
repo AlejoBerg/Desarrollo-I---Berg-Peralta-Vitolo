@@ -10,11 +10,11 @@ public class Parchments : MonoBehaviour
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
     private int index;
-    public bool activeType = false;
     private bool finish = false;
     private float currentTextTime;
     private float TextExitTime = 1f;
-   
+    [HideInInspector] public bool activeType = false;
+
     private void Update()
     {
         if (activeType)
@@ -26,7 +26,7 @@ public class Parchments : MonoBehaviour
         
         if (finish && currentTextTime >= TextExitTime)
         {
-            textDisplay.enabled = false;
+            textDisplay.text = "";
             Destroy(gameObject);
         }
         else

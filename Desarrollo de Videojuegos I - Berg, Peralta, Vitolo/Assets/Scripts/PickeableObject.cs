@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PickeableObject : MonoBehaviour
 {
-   public bool isPickeable = true;
+   [HideInInspector] public bool isPickeable = true;
    private Rigidbody rb;
    private bool active = true;
-   public string tagName;
+   [HideInInspector] public string tagName;
    [SerializeField] public GameObject pickUpTextToShow;
    [SerializeField] public Parchments _parchments;
    [SerializeField] private Collectionables _collectionables;

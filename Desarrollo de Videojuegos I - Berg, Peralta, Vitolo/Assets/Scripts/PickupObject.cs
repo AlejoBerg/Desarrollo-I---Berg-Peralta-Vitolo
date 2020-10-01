@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PickupObject : MonoBehaviour
 {
-  [SerializeField] public GameObject itemToPickUp;
-  [SerializeField] public GameObject pickedObject;
-  [SerializeField] public GameObject torchObject;
   [SerializeField] private Transform interactionZone;
   [SerializeField] private Transform backpackZone;
   [SerializeField] private PlayerController player;
+  [HideInInspector] public GameObject itemToPickUp;
+  [HideInInspector] public GameObject pickedObject;
+  [HideInInspector] public GameObject torchObject;
   
   private void Start()
   {

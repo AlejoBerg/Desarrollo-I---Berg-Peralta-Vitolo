@@ -16,7 +16,7 @@ public class TextFader : MonoBehaviour
         tFaded = !tFaded;
     }
 
-    public IEnumerator DoFade(CanvasGroup canv, float start, float end)
+    IEnumerator DoFade(CanvasGroup canv, float start, float end)
     {
         float counter = 0f;
 
@@ -28,7 +28,4 @@ public class TextFader : MonoBehaviour
             yield return null;
         }
     }
-    
-
-    
 }
