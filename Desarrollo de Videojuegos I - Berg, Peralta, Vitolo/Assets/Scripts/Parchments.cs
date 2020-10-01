@@ -13,7 +13,6 @@ public class Parchments : MonoBehaviour
     private bool finish = false;
     private float currentTextTime;
     private float TextExitTime = 1f;
-    private Text textDisplayReference;
     [HideInInspector] public bool activeType = false;
 
     private void Update()
@@ -29,13 +28,13 @@ public class Parchments : MonoBehaviour
         if (finish && currentTextTime >= TextExitTime)
         {
             textDisplay.GetComponent<TextFader>().Fade();
-            textDisplay.GetComponent<Text>().text = "";
             Destroy(gameObject);
         }
         else
         {
             currentTextTime += Time.deltaTime;
         }
+        if(textDisplay.GetComponent<CanvasGroup>().alpha == 0f){textDisplay.GetComponent<Text>().text = "";}
     }
 
     IEnumerator Type()
