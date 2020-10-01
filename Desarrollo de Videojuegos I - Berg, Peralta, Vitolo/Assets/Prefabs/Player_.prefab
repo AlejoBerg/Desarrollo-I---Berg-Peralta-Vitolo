@@ -1885,12 +1885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5ec0ff5a2db2345a67a73372624f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToPickUp: {fileID: 0}
-  pickedObject: {fileID: 0}
-  torchObject: {fileID: 0}
   interactionZone: {fileID: 205346376}
   backpackZone: {fileID: 570978058}
   player: {fileID: 915654347}
+  itemToPickUp: {fileID: 0}
+  pickedObject: {fileID: 0}
+  torchObject: {fileID: 0}
+  torchPosition: {x: 0, y: 0, z: 0.55}
+  torchAngleRotation: {x: 0, y: 0, z: 30}
 --- !u!54 &915654348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2416,7 +2418,7 @@ PrefabInstance:
     - target: {fileID: 8784614007687792904, guid: b56b20aad3cb5f946870e58e36669352,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.748
+      value: 0.734
       objectReference: {fileID: 0}
     - target: {fileID: 8784614007687792904, guid: b56b20aad3cb5f946870e58e36669352,
         type: 3}
