@@ -1321,18 +1321,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1508693533}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &208917493 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2114690058472361170}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80c55e8fce0f4b4c971ec4546ec55ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &217060844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3608,111 +3596,6 @@ Transform:
   m_Father: {fileID: 776660197}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 33.551003, z: 0}
---- !u!1001 &532905892
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1017801306}
-    m_Modifications:
-    - target: {fileID: 2114690057682381547, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Pergamino3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textToShow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textDisplay
-      value: 
-      objectReference: {fileID: 1576490829}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: typingSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.data[0]
-      value: Probando el texto, Pergamino 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 53.311348
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06399989
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 128.24464
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.24105084
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.9705125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -387.897
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6225955000643472571, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: pickUpTextToShow
-      value: 
-      objectReference: {fileID: 1230827546}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6, type: 3}
---- !u!4 &532905893 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 532905892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &544569489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4239,6 +4122,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e5729b831663543a078a5fc4f8f136, type: 3}
+--- !u!1 &609479436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609479437}
+  m_Layer: 0
+  m_Name: Pergamino3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &609479437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609479436}
+  m_LocalRotation: {x: -0, y: -0.9433897, z: -0, w: -0.3316864}
+  m_LocalPosition: {x: 48.338, y: 1.102, z: 125.388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1801869289}
+  m_Father: {fileID: 1017801306}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -218.74199, z: 0}
 --- !u!1001 &626212300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4629,6 +4543,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 360934833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &725206149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725206150}
+  m_Layer: 0
+  m_Name: Pergamino1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725206150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725206149}
+  m_LocalRotation: {x: -0, y: -0.9433897, z: -0, w: -0.3316864}
+  m_LocalPosition: {x: 27.542862, y: 1.102, z: 30.515}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2110835550}
+  m_Father: {fileID: 1017801306}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -218.74199, z: 0}
 --- !u!1001 &727416971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5670,12 +5615,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7594838306756706246, guid: b7e5729b831663543a078a5fc4f8f136,
     type: 3}
   m_PrefabInstance: {fileID: 349262467}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &863954490 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2114690058472361170}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &877779320
 PrefabInstance:
@@ -7276,9 +7215,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8230603768254252226}
-  - {fileID: 863954490}
-  - {fileID: 532905893}
+  - {fileID: 8025442995635236393}
+  - {fileID: 725206150}
+  - {fileID: 609479437}
   m_Father: {fileID: 1728202145}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7592,7 +7531,7 @@ PrefabInstance:
     - target: {fileID: 1304015810, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
       propertyPath: _parchments
       value: 
-      objectReference: {fileID: 208917493}
+      objectReference: {fileID: 0}
     - target: {fileID: 915654347, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
       propertyPath: mainCamera
       value: 
@@ -12794,6 +12733,96 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.82, y: 4.016376, z: 3.9635577}
   m_Center: {x: 0.08065367, y: 0.06216979, z: -0.020312548}
+--- !u!1001 &1801869288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 609479437}
+    m_Modifications:
+    - target: {fileID: 9180825957051406203, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_Name
+      value: Pergamino
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.966
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771539157301688416, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1230827546}
+    - target: {fileID: 2240355331259175406, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
+    - target: {fileID: 2240355331259175406, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Probando el texto, Pergamino 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
+--- !u!4 &1801869289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801869288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1803050995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7594838306756706246, guid: b7e5729b831663543a078a5fc4f8f136,
@@ -15360,6 +15389,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e5729b831663543a078a5fc4f8f136, type: 3}
+--- !u!1001 &2110835549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 725206150}
+    m_Modifications:
+    - target: {fileID: 9180825957051406203, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_Name
+      value: Pergamino
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.254
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771539157301688416, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1230827546}
+    - target: {fileID: 2240355331259175406, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
+    - target: {fileID: 2240355331259175406, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Probando el texto, Pergamino 1.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
+--- !u!4 &2110835550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2110835549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2120058696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7594838306756706246, guid: b7e5729b831663543a078a5fc4f8f136,
@@ -15372,105 +15491,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1989652492}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2114690058472361170
+--- !u!1001 &1155386002514374682
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1017801306}
+    m_TransformParent: {fileID: 8025442995635236393}
     m_Modifications:
-    - target: {fileID: 2114690057682381547, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406203, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_Name
-      value: Pergamino1
+      value: Pergamino
       objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textToShow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textDisplay
-      value: 
-      objectReference: {fileID: 1576490829}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.data[0]
-      value: Probando el texto, Pergamino 1.
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: typingSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.841003
+      value: 1.336
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.221
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.49826
+      value: -0.229
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.76551354
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.64341986
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -99.90501
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6225955000643472571, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+    - target: {fileID: 3771539157301688416, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: pickUpTextToShow
       value: 
       objectReference: {fileID: 1230827546}
+    - target: {fileID: 2240355331259175406, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
 --- !u!1001 &2564475654624384621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42453,17 +42552,17 @@ PrefabInstance:
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -169.023
+      value: -168.96
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.068
+      value: -4.0057
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -201.4359
+      value: -201.44
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
@@ -42505,6 +42604,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -45.539
       objectReference: {fileID: 0}
+    - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.70156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.70156
+      objectReference: {fileID: 0}
     - target: {fileID: 4420386173300344880, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: pickUpTextToShow
@@ -42533,108 +42647,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2564475654624384621}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8230603768254252225
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1017801306}
-    m_Modifications:
-    - target: {fileID: 2114690057682381547, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Pergamino2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textToShow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: textDisplay
-      value: 
-      objectReference: {fileID: 1576490829}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: typingSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018296326793831733, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: sentences.Array.data[0]
-      value: Probando el texto, Pergamino 2.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.542862
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9744127
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 106.88401
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9433897
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.3316864
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -218.74199
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6225955000643472571, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
-        type: 3}
-      propertyPath: pickUpTextToShow
-      value: 
-      objectReference: {fileID: 1230827546}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6, type: 3}
---- !u!4 &8230603768254252226 stripped
+--- !u!4 &8025442995635236393
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2114690057682381544, guid: 319e2dd9f1cab3c4b9d046e1a48da0e6,
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025442995635236394}
+  m_LocalRotation: {x: -0, y: -0.9433897, z: -0, w: -0.3316864}
+  m_LocalPosition: {x: 27.542862, y: 0.9744127, z: 106.88401}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8025442996456515424}
+  m_Father: {fileID: 1017801306}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -218.74199, z: 0}
+--- !u!1 &8025442995635236394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8025442995635236393}
+  m_Layer: 0
+  m_Name: Pergamino2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8025442996456515424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9180825957051406202, guid: 5de2482e7c47431408bcd0474ac7bc5e,
     type: 3}
-  m_PrefabInstance: {fileID: 8230603768254252225}
+  m_PrefabInstance: {fileID: 1155386002514374682}
   m_PrefabAsset: {fileID: 0}
