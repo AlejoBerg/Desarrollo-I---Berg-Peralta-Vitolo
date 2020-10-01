@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         playerInput.y = rb.velocity.y;
         rb.velocity = playerInput;
         
-        if (Input.GetKey(KeyCode.Space) && canJump && jumpActive)
+        if (Input.GetButton("Jump") && canJump && jumpActive)
         {
             rb.velocity += Vector3.up * jumpForce;
             playerAnimator.SetBool("IsGrounded", false);

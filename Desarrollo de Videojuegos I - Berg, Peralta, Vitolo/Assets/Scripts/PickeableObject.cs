@@ -16,14 +16,6 @@ public class PickeableObject : MonoBehaviour
    {
       rb = GetComponent<Rigidbody>();
    }
-
-   private void FixedUpdate()
-   {
-      if (rb.IsSleeping())
-      {
-         rb.WakeUp();
-      }
-   }
    
    private void OnTriggerEnter(Collider other)
    {

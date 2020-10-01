@@ -9,6 +9,6 @@ public class ScoreHUD : MonoBehaviour
     
     void Update()
     {
-        Puntaje.text = GameManager.score.ToString();
+        Puntaje.text = GameManager.Score.ToString();
     }
 }
