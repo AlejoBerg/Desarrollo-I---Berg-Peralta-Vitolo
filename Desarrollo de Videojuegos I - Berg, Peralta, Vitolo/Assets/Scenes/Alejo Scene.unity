@@ -12815,6 +12815,26 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Probando el texto, Pergamino 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4742057864739695090, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1230827546}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Probando Texto Pergamino 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
 --- !u!4 &1801869289 stripped
@@ -15471,6 +15491,26 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Probando el texto, Pergamino 1.
       objectReference: {fileID: 0}
+    - target: {fileID: 4742057864739695090, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1230827546}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Probando Texto Pergamino 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
 --- !u!4 &2110835550 stripped
@@ -15568,6 +15608,26 @@ PrefabInstance:
       propertyPath: textDisplay
       value: 
       objectReference: {fileID: 1576490829}
+    - target: {fileID: 4742057864739695090, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1230827546}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: textDisplay
+      value: 
+      objectReference: {fileID: 1576490829}
+    - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Probando Texto Pergamino 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
 --- !u!1001 &2564475654624384621
@@ -42552,17 +42612,17 @@ PrefabInstance:
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -168.96
+      value: -169.0395
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0057
+      value: -4.0631
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -201.44
+      value: -201.24
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
@@ -42607,17 +42667,17 @@ PrefabInstance:
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.70156
+      value: 0.9811906
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70156
+      value: 0.9811906
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.70156
+      value: 0.9811906
       objectReference: {fileID: 0}
     - target: {fileID: 4420386173300344880, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
