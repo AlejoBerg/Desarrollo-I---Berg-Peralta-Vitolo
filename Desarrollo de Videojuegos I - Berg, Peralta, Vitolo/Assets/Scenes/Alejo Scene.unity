@@ -16868,7 +16868,7 @@ PrefabInstance:
     - target: {fileID: 3460452490571384472, guid: 5de2482e7c47431408bcd0474ac7bc5e,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Probando Texto Pergamino 1
+      value: Jump Achieved [Space Bar]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de2482e7c47431408bcd0474ac7bc5e, type: 3}
