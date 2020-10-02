@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205346375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.53499997, z: 0.402}
+  m_LocalPosition: {x: 0, y: 0.53499997, z: 0.531}
   m_LocalScale: {x: 0.30978, y: 1, z: 0.3125}
   m_Children: []
   m_Father: {fileID: 6813863927669946252}
@@ -42,52 +42,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &570978057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 570978058}
-  - component: {fileID: 570978059}
-  m_Layer: 0
-  m_Name: backpackZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &570978058
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570978057}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.821, z: -2.243}
-  m_LocalScale: {x: 0.3, y: 1.2, z: 0.3}
-  m_Children: []
-  m_Father: {fileID: 6813863927669946252}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &570978059
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570978057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.8534024, y: 1, z: 2.2606447}
+  m_Center: {x: 0.10420384, y: 0, z: 0.63032216}
 --- !u!1 &6810439499901684892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1805,6 @@ Transform:
   - {fileID: 6813886289426247344}
   - {fileID: 6814254707097038650}
   - {fileID: 205346376}
-  - {fileID: 570978058}
   - {fileID: 3784669621815066370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1891,8 +1846,8 @@ MonoBehaviour:
   itemToPickUp: {fileID: 0}
   pickedObject: {fileID: 0}
   torchObject: {fileID: 0}
-  torchPosition: {x: 0, y: 100, z: -30}
-  torchAngleRotation: {x: 30, y: 0, z: 0}
+  torchPosition: {x: 0, y: 100, z: 0.55}
+  torchAngleRotation: {x: 30, y: 0, z: -20}
 --- !u!54 &915654348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1936,7 +1891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  jumpForce: 5
+  jumpForce: 4
   jumpActive: 0
 --- !u!1 &6811225707267614296
 GameObject:
@@ -2448,7 +2403,7 @@ PrefabInstance:
     - target: {fileID: 8784614007687792904, guid: b56b20aad3cb5f946870e58e36669352,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8784614007687792904, guid: b56b20aad3cb5f946870e58e36669352,
         type: 3}
