@@ -5,6 +5,7 @@ using UnityEngine;
 public class FallingRocks : MonoBehaviour
 {
     [SerializeField] private GameObject[] objectsToThrow;
+    [SerializeField] private AudioSource objectFallingSFX;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class FallingRocks : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            objectFallingSFX.Play();
             for (int i = 0; i < objectsToThrow.Length; i++)
             {
                 objectsToThrow[i].SetActive(true);

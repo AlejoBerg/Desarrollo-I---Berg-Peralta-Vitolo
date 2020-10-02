@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +14,9 @@ public class Collectionables : MonoBehaviour
   private void Update()
     {
         if (isPickUP)
-        { 
+        {
+            var sfxCollectable = GetComponent<AudioSource>();
+            sfxCollectable.Play();
             _textFader.Fade();
             isPickUP = false;
             activated = true;
