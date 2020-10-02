@@ -4113,7 +4113,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 96cc01ff557ec8a48b9e4fb64cb1b397, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 45675a0bf855aef479493ce7ea73a957, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.072
   m_Pitch: 1
@@ -8300,7 +8300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304015810, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
       propertyPath: torchPosition.z
-      value: -10
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 1304015810, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
       propertyPath: torchAngleRotation.z
@@ -16466,7 +16466,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 96cc01ff557ec8a48b9e4fb64cb1b397, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 45675a0bf855aef479493ce7ea73a957, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.072
   m_Pitch: 1
@@ -20071,6 +20071,16 @@ PrefabInstance:
       propertyPath: platformSFX
       value: 
       objectReference: {fileID: 2050453420}
+    - target: {fileID: 1763579472576681394, guid: 09abb63a2e21afd4f8421260a4bbfaa5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763579472576681394, guid: 09abb63a2e21afd4f8421260a4bbfaa5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.693
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09abb63a2e21afd4f8421260a4bbfaa5, type: 3}
 --- !u!1001 &5661137987313284411
