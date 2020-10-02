@@ -6,7 +6,6 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class WallsOut : MonoBehaviour
 {
-    private event Action OnCollisionWithRock;
 
     [SerializeField] private float platformSpeed = 0;
     [SerializeField] private WallsOut secondPlatform = null;
@@ -21,11 +20,10 @@ public class WallsOut : MonoBehaviour
 
     private void Start()
     {
-        OnCollisionWithRock += OnCollisionWithRockHandler;
         initialPlatformPosition = transform.position;
-        endPlatformPosition = initialPlatformPosition + new Vector3(0,-0.1f,0);
+        endPlatformPosition = initialPlatformPosition + new Vector3(0, -0.1f, 0);
     }
-    
+
     private void Update()
     {
         if (isActivated && secondPlatform.isActivated == true)
@@ -37,20 +35,20 @@ public class WallsOut : MonoBehaviour
             }
             eliminateWall.SetActive(false);
         }
+
+        if (isActivated) { PlatformAnimation(); }
     }
 
-    private void OnCollisionStay (Collision other) 
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag.Equals("Rocks"))
         {
-            print("reproduzco el sonido");
             platformSFX.Play();
             isActivated = true;
-            OnCollisionWithRock.Invoke();
         }
     }
-    
-    private void OnCollisionWithRockHandler()
+
+    private void PlatformAnimation()
     {
         time += Time.deltaTime * 0.5f;
         transform.position = new Vector3(initialPlatformPosition.x, (Mathf.Lerp(initialPlatformPosition.y, endPlatformPosition.y, time)), initialPlatformPosition.z);
