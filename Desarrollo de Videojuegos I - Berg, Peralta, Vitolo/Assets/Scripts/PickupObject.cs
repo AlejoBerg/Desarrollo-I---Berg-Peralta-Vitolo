@@ -27,10 +27,8 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        pickedObject = itemToPickUp;
-        pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+        ThingsToDo();
         pickedObject.transform.position = new Vector3(-1,-1,-1);
-        itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
         itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
       }
     }
@@ -50,6 +48,19 @@ public class PickupObject : MonoBehaviour
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
     }
+    
+    // pergaminos
+
+    if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
+        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Parchments") 
+    { 
+      if (Input.GetKeyDown(KeyCode.E))
+      {
+        ThingsToDo();
+        player.jumpActive = true;
+        pickedObject.GetComponent<Parchments>().activeType = true;
+      }
+    }
 
     /// cualquier otro
 
@@ -58,14 +69,12 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        pickedObject = itemToPickUp;
-        pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+        ThingsToDo();
         pickedObject.transform.SetParent(interactionZone);
         pickedObject.transform.position = interactionZone.position;
         if(pickedObject.GetComponent<Rigidbody>() != null){
-        pickedObject.GetComponent<Rigidbody>().useGravity = false;
-        pickedObject.GetComponent<Rigidbody>().isKinematic = true;}
-        itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<Rigidbody>().useGravity = false;
+          pickedObject.GetComponent<Rigidbody>().isKinematic = true;}
       }
     } 
     else if (pickedObject != null)
@@ -80,20 +89,12 @@ public class PickupObject : MonoBehaviour
           pickedObject = null;
       }
     }
-    
-    // pergaminos
 
-    if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
-        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Parchments") 
-      { 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-          pickedObject = itemToPickUp;
-          pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          player.jumpActive = true;
-          pickedObject.GetComponent<Parchments>().activeType = true;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-        }
-      }
+    void ThingsToDo()
+    {
+      pickedObject = itemToPickUp;
+      pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+      itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+    }
   }
 }

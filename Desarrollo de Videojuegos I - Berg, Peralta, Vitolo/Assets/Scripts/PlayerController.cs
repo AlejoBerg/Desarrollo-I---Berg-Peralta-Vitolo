@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             playerSpeed = 1.5f;
             
-            if (Input.GetKey(KeyCode.LeftShift))
+            /*if (Input.GetKey(KeyCode.LeftShift))
             {
                 playerSpeed = 3f;
                 playerSpeedForAnimation = 1.2f;
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerSpeed = 1.5f;
                 playerSpeedForAnimation = 0.2f; 
-            }
+            }*/ 
         }
         else
         {   playerSpeedForAnimation = 0;

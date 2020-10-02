@@ -23,6 +23,7 @@ public class Parchments : MonoBehaviour
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
             activeType = false;
+            GameManager.AddParchment(1);
         }
         
         if (finish && currentTextTime >= TextExitTime)
