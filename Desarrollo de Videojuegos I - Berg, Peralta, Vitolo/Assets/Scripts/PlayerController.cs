@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using Amazon.Runtime.Internal.Transform;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {    
     [SerializeField]private Camera mainCamera;
-    [SerializeField]private float jumpForce = 5f;
+    [SerializeField]private float jumpForce = 4f;
     private float horizontalMove;
     private float verticalMove;
     private float playerSpeed = 1.5f;
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
         
-        playerInput = new Vector3(horizontalMove, 0 ,verticalMove).normalized * playerSpeed;
+        playerInput = new Vector3(horizontalMove, 0,verticalMove).normalized * playerSpeed;
         
         if (horizontalMove != 0 || verticalMove != 0)
         { 
@@ -65,16 +66,16 @@ public class PlayerController : MonoBehaviour
 
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
-        
-        playerInput.y = rb.velocity.y;
-        rb.velocity = playerInput;
-        
-        if (Input.GetButton("Jump") && canJump && jumpActive)
+       
+        if (Input.GetButtonDown("Jump") && canJump && jumpActive)
         {
-            rb.velocity += Vector3.up * jumpForce;
+            rb.AddForce(Vector3.up * jumpForce,ForceMode.VelocityChange);
             playerAnimator.SetBool("IsGrounded", false);
             canJump = false;
         }
+       
+        playerInput.y = rb.velocity.y;
+        rb.velocity = playerInput;
     }
 
    void CamDirection()

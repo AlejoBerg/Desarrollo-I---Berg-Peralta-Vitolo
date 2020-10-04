@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 0.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 1.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 2.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 0.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 1.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 2.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_High Cliff_Large/Mesh/MRL_High Cliff_Large_LOD 0.fbm.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +87,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -166,6 +171,7 @@
       <workItem from="1601581447712" duration="7460000" />
       <workItem from="1601591328009" duration="1263000" />
       <workItem from="1601594208829" duration="6235000" />
+      <workItem from="1601764238394" duration="6807000" />
     </task>
     <servers />
   </component>
@@ -263,5 +269,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598542767639" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601749252050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601749252050" />
   </component>
 </project>
