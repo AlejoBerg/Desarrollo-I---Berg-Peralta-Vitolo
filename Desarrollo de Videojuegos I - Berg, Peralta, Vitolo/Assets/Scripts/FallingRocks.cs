@@ -21,6 +21,8 @@ public class FallingRocks : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            var colliderRef = GetComponent<Collider>();
+            Destroy(colliderRef);
             objectFallingSFX.Play();
             for (int i = 0; i < objectsToThrow.Length; i++)
             {
