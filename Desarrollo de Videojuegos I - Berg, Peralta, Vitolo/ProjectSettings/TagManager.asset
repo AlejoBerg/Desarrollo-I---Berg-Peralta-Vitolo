@@ -12,6 +12,7 @@ TagManager:
   - Collectable
   - Platforms
   - Antorch
+  - Walls
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private float playerSpeedForAnimation;
     private Rigidbody rb;
     [HideInInspector] public bool jumpActive = false;
+    private float coordsY;
     
     void Start()
     {
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
-        
+        coordsY = rb.velocity.y;
         playerInput = new Vector3(horizontalMove, 0,verticalMove).normalized * playerSpeed;
         
         if (horizontalMove != 0 || verticalMove != 0)
@@ -67,18 +68,17 @@ public class PlayerController : MonoBehaviour
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
        
+        rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
+        
         if (Input.GetButtonDown("Jump") && canJump && jumpActive)
         {
-            rb.AddForce(Vector3.up * jumpForce,ForceMode.VelocityChange);
+            rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
             canJump = false;
         }
-       
-        playerInput.y = rb.velocity.y;
-        rb.velocity = playerInput;
     }
 
-   void CamDirection()
+    void CamDirection()
     {
         camForward = mainCamera.transform.forward;
         camRight = mainCamera.transform.right;

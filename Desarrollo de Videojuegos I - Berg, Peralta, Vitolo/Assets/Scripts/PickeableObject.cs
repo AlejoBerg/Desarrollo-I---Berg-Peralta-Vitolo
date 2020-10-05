@@ -12,6 +12,7 @@ public class PickeableObject : MonoBehaviour
    [SerializeField] public GameObject pickUpTextToShow;
    [SerializeField] public Parchments _parchments;
    [SerializeField] private Collectionables _collectionables;
+   public AudioSource audioSFX = null;
    private void Start()
    {
       rb = GetComponent<Rigidbody>();

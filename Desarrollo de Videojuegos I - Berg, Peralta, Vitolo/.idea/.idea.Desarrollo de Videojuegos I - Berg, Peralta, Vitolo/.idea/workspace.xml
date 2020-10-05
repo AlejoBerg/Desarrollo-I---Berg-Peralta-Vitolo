@@ -20,19 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 4/Mesh/Generic Cliff 4_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 0.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 1.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_Generic Cliff 5/Mesh/MRL_Generic Cliff 5_LOD 2.fbm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Toby Fredson/Pack de piedras/Legacy Project/MRL_High Cliff_Large/Mesh/MRL_High Cliff_Large_LOD 0.fbm.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Temp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Temp.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Physic Material To Jump.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Temp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -80,15 +81,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TurnLightsOnWhenEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActiveRun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Temp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" />
       </list>
     </option>
   </component>
@@ -172,6 +174,7 @@
       <workItem from="1601591328009" duration="1263000" />
       <workItem from="1601594208829" duration="6235000" />
       <workItem from="1601764238394" duration="6807000" />
+      <workItem from="1601900359285" duration="7671000" />
     </task>
     <servers />
   </component>

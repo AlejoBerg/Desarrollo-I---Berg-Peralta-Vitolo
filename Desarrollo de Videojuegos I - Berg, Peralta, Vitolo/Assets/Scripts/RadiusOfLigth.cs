@@ -7,11 +7,12 @@ public class RadiusOfLigth : MonoBehaviour
 {
     private Light light;
     private bool addOrSubtrac = false;
+    [SerializeField] private float time;
     [SerializeField] float limitOfRangeLight;
 
     private void Update()
     {
-        if(addOrSubtrac){light.range = Mathf.Lerp(light.range, limitOfRangeLight, 0.005f);}
+        if(addOrSubtrac){light.range = Mathf.Lerp(light.range, limitOfRangeLight, time);}
     }
 
     private void OnTriggerEnter(Collider other)

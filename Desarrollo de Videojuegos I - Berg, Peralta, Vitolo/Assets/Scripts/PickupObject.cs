@@ -41,9 +41,10 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         torchObject = itemToPickUp;
+        torchObject.GetComponent<PickeableObject>().audioSFX.Play();
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
-        torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
         torchObject.transform.SetParent(backpackZone);
+        torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
         torchObject.transform.localPosition = torchPosition;
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
@@ -93,6 +94,7 @@ public class PickupObject : MonoBehaviour
     void ThingsToDo()
     {
       pickedObject = itemToPickUp;
+      if(pickedObject.GetComponent<AudioClip>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
       pickedObject.GetComponent<PickeableObject>().isPickeable = false;
       itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
     }
