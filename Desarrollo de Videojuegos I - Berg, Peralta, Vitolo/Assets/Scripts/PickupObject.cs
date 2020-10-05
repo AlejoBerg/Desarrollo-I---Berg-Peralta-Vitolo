@@ -94,7 +94,7 @@ public class PickupObject : MonoBehaviour
     void ThingsToDo()
     {
       pickedObject = itemToPickUp;
-      if(pickedObject.GetComponent<AudioClip>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
+      if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
       pickedObject.GetComponent<PickeableObject>().isPickeable = false;
       itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
     }
