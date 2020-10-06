@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     [HideInInspector] public bool jumpActive = false;
     private float coordsY;
+    [SerializeField]private float _distanceRayCast;
     
     void Start()
     {
@@ -32,6 +33,29 @@ public class PlayerController : MonoBehaviour
         Movement();
     }
 
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
+        
+       int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
+       
+       //layerMask = ~layerMask; // Con esta línea choco con todo menos con la capa 8
+
+       RaycastHit hit;
+       
+       if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, _distanceRayCast, layerMask))
+       {
+           Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+           Debug.Log("Did Hit");
+           rb.velocity = new Vector3(0, rb.velocity.y, 0);
+       }
+       else
+       {
+           Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+           Debug.Log("Did not Hit");
+       }
+    }
+
     void Movement()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal");
@@ -40,7 +64,7 @@ public class PlayerController : MonoBehaviour
         playerInput = new Vector3(horizontalMove, 0,verticalMove).normalized * playerSpeed;
         
         if (horizontalMove != 0 || verticalMove != 0)
-        { 
+        {
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             playerSpeed = 1.5f;
@@ -68,7 +92,7 @@ public class PlayerController : MonoBehaviour
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
        
-        rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
+        
         
         if (Input.GetButtonDown("Jump") && canJump && jumpActive)
         {

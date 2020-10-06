@@ -78,6 +78,7 @@
           <e p="RadiusOfLigth.cs" t="Include" />
           <e p="ScoreHUD.cs" t="Include" />
           <e p="Temp.cs" t="Include" />
+          <e p="test.cs" t="Include" />
           <e p="TextFader.cs" t="Include" />
           <e p="ThirdCameraController.cs" t="Include" />
           <e p="WallsOut.cs" t="Include" />

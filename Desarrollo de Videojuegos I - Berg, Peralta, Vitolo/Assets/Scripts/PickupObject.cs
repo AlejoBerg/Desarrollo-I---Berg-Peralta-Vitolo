@@ -36,7 +36,7 @@ public class PickupObject : MonoBehaviour
      //antorcha
      
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
-        torchObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Antorch")
+        torchObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Torch")
     {
       if (Input.GetKeyDown(KeyCode.E))
       {

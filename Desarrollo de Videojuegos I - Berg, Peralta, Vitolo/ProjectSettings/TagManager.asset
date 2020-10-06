@@ -11,8 +11,7 @@ TagManager:
   - Parchments
   - Collectable
   - Platforms
-  - Antorch
-  - Walls
+  - Torch
   layers:
   - Default
   - TransparentFX
@@ -22,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Walls
   - 
   - 
   - 
