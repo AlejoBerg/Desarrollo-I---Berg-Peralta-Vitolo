@@ -24,11 +24,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float _distanceRayCast;
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool test = false;
+    private Animator playerBagAnimator;
+    [SerializeField] private GameObject bagPack;
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
+        playerBagAnimator = bagPack.GetComponent<Animator>();
     }
 
     void Update()
@@ -71,7 +74,7 @@ public class PlayerController : MonoBehaviour
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             playerSpeed = 1.5f;
-            
+            playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
             /*if (Input.GetKey(KeyCode.LeftShift))
             {
                 playerSpeed = 3f;
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
         else
         {   playerSpeedForAnimation = 0;
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
+            playerBagAnimator.SetFloat("SpeedBagPack", 0f);
         }
         
         CamDirection();
@@ -99,6 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
+            //playerBagAnimator.SetBool("PlayerJump", true);
             canJump = false;
         }
     }
@@ -120,6 +125,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag.Equals("Floor"))
         {
             playerAnimator.SetBool("IsGrounded", true);
+            //playerBagAnimator.SetBool("PlayerJump", false);
             canJump = true;
         }
     }
