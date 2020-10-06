@@ -168,10 +168,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 10362407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dc43cdc06d4d54285b79cc0a1ad058, type: 3}
+  m_Script: {fileID: 11500000, guid: 922a0915274c88b4f80a2517f42da1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 1
 --- !u!225 &10362410
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1584,18 +1584,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 931660683}
-    - target: {fileID: 205346376, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 205346376, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0073299
-      objectReference: {fileID: 0}
-    - target: {fileID: 205346376, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.23942895
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
 --- !u!1 &915654346 stripped
@@ -2937,8 +2925,8 @@ GameObject:
   - component: {fileID: 1775195859}
   - component: {fileID: 1775195858}
   - component: {fileID: 1775195857}
-  - component: {fileID: 1775195860}
   - component: {fileID: 1775195861}
+  - component: {fileID: 1775195860}
   m_Layer: 5
   m_Name: FadeIn/Out
   m_TagString: Untagged
@@ -3029,7 +3017,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1775195855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dc43cdc06d4d54285b79cc0a1ad058, type: 3}
+  m_Script: {fileID: 11500000, guid: 922a0915274c88b4f80a2517f42da1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
@@ -3060,7 +3048,7 @@ GameObject:
   - component: {fileID: 1893967516}
   m_Layer: 8
   m_Name: Plane 20 grados
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

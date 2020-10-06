@@ -20,7 +20,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     [HideInInspector] public bool jumpActive = false;
     private float coordsY;
+    [SerializeField]private float _distanceDetectRayCast;
     [SerializeField]private float _distanceRayCast;
+    int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
+    private bool test = false;
     
     void Start()
     {
@@ -37,22 +40,22 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
         
-       int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
-       
        //layerMask = ~layerMask; // Con esta línea choco con todo menos con la capa 8
 
-       RaycastHit hit;
-       
-       if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, _distanceRayCast, layerMask))
+       if(test)
        {
-           Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-           Debug.Log("Did Hit");
-           rb.velocity = new Vector3(0, rb.velocity.y, 0);
-       }
-       else
-       {
-           Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-           Debug.Log("Did not Hit");
+         RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, _distanceDetectRayCast, layerMask))
+             {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                rb.velocity = new Vector3(0, rb.velocity.y, 0);
+             }
+            else
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * _distanceRayCast, Color.white);
+                test = false;
+            }
        }
     }
 
@@ -92,8 +95,6 @@ public class PlayerController : MonoBehaviour
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
        
-        
-        
         if (Input.GetButtonDown("Jump") && canJump && jumpActive)
         {
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
@@ -120,6 +121,14 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.SetBool("IsGrounded", true);
             canJump = true;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Walls"))
+        {
+            test = true;
         }
     }
 }

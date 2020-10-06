@@ -12,6 +12,7 @@ TagManager:
   - Collectable
   - Platforms
   - Torch
+  - Walls
   layers:
   - Default
   - TransparentFX
