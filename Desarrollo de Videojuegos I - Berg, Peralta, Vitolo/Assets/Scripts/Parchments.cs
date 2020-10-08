@@ -13,7 +13,7 @@ public class Parchments : MonoBehaviour
     private int index;
     private bool finish = false;
     private float currentTextTime;
-    private float TextExitTime = 1f;
+    [SerializeField] private float TextExitTime = 1f;
     [HideInInspector] public bool activeType = false;
 
     private void Update()

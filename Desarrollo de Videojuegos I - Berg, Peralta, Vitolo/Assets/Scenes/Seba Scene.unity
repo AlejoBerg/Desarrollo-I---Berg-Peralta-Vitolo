@@ -1584,27 +1584,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 931660683}
-    - target: {fileID: 6904706223310465776, guid: 9b239cd961cd32d4a8b2cf6fc9888af9,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545877848, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 868173aa50ea011428813e7484277a3e, type: 3}
-    - target: {fileID: 1545877848, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_CullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545877848, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 81541c1597997494283a86c4d4a906f7, type: 2}
-    - target: {fileID: 1545877848, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b239cd961cd32d4a8b2cf6fc9888af9, type: 3}
 --- !u!1 &915654346 stripped
