@@ -21,6 +21,7 @@ public class ThirdCameraController : MonoBehaviour
     private void Start()
     {
         cameraTransform = this.transform;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
