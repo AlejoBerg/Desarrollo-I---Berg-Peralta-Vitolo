@@ -16,6 +16,6 @@ public class GameManager : MonoBehaviour
     
     public static void AddParchment(int newParchment)
     {
-        parchmentsAmount += newParchment;  
+        parchmentsAmount += newParchment;
     }
 }

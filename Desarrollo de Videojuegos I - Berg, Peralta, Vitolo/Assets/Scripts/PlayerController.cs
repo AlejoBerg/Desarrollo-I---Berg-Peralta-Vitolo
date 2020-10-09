@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float _distanceRayCast;
     [SerializeField]private GameObject bagPack;
     [SerializeField]private AudioSource jumpSFX;
+    [HideInInspector] public bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
     private float playerSpeed = 1.5f;
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private Rigidbody rb;
-    [HideInInspector] public bool jumpActive = false;
     private float coordsY;
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool test = false;
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
+        if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
     }
 
     private void FixedUpdate()
@@ -50,10 +51,10 @@ public class PlayerController : MonoBehaviour
          RaycastHit hit;
 
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, _distanceDetectRayCast, layerMask))
-             {
+            {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 rb.velocity = new Vector3(0, rb.velocity.y, 0);
-             }
+            }
             else
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * _distanceRayCast, Color.white);

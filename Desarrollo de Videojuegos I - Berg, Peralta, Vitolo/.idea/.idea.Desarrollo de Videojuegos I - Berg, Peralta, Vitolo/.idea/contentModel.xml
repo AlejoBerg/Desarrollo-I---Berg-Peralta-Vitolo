@@ -66,6 +66,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActivateWhenTrigger.cs" t="Include" />
           <e p="CameraCollider.cs" t="Include" />
           <e p="CanvasFade.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />

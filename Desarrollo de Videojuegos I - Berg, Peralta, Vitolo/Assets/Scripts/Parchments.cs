@@ -9,13 +9,12 @@ public class Parchments : MonoBehaviour
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
-   // [SerializeField] private AudioSource parchmentSFX = null;
+    [SerializeField] private float TextExitTime = 1f;
+    [HideInInspector] public bool activeType = false;
     private int index;
     private bool finish = false;
     private float currentTextTime;
-    [SerializeField] private float TextExitTime = 1f;
-    [HideInInspector] public bool activeType = false;
-
+    
     private void Update()
     {
         if (activeType)
@@ -41,7 +40,6 @@ public class Parchments : MonoBehaviour
 
     IEnumerator Type()
     {
-        //parchmentSFX.Play();
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.GetComponent<Text>().text += letter;

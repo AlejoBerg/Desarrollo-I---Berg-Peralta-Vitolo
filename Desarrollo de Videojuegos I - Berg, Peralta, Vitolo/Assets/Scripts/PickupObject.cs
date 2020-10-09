@@ -7,17 +7,12 @@ public class PickupObject : MonoBehaviour
 {
   [SerializeField] private Transform interactionZone;
   [SerializeField] private Transform backpackZone;
-  [SerializeField] private PlayerController player;
   [HideInInspector] public GameObject itemToPickUp;
   [HideInInspector] public GameObject pickedObject;
   [HideInInspector] public GameObject torchObject;
   [SerializeField] private Vector3 torchPosition;
   [SerializeField] private Vector3 torchAngleRotation;
-  private void Start()
-  {
-    player = GetComponent<PlayerController>();
-  }
-
+ 
   private void Update()
   {
     //coleccionables
@@ -58,7 +53,6 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
-        player.jumpActive = true;
         pickedObject.GetComponent<Parchments>().activeType = true;
       }
     }
