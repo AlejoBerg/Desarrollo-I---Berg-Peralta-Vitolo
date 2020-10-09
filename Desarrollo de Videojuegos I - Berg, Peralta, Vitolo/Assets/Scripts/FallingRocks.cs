@@ -5,7 +5,8 @@ using UnityEngine;
 public class FallingRocks : MonoBehaviour
 {
     [SerializeField] private GameObject[] objectsToThrow;
-    [SerializeField] private AudioSource objectFallingSFX;
+    [SerializeField] private GameObject colliderBlocking = null;
+    [SerializeField] private AudioSource objectFallingSFX = null;
 
     private void Start()
     {
@@ -13,7 +14,10 @@ public class FallingRocks : MonoBehaviour
         {
             var rb = objectsToThrow[i].GetComponent<Rigidbody>();
             rb.isKinematic = true;
-            //objectsToThrow[i].SetActive(false);
+            if (colliderBlocking != null)
+            {
+                colliderBlocking.SetActive(false);
+            }
         }
     }
 
@@ -29,6 +33,11 @@ public class FallingRocks : MonoBehaviour
                 objectsToThrow[i].SetActive(true);
                 var rb = objectsToThrow[i].GetComponent<Rigidbody>();
                 rb.isKinematic = false;
+            }
+
+            if(colliderBlocking != null)
+            {
+                colliderBlocking.SetActive(true);
             }
         }
     }

@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
-using Amazon.Runtime.Internal.Transform;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {    
     [SerializeField]private Camera mainCamera;
     [SerializeField]private float jumpForce = 4f;
+    [SerializeField]private float _distanceDetectRayCast;
+    [SerializeField]private float _distanceRayCast;
+    [SerializeField]private GameObject bagPack;
+    [SerializeField]private AudioSource jumpSFX;
     private float horizontalMove;
     private float verticalMove;
     private float playerSpeed = 1.5f;
@@ -20,12 +23,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     [HideInInspector] public bool jumpActive = false;
     private float coordsY;
-    [SerializeField]private float _distanceDetectRayCast;
-    [SerializeField]private float _distanceRayCast;
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool test = false;
     private Animator playerBagAnimator;
-    [SerializeField] private GameObject bagPack;
     
     void Start()
     {
@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
        
         if (Input.GetButtonDown("Jump") && canJump && jumpActive)
         {
+            jumpSFX.Play();
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
             //playerBagAnimator.SetBool("PlayerJump", true);
