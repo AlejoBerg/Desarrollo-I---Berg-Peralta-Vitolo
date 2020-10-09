@@ -13,40 +13,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6, y: 2.7, z: 2.7}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3460452490571384472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37162523922792029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80c55e8fce0f4b4c971ec4546ec55ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textDisplay: {fileID: 0}
-  sentences: []
-  typingSpeed: 0.1
-  parchmentSFX: {fileID: 3933793721745313850}
-  activeType: 0
---- !u!114 &4742057864739695090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37162523922792029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994780161be0155498adbe2163738e3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPickeable: 1
-  tagName: 
-  pickUpTextToShow: {fileID: 0}
-  _parchments: {fileID: 0}
-  _collectionables: {fileID: 0}
 --- !u!82 &3933793721745313850
 AudioSource:
   m_ObjectHideFlags: 0
@@ -143,6 +109,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3460452490571384472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37162523922792029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80c55e8fce0f4b4c971ec4546ec55ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 0}
+  sentences: []
+  typingSpeed: 0.1
+  TextExitTime: 1
+  activeType: 0
+--- !u!114 &4742057864739695090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37162523922792029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994780161be0155498adbe2163738e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPickeable: 1
+  tagName: 
+  pickUpTextToShow: {fileID: 0}
+  _parchments: {fileID: 0}
+  _collectionables: {fileID: 0}
+  audioSFX: {fileID: 0}
 --- !u!1 &1549174933901656543
 GameObject:
   m_ObjectHideFlags: 0
