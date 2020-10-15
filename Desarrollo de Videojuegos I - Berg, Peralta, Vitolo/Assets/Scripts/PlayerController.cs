@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
-    private float playerSpeed = 1.5f;
+    private static float playerSpeed = 1.5f;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     protected static bool pickUpTorch = false;
     public static bool PickUpItem { get => pickUpItem; set => pickUpItem = value;}
     public static bool PickUpTorch { get => pickUpTorch; set => pickUpTorch = value;}
+    public static float PlayerSpeed { get => playerSpeed; set => playerSpeed = value;}
     
     
     void Start()
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
         {
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerSpeed = 1.5f;
+            //playerSpeed = 1.5f;
             playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
             /*if (Input.GetKey(KeyCode.LeftShift))
             {

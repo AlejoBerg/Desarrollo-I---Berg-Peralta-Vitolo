@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItems.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItems.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItemsIdle.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItemsIdle.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/PickUpTorch.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/PickUpTorch.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/Picking Up Object.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/Picking Up Object.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
@@ -182,7 +177,7 @@
       <workItem from="1602200365443" duration="46000" />
       <workItem from="1602272041956" duration="1323000" />
       <workItem from="1602284392281" duration="452000" />
-      <workItem from="1602773761275" duration="12758000" />
+      <workItem from="1602773761275" duration="21116000" />
     </task>
     <servers />
   </component>

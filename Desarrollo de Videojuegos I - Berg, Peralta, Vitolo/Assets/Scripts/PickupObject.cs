@@ -23,6 +23,8 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
+        PlayerController.PickUpTorch = true;
+        StartCoroutine(pickItems());
         pickedObject.transform.position = new Vector3(-1,-1,-1);
         itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
       }
@@ -49,11 +51,13 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
+        PlayerController.PickUpTorch = true;
+        StartCoroutine(pickItems());
         pickedObject.GetComponent<Parchments>().activeType = true;
       }
     }
 
-    /// cualquier otro
+    // rocas
 
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
         pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Rocks")
@@ -62,6 +66,7 @@ public class PickupObject : MonoBehaviour
       {
         ThingsToDo();
         PlayerController.PickUpItem = true;
+        PlayerController.PlayerSpeed = 1f;
         pickedObject.transform.SetParent(interactionZone);
         pickedObject.transform.position = interactionZone.position;
         if(pickedObject.GetComponent<Rigidbody>() != null){
@@ -76,6 +81,7 @@ public class PickupObject : MonoBehaviour
       {
           pickedObject.GetComponent<PickeableObject>().isPickeable = true;
           pickedObject.transform.SetParent(null);
+          PlayerController.PlayerSpeed = 1.5f;
           if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = true;
           pickedObject.GetComponent<Rigidbody>().isKinematic = false;}
@@ -95,13 +101,19 @@ public class PickupObject : MonoBehaviour
     
     IEnumerator pickTorch()
     {
-      yield return new WaitForSeconds(0.6f);
-      torchObject = itemToPickUp;
-      torchObject.GetComponent<PickeableObject>().audioSFX.Play();
-      torchObject.GetComponent<PickeableObject>().isPickeable = false;
-      torchObject.transform.SetParent(backpackZone);
-      torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
-      torchObject.transform.localPosition = torchPosition;
+        torchObject = itemToPickUp;
+        torchObject.GetComponent<PickeableObject>().audioSFX.Play();
+        torchObject.GetComponent<PickeableObject>().isPickeable = false;
+        yield return new WaitForSeconds(0.2f);
+        PlayerController.PickUpTorch = false;
+        torchObject.transform.SetParent(backpackZone);
+        torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
+        torchObject.transform.localPosition = torchPosition;
+    }
+    
+    IEnumerator pickItems()
+    {
+      yield return new WaitForSeconds(0.2f);
       PlayerController.PickUpTorch = false;
     }
   }
