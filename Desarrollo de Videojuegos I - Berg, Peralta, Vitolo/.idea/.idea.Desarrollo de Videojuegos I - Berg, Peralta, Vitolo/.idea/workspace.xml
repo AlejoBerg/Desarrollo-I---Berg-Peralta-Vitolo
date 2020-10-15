@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItems.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItems.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItemsIdle.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/CarryItemsIdle.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/ParchmentsCollectablesPickUp.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/PickUpTorch.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/PickUpTorch.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
@@ -68,7 +75,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/cameratest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/test2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" />
@@ -82,9 +88,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
       </list>
     </option>
   </component>
@@ -174,6 +181,8 @@
       <workItem from="1602023813015" duration="1039000" />
       <workItem from="1602200365443" duration="46000" />
       <workItem from="1602272041956" duration="1323000" />
+      <workItem from="1602284392281" duration="452000" />
+      <workItem from="1602773761275" duration="12758000" />
     </task>
     <servers />
   </component>

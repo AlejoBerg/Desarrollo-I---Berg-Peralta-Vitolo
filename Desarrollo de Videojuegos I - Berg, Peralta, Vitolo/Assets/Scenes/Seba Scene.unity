@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 495723471}
   - component: {fileID: 495723470}
   - component: {fileID: 495723469}
+  - component: {fileID: 495723472}
   m_Layer: 0
   m_Name: RocaDorada
   m_TagString: Rocks
@@ -727,6 +728,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &495723472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495723468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4961052, y: 0.49677312, z: 0.51716995}
+  m_Center: {x: -0.0017299652, y: 0.0014616847, z: -0.0011100769}
 --- !u!1 &497903125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1177,7 @@ BoxCollider:
   m_GameObject: {fileID: 602703774}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2144,7 +2158,7 @@ BoxCollider:
   m_GameObject: {fileID: 1040106217}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2690,6 +2704,7 @@ MonoBehaviour:
   sentences:
   - Now you can Jump !!
   typingSpeed: 0.2
+  TextExitTime: 1
   activeType: 0
 --- !u!82 &1501590931
 AudioSource:
@@ -2857,6 +2872,7 @@ GameObject:
   - component: {fileID: 1604525605}
   - component: {fileID: 1604525604}
   - component: {fileID: 1604525603}
+  - component: {fileID: 1604525606}
   m_Layer: 0
   m_Name: RocaGris
   m_TagString: Rocks
@@ -2913,6 +2929,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1604525606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604525602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48371124, y: 0.50939393, z: 0.51716995}
+  m_Center: {x: -0.0207901, y: -0.02176249, z: -0.0011100769}
 --- !u!1 &1775195855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,37 +3295,37 @@ PrefabInstance:
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.399036
+      value: -19.418
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18880963
+      value: 1.259
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.044429
+      value: -10.784
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
@@ -3306,7 +3335,7 @@ PrefabInstance:
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 3666339104857966583, guid: 0b9e03fc9157a5e4bab3bd1c22830508,
         type: 3}

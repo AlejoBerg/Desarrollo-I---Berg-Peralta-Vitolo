@@ -24,8 +24,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private float coordsY;
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
-    private bool test = false;
+    private bool wallDetected = false;
     private Animator playerBagAnimator;
+    protected static bool pickUpItem = false;
+    protected static bool pickUpTorch = false;
+    public static bool PickUpItem { get => pickUpItem; set => pickUpItem = value;}
+    public static bool PickUpTorch { get => pickUpTorch; set => pickUpTorch = value;}
+    
     
     void Start()
     {
@@ -46,7 +51,7 @@ public class PlayerController : MonoBehaviour
         
        //layerMask = ~layerMask; // Con esta línea choco con todo menos con la capa 8
 
-       if(test)
+       if(wallDetected)
        {
          RaycastHit hit;
 
@@ -58,7 +63,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * _distanceRayCast, Color.white);
-                test = false;
+                wallDetected = false;
             }
        }
     }
@@ -87,12 +92,30 @@ public class PlayerController : MonoBehaviour
             {
                 playerSpeed = 1.5f;
                 playerSpeedForAnimation = 0.2f; 
-            }*/ 
+            }*/
         }
         else
         {   playerSpeedForAnimation = 0;
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             playerBagAnimator.SetFloat("SpeedBagPack", 0f);
+        }
+        
+        if (pickUpItem)
+        {
+            playerAnimator.SetBool("ItemPickUp",true);
+        }
+        else
+        {
+            playerAnimator.SetBool("ItemPickUp",false);
+        }
+
+        if (pickUpTorch)
+        {
+            playerAnimator.SetBool("Torch",true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Torch",false);
         }
         
         CamDirection();
@@ -136,7 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Walls"))
         {
-            test = true;
+            wallDetected = true;
         }
     }
 }

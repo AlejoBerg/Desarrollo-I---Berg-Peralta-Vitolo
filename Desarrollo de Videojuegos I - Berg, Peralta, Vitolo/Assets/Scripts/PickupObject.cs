@@ -35,12 +35,8 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        torchObject = itemToPickUp;
-        torchObject.GetComponent<PickeableObject>().audioSFX.Play();
-        torchObject.GetComponent<PickeableObject>().isPickeable = false;
-        torchObject.transform.SetParent(backpackZone);
-        torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
-        torchObject.transform.localPosition = torchPosition;
+        PlayerController.PickUpTorch = true;
+        StartCoroutine(pickTorch());
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
     }
@@ -60,16 +56,18 @@ public class PickupObject : MonoBehaviour
     /// cualquier otro
 
     if (itemToPickUp != null && itemToPickUp.GetComponent<PickeableObject>().isPickeable == true &&
-        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName != "Parchments")
+        pickedObject == null && itemToPickUp.GetComponent<PickeableObject>().tagName == "Rocks")
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
+        PlayerController.PickUpItem = true;
         pickedObject.transform.SetParent(interactionZone);
         pickedObject.transform.position = interactionZone.position;
         if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = false;
           pickedObject.GetComponent<Rigidbody>().isKinematic = true;}
+        if(pickedObject.GetComponent<BoxCollider>() != null){pickedObject.GetComponent<BoxCollider>().enabled = false;}
       }
     } 
     else if (pickedObject != null)
@@ -81,7 +79,9 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = true;
           pickedObject.GetComponent<Rigidbody>().isKinematic = false;}
+          if(pickedObject.GetComponent<BoxCollider>() != null){pickedObject.GetComponent<BoxCollider>().enabled = true;}
           pickedObject = null;
+          PlayerController.PickUpItem = false;
       }
     }
 
@@ -91,6 +91,18 @@ public class PickupObject : MonoBehaviour
       if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
       pickedObject.GetComponent<PickeableObject>().isPickeable = false;
       itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+    }
+    
+    IEnumerator pickTorch()
+    {
+      yield return new WaitForSeconds(0.6f);
+      torchObject = itemToPickUp;
+      torchObject.GetComponent<PickeableObject>().audioSFX.Play();
+      torchObject.GetComponent<PickeableObject>().isPickeable = false;
+      torchObject.transform.SetParent(backpackZone);
+      torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
+      torchObject.transform.localPosition = torchPosition;
+      PlayerController.PickUpTorch = false;
     }
   }
 }
