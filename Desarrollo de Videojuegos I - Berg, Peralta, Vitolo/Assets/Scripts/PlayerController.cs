@@ -110,14 +110,14 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("ItemPickUp",false);
         }
 
-        if (pickUpTorch)
+        /*if (pickUpTorch)
         {
             playerAnimator.SetBool("Torch",true);
         }
         else
         {
             playerAnimator.SetBool("Torch",false);
-        }
+        }*/
         
         CamDirection();
 

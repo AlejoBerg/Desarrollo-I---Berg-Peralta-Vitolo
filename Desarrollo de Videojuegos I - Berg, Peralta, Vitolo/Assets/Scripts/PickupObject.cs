@@ -23,8 +23,8 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
-        PlayerController.PickUpTorch = true;
-        StartCoroutine(pickItems());
+        //PlayerController.PickUpTorch = true;
+        //StartCoroutine(pickItems());
         pickedObject.transform.position = new Vector3(-1,-1,-1);
         itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
       }
@@ -37,7 +37,7 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
-        PlayerController.PickUpTorch = true;
+        //PlayerController.PickUpTorch = true;
         StartCoroutine(pickTorch());
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
       }
@@ -51,8 +51,8 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         ThingsToDo();
-        PlayerController.PickUpTorch = true;
-        StartCoroutine(pickItems());
+        //PlayerController.PickUpTorch = true;
+        //StartCoroutine(pickItems());
         pickedObject.GetComponent<Parchments>().activeType = true;
       }
     }
@@ -80,6 +80,7 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
           pickedObject.GetComponent<PickeableObject>().isPickeable = true;
+          pickedObject.transform.localPosition = new Vector3(0,0,1);
           pickedObject.transform.SetParent(null);
           PlayerController.PlayerSpeed = 1.5f;
           if(pickedObject.GetComponent<Rigidbody>() != null){
@@ -104,17 +105,18 @@ public class PickupObject : MonoBehaviour
         torchObject = itemToPickUp;
         torchObject.GetComponent<PickeableObject>().audioSFX.Play();
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
-        yield return new WaitForSeconds(0.2f);
+        //yield return new WaitForSeconds(0.2f);
         PlayerController.PickUpTorch = false;
         torchObject.transform.SetParent(backpackZone);
         torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
         torchObject.transform.localPosition = torchPosition;
+        yield return null;
     }
     
-    IEnumerator pickItems()
+    /*IEnumerator pickItems()
     {
       yield return new WaitForSeconds(0.2f);
       PlayerController.PickUpTorch = false;
-    }
+    }*/
   }
 }
