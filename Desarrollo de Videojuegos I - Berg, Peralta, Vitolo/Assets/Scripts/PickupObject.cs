@@ -24,11 +24,12 @@ public class PickupObject : MonoBehaviour
       {
         ThingsToDo();
         //PlayerController.PickUpTorch = true;
-        //StartCoroutine(pickItems());
         pickedObject.transform.position = new Vector3(-1,-1,-1);
         itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
+        
       }
-    }
+    } 
+    
     
      //antorcha
      
@@ -38,8 +39,8 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
         //PlayerController.PickUpTorch = true;
-        StartCoroutine(pickTorch());
         itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+        StartCoroutine(pickTorch());
       }
     }
     
@@ -80,7 +81,7 @@ public class PickupObject : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.E))
       {
           pickedObject.GetComponent<PickeableObject>().isPickeable = true;
-          pickedObject.transform.localPosition = new Vector3(0,0,1);
+          if(pickedObject.CompareTag("Rocks")){pickedObject.transform.localPosition = new Vector3(0,0,1);}
           pickedObject.transform.SetParent(null);
           PlayerController.PlayerSpeed = 1.5f;
           if(pickedObject.GetComponent<Rigidbody>() != null){

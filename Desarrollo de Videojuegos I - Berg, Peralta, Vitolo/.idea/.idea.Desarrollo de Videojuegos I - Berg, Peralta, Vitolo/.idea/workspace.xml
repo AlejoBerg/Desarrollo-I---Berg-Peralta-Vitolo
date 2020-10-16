@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimController 1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TurnLightsOnWhenEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActiveRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Temp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
@@ -83,6 +82,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
       </list>
     </option>
   </component>
@@ -175,6 +175,7 @@
       <workItem from="1602284392281" duration="452000" />
       <workItem from="1602773761275" duration="21157000" />
       <workItem from="1602866143751" duration="609000" />
+      <workItem from="1602882053625" duration="1078000" />
     </task>
     <servers />
   </component>
