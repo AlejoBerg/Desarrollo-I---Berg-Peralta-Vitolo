@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             //playerSpeed = 1.5f;
             playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
-            /*if (Input.GetKey(KeyCode.LeftShift))
+           /* if (Input.GetKey(KeyCode.LeftShift))
             {
                 playerSpeed = 3f;
                 playerSpeedForAnimation = 1.2f;

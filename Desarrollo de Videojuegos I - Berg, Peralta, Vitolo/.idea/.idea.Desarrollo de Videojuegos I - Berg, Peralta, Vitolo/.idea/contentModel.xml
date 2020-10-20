@@ -42,29 +42,6 @@
             <e p="SpiderBlinking.cs" t="Include" />
           </e>
         </e>
-        <e p="Animations" t="Include">
-          <e p="Rokoko" t="Include">
-            <e p="MotionLibrary" t="Include">
-              <e p="Editor" t="Include">
-                <e p="MotionLibraryWindowCompatibility.cs" t="Include" />
-                <e p="MotionLibraryWindowMenuItem.cs" t="Include" />
-              </e>
-              <e p="LICENSE.txt" t="Include" />
-              <e p="MotionLibraryRuntime.asmdef" t="Include" />
-              <e p="Plugins" t="Include">
-                <e p="2018" t="Include">
-                  <e p="Newtonsoft.Json.xml" t="Include" />
-                </e>
-              </e>
-              <e p="Resources" t="Include">
-                <e p="Shaders" t="Include">
-                  <e p="MotionLibraryFloor3.shader" t="Include" />
-                  <e p="New AmplifyShader.shader" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="ActivateWhenTrigger.cs" t="Include" />
           <e p="CameraCollider.cs" t="Include" />
@@ -87,7 +64,6 @@
         </e>
       </e>
       <e p="Desarrollo de Videojuegos I - Berg, Peralta, Vitolo.sln" t="IncludeFlat" />
-      <e p="MotionLibraryRuntime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />

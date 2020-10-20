@@ -7,6 +7,7 @@ public class LoadNextLevel : MonoBehaviour
 {
     [SerializeField] private string nextLevelName = "";
     [SerializeField] private float delayBeforeLoadNextLevel = 0;
+    [SerializeField] private int victoryCondition = 0;
     [SerializeField] private CanvasFade fadeOutImage = null;
     [SerializeField] private AudioSource fadeOutMusic = null;
     private float initialVolume = 0;
@@ -18,7 +19,7 @@ public class LoadNextLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.CompareTag("Player") && victoryCondition == GameManager.ParchmentsAmount)
         {
             fadeOutImage.DoFade();
             StartCoroutine("FadeMusicVolume");
