@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,7 @@ public class LoadNextLevel : MonoBehaviour
     [SerializeField] private AudioSource fadeOutMusic = null;
     private float initialVolume = 0;
 
-    private void Start()
+   private void Start()
     {
         initialVolume = fadeOutMusic.volume;
     }

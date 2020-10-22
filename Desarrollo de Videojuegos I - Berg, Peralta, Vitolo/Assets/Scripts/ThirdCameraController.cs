@@ -18,6 +18,10 @@ public class ThirdCameraController : MonoBehaviour
     private float minFov = 20f;
     private float maxFov = 50f;
  
+    public void Awake() 
+    { 
+        DontDestroyOnLoad(gameObject); 
+    }
     private void Start()
     {
         cameraTransform = this.transform;

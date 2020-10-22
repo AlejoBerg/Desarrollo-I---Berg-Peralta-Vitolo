@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PickupObject : MonoBehaviour
@@ -94,6 +95,12 @@ public class PickupObject : MonoBehaviour
         torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
         torchObject.transform.localPosition = torchPosition;
         yield return null;
+    }
+
+    if (SceneManager.GetActiveScene().buildIndex == 1)
+    {
+      Destroy(torchObject);
+      torchObject = null;
     }
   }
 }

@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9308a557673f8754bab5d0d2d613473b
+guid: edeea1af5770f2c4eb9ebfbc7ab28329
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: RunningWithRocks
+    second: Running
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: RunningWithRocks
+      name: Running
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 38
+      lastFrame: 23
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -522,20 +522,20 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: RunningWithRocks(Clone)
+    - name: TTBoyAvatar@Running(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0.02633829, y: -0.06395287, z: -0.053337682, w: 0.99617845}
+      rotation: {x: 0, y: -0.013026798, z: 0, w: 0.9999152}
       scale: {x: 1, y: 1, z: 1}
     - name: BODY
-      parentName: RunningWithRocks(Clone)
+      parentName: TTBoyAvatar@Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: ROOT
-      parentName: RunningWithRocks(Clone)
-      position: {x: 0.07467597, y: -0.09870636, z: 0.009501627}
-      rotation: {x: -0.0068690334, y: 0.06498343, z: 0.052077968, w: 0.9965028}
+      parentName: TTBoyAvatar@Running(Clone)
+      position: {x: 0.01605546, y: -0.037722968, z: -0.07426214}
+      rotation: {x: 0.059343938, y: 0.013540069, z: 0.008262085, w: 0.9981116}
       scale: {x: 1, y: 1, z: 1}
     - name: TT
       parentName: ROOT
@@ -544,129 +544,129 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: TT Pelvis
       parentName: TT
-      position: {x: 0.0050818105, y: 0.062246025, z: 0.12996951}
+      position: {x: 0.007938578, y: -0.0012152195, z: 0.06665762}
       rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
-      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000006}
     - name: TT Spine
       parentName: TT Pelvis
       position: {x: -0.057580795, y: -0.00008765385, z: 0.00000007997456}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+      scale: {x: 1, y: 1, z: 1}
     - name: TT Spine1
       parentName: TT Spine
       position: {x: -0.11012047, y: -0.0000876861, z: -2.4320598e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000002, z: 1.0000004}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000007}
     - name: TT Spine2
       parentName: TT Spine1
       position: {x: -0.11012047, y: -0.0000876861, z: -2.4320654e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999994, z: 0.9999998}
+      scale: {x: 0.9999999, y: 0.99999964, z: 1}
     - name: TT L Clavicle
       parentName: TT Spine2
       position: {x: -0.06192047, y: -0.013020938, z: 0.0051194737}
       rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
-      scale: {x: 0.9999997, y: 1.0000005, z: 0.9999999}
+      scale: {x: 0.999999, y: 0.99999905, z: 0.999999}
     - name: TT L UpperArm
       parentName: TT L Clavicle
       position: {x: -0.077098235, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000004, y: 1.0000011, z: 1.000001}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000006}
     - name: TT L Forearm
       parentName: TT L UpperArm
       position: {x: -0.17838836, y: 0, z: 0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000014, y: 1, z: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
     - name: TT L Hand
       parentName: TT L Forearm
       position: {x: -0.17838833, y: 0, z: -0.000000076293944}
       rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
-      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000001}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000012}
     - name: TT L Finger1
       parentName: TT L Hand
       position: {x: -0.08701877, y: -0.001172409, z: -0.03431827}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999996, y: 1, z: 0.99999946}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1.000001}
     - name: TT L Finger11
       parentName: TT L Finger1
       position: {x: -0.028457412, y: 0, z: -0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 0.9999999, z: 1}
+      scale: {x: 1.0000006, y: 1.0000011, z: 1.0000015}
     - name: TT L Finger12
       parentName: TT L Finger11
       position: {x: -0.028457412, y: -0.000000076293944, z: 0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000008}
     - name: TT L Finger2
       parentName: TT L Hand
       position: {x: -0.09143101, y: -0.0038981629, z: -0.006881488}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999934, y: 0.99999994, z: 0.9999995}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000007}
     - name: TT L Finger21
       parentName: TT L Finger2
       position: {x: -0.028470343, y: -0.000000076293944, z: -5.9604643e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000011, y: 1.0000008, z: 1.0000007}
+      scale: {x: 1.0000002, y: 0.99999964, z: 1.0000001}
     - name: TT L Finger22
       parentName: TT L Finger21
       position: {x: -0.028470306, y: 0, z: 8.9406965e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000008}
     - name: TT L Finger3
       parentName: TT L Hand
       position: {x: -0.0885397, y: 0.00061996456, z: 0.019150957}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999995, y: 1.0000001, z: 0.99999964}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000007}
     - name: TT L Finger31
       parentName: TT L Finger3
       position: {x: -0.028738707, y: 0, z: 0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000007}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000007}
     - name: TT L Finger32
       parentName: TT L Finger31
       position: {x: -0.028738784, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000007}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
     - name: TT L Finger4
       parentName: TT L Hand
       position: {x: -0.08199314, y: 0.015383682, z: 0.03668539}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999994, y: 0.99999994, z: 0.9999997}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000007}
     - name: TT L Finger41
       parentName: TT L Finger4
       position: {x: -0.025724335, y: -0.000000076293944, z: -0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000008}
+      scale: {x: 1, y: 1.0000002, z: 0.9999999}
     - name: TT L Finger42
       parentName: TT L Finger41
       position: {x: -0.025724411, y: 0.00000015258789, z: 0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000005}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000011}
     - name: TT L Finger0
       parentName: TT L Hand
       position: {x: -0.021258086, y: 0.00042533875, z: -0.03858865}
       rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
-      scale: {x: 0.9999998, y: 0.99999917, z: 0.99999946}
+      scale: {x: 1.0000012, y: 0.9999998, z: 1.0000005}
     - name: TT L Finger01
       parentName: TT L Finger0
       position: {x: -0.052350998, y: 0.000000076293944, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000001}
     - name: TT L Finger02
       parentName: TT L Finger01
       position: {x: -0.027839927, y: -0.000000076293944, z: -0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.99999964, z: 1.0000006}
+      scale: {x: 0.9999999, y: 0.99999964, z: 1.0000001}
     - name: TT Neck
       parentName: TT Spine2
       position: {x: -0.084582135, y: -0.018621856, z: -0.000000021649583}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000013, y: 1.000002, z: 1.0000011}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999997}
     - name: TT Head
       parentName: TT Neck
       position: {x: -0.096551664, y: -0.000000009536743, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999934, y: 0.9999992, z: 0.9999998}
+      scale: {x: 1, y: 1, z: 1.0000001}
     - name: HEAD
       parentName: TT Head
       position: {x: 1.13994, y: 0.010149032, z: -0.0000000018462621}
@@ -676,137 +676,137 @@ ModelImporter:
       parentName: TT Spine2
       position: {x: -0.06192047, y: -0.013020909, z: -0.0051195463}
       rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
-      scale: {x: 1.0000014, y: 1.0000002, z: 1.0000001}
+      scale: {x: 1.0000008, y: 0.99999964, z: 1.0000001}
     - name: TT R UpperArm
       parentName: TT R Clavicle
       position: {x: -0.077098235, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000015, z: 1.0000021}
+      scale: {x: 0.99999976, y: 1.0000007, z: 1.0000014}
     - name: TT R Forearm
       parentName: TT R UpperArm
       position: {x: -0.17838836, y: 0, z: -0.000000076293944}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000002, y: 1.0000005, z: 0.9999996}
+      scale: {x: 0.9999997, y: 1.0000001, z: 0.9999995}
     - name: TT R Hand
       parentName: TT R Forearm
       position: {x: -0.17838833, y: 0.0000000011920929, z: 0.000000076293944}
       rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-      scale: {x: 1.0000005, y: 1.0000012, z: 1.0000008}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000007}
     - name: TT R Finger0
       parentName: TT R Hand
       position: {x: -0.021258086, y: 0.00042533875, z: 0.03858865}
       rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
-      scale: {x: 1.000001, y: 0.99999964, z: 1.0000006}
+      scale: {x: 1.0000005, y: 0.99999976, z: 1.0000007}
     - name: TT R Finger01
       parentName: TT R Finger0
       position: {x: -0.052350957, y: 0.000000076293944, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000004, z: 0.9999999}
+      scale: {x: 1.0000005, y: 1.0000011, z: 1.0000004}
     - name: TT R Finger02
       parentName: TT R Finger01
       position: {x: -0.027839966, y: -0.000000076293944, z: -0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.99999964, z: 1.0000006}
+      scale: {x: 0.9999996, y: 0.99999946, z: 1}
     - name: TT R Finger1
       parentName: TT R Hand
       position: {x: -0.08701885, y: -0.001172409, z: 0.03431827}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+      scale: {x: 0.99999964, y: 0.9999999, z: 1.0000002}
     - name: TT R Finger11
       parentName: TT R Finger1
       position: {x: -0.028457412, y: 0, z: -0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 1, z: 0.9999998}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
     - name: TT R Finger12
       parentName: TT R Finger11
       position: {x: -0.028457412, y: -0.000000076293944, z: 0.0000000023841857}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000005, z: 1.0000005}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000007}
     - name: TT R Finger2
       parentName: TT R Hand
       position: {x: -0.09143101, y: -0.0038981629, z: 0.0068814866}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+      scale: {x: 1.0000004, y: 1.0000008, z: 1.0000005}
     - name: TT R Finger21
       parentName: TT R Finger2
       position: {x: -0.028470343, y: -0.000000076293944, z: 5.9604643e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000006}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000005}
     - name: TT R Finger22
       parentName: TT R Finger21
       position: {x: -0.028470306, y: 0, z: -2.9802322e-10}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000007, z: 1.000001}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000004}
     - name: TT R Finger3
       parentName: TT R Hand
       position: {x: -0.088539734, y: 0.00061996456, z: -0.01915096}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000002}
     - name: TT R Finger31
       parentName: TT R Finger3
       position: {x: -0.028738746, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1.0000004}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
     - name: TT R Finger32
       parentName: TT R Finger31
       position: {x: -0.028738784, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000008}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000007}
     - name: TT R Finger4
       parentName: TT R Hand
       position: {x: -0.08199325, y: 0.015383682, z: -0.036685385}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1.0000006, z: 1.0000007}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
     - name: TT R Finger41
       parentName: TT R Finger4
       position: {x: -0.025724335, y: -0.000000076293944, z: -0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
     - name: TT R Finger42
       parentName: TT R Finger41
       position: {x: -0.025724411, y: 0.00000015258789, z: -0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000006}
     - name: TT L Thigh
       parentName: TT Pelvis
       position: {x: 0.000000076293944, y: 0.00000012114235, z: 0.06587817}
       rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-      scale: {x: 1.0000011, y: 1.0000004, z: 1.000001}
+      scale: {x: 1.0000006, y: 1, z: 1.0000006}
     - name: TT L Calf
       parentName: TT L Thigh
       position: {x: -0.29395327, y: -3.7252902e-11, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999998, y: 1.0000013, z: 1.0000007}
+      scale: {x: 1.0000008, y: 1.0000013, z: 1.0000002}
     - name: TT L Foot
       parentName: TT L Calf
       position: {x: -0.2939533, y: 4.6566128e-12, z: 0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000007}
     - name: TT L Toe0
       parentName: TT L Foot
       position: {x: -0.09343729, y: 0.0748991, z: 0}
       rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
-      scale: {x: 1.0000011, y: 1.0000004, z: 1.0000008}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000006}
     - name: TT R Thigh
       parentName: TT Pelvis
       position: {x: -0.000000076293944, y: -0.000000061577374, z: -0.06587817}
       rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-      scale: {x: 1.000001, y: 1.0000005, z: 1.0000006}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
     - name: TT R Calf
       parentName: TT R Thigh
       position: {x: -0.29395333, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.99999976, y: 1, z: 0.99999994}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
     - name: TT R Foot
       parentName: TT R Calf
       position: {x: -0.29395327, y: -2.3283063e-11, z: 0.0000000047683715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999998}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
     - name: TT R Toe0
       parentName: TT R Foot
       position: {x: -0.09343729, y: 0.0748991, z: 0}
       rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
-      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000004}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

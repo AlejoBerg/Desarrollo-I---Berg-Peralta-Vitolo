@@ -33,17 +33,22 @@ public class PlayerController : MonoBehaviour
     public static float PlayerSpeed { get => playerSpeed; set => playerSpeed = value;}
     
     
+    public void Awake() 
+    { 
+        DontDestroyOnLoad(gameObject); 
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
         playerBagAnimator = bagPack.GetComponent<Animator>();
     }
-
+    
     void Update()
     {
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
+        
     }
 
     private void FixedUpdate()
