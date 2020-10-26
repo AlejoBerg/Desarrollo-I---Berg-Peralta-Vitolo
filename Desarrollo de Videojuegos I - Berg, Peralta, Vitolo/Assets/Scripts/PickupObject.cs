@@ -8,9 +8,9 @@ public class PickupObject : MonoBehaviour
 {
   [SerializeField] private Transform interactionZone;
   [SerializeField] private Transform backpackZone;
-   public GameObject itemToPickUp;
-   public GameObject pickedObject;
-   public GameObject torchObject;
+  [HideInInspector] public GameObject itemToPickUp;
+  [HideInInspector] public GameObject pickedObject;
+  [HideInInspector] public GameObject torchObject;
   [SerializeField] private PlayerController player;
   [SerializeField] private Vector3 torchPosition;
   [SerializeField] private Vector3 torchAngleRotation;
@@ -47,7 +47,6 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           PlayerController.PickUpItem = true;
-          //PlayerController.PlayerSpeed = 1f;
           player.ChangePlayerSpeed(1f);
           pickedObject.transform.SetParent(interactionZone);
           pickedObject.transform.position = interactionZone.position;

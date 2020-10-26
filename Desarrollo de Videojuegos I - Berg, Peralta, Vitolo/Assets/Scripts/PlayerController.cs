@@ -12,15 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float _distanceRayCast;
     [SerializeField]private GameObject bagPack;
     [SerializeField]private AudioSource jumpSFX;
-    [HideInInspector] public bool jumpActive = false;
+    [SerializeField] private float playerSpeed = 1.5f;
+    private bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
-    //private static float playerSpeed = 1.5f;
-    [SerializeField] private float playerSpeed = 1.5f;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
     private bool canJump = true;
+    private bool canRun = false;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private Rigidbody rb;
@@ -32,9 +32,7 @@ public class PlayerController : MonoBehaviour
     protected static bool pickUpTorch = false;
     public static bool PickUpItem { get => pickUpItem; set => pickUpItem = value;}
     public static bool PickUpTorch { get => pickUpTorch; set => pickUpTorch = value;}
-   // public static float PlayerSpeed { get => playerSpeed; set => playerSpeed = value;}
-    
-    
+
     public void Awake() 
     { 
         DontDestroyOnLoad(gameObject);
@@ -89,7 +87,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             //playerSpeed = 1.5f;
             playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
-           /* if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && canRun)
             {
                 playerSpeed = 3f;
                 playerSpeedForAnimation = 1.2f;
@@ -100,7 +98,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerSpeed = 1.5f;
                 playerSpeedForAnimation = 0.2f; 
-            }*/
+            }
         }
         else
         {   playerSpeedForAnimation = 0;

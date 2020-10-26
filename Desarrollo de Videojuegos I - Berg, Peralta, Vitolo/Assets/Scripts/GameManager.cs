@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private static int score = 0;
     private static int parchmentsAmount = 0;
     private static Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private static Vector3 spawnPointLvl2 = new Vector3(-1366.58f, -703.0021f,576.4408f);
+    private static Vector3 spawnPointLvl2 =  new Vector3(-1355.21f, -703f,576.4408f);
     private static Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static int currentScene = 0;
     private static bool changedLevel = false;
