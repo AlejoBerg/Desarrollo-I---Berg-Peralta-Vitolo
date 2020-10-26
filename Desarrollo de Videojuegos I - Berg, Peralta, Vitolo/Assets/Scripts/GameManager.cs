@@ -2,34 +2,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum State
-{
-    Menu,
-    Level1,
-    Level2,
-    Level3,
-}
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     private static int score = 0;
     private static int parchmentsAmount = 0;
-    private State currenState;
+    private static Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    private static Vector3 spawnPointLvl2 = new Vector3(-1366.58f, -703.0021f,576.4408f);
+    private static Vector3 spawnPointLvl3 = new Vector3(0,1,0);
+    private static int currentScene = 0;
+    private static bool changedLevel = false;
     
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
+    public static Vector3 SpawnPointLvl1 => spawnPointLvl1;
+    public static Vector3 SpawnPointLvl2 => spawnPointLvl2;
+    public static Vector3 SpawnPointLvl3 => spawnPointLvl3;
+    public static int CurrentScene => currentScene;
+    public static bool ChangedLevel{ get => changedLevel; set => changedLevel = value; }
 
-    public static GameManager Instance 
+    public static void ChangeCurrentScene(int newScene)
     {
-        get {
-            if(instance == null) 
-            {
-                instance = new GameManager();
-                Debug.Log("se creo");
-            }
-            return instance;
-            }
+        currentScene = newScene;
     }
     
     public static void AddPoints(int newPoints)

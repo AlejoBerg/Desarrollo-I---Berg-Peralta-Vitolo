@@ -1876,6 +1876,7 @@ MonoBehaviour:
   itemToPickUp: {fileID: 0}
   pickedObject: {fileID: 0}
   torchObject: {fileID: 0}
+  player: {fileID: 915654347}
   torchPosition: {x: 0, y: 100, z: -50}
   torchAngleRotation: {x: 0, y: 0, z: -35}
 --- !u!54 &915654348
@@ -1927,6 +1928,7 @@ MonoBehaviour:
   bagPack: {fileID: 206744611638037777}
   jumpSFX: {fileID: 4944887258010269052}
   jumpActive: 0
+  playerSpeed: 1.5
 --- !u!114 &6814570733554699656
 MonoBehaviour:
   m_ObjectHideFlags: 0

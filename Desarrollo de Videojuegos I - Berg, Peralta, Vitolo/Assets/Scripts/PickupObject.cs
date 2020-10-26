@@ -8,9 +8,10 @@ public class PickupObject : MonoBehaviour
 {
   [SerializeField] private Transform interactionZone;
   [SerializeField] private Transform backpackZone;
-  [SerializeField] public GameObject itemToPickUp;
-  [SerializeField] public GameObject pickedObject;
-  [SerializeField] public GameObject torchObject;
+   public GameObject itemToPickUp;
+   public GameObject pickedObject;
+   public GameObject torchObject;
+  [SerializeField] private PlayerController player;
   [SerializeField] private Vector3 torchPosition;
   [SerializeField] private Vector3 torchAngleRotation;
  
@@ -46,7 +47,8 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           PlayerController.PickUpItem = true;
-          PlayerController.PlayerSpeed = 1f;
+          //PlayerController.PlayerSpeed = 1f;
+          player.ChangePlayerSpeed(1f);
           pickedObject.transform.SetParent(interactionZone);
           pickedObject.transform.position = interactionZone.position;
           if(pickedObject.GetComponent<Rigidbody>() != null){
@@ -63,7 +65,8 @@ public class PickupObject : MonoBehaviour
         pickedObject.GetComponent<PickeableObject>().isPickeable = true;
         if(pickedObject.CompareTag("Rocks")){pickedObject.transform.localPosition = new Vector3(0,0,1);}
         pickedObject.transform.SetParent(null);
-        PlayerController.PlayerSpeed = 1.5f;
+        //PlayerController.PlayerSpeed = 1.5f;
+        player.ChangePlayerSpeed(1.5f);
         if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = true;
           pickedObject.GetComponent<Rigidbody>().isKinematic = false;}
@@ -100,7 +103,9 @@ public class PickupObject : MonoBehaviour
     if (SceneManager.GetActiveScene().buildIndex == 1)
     {
       Destroy(torchObject);
+      Destroy(pickedObject);
       torchObject = null;
+      pickedObject = null;
     }
   }
 }

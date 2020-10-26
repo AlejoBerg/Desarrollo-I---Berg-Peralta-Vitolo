@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {    
@@ -14,7 +15,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
-    private static float playerSpeed = 1.5f;
+    //private static float playerSpeed = 1.5f;
+    [SerializeField] private float playerSpeed = 1.5f;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
@@ -30,12 +32,12 @@ public class PlayerController : MonoBehaviour
     protected static bool pickUpTorch = false;
     public static bool PickUpItem { get => pickUpItem; set => pickUpItem = value;}
     public static bool PickUpTorch { get => pickUpTorch; set => pickUpTorch = value;}
-    public static float PlayerSpeed { get => playerSpeed; set => playerSpeed = value;}
+   // public static float PlayerSpeed { get => playerSpeed; set => playerSpeed = value;}
     
     
     public void Awake() 
     { 
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
-        
+        if(GameManager.ChangedLevel){CheckSpawnPosition();}
     }
 
     private void FixedUpdate()
@@ -166,6 +168,30 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag.Equals("Walls"))
         {
             wallDetected = true;
+        }
+    }
+
+    public void ChangePlayerSpeed(float speed)
+    {
+        playerSpeed = speed;
+    }
+    
+    private void CheckSpawnPosition()
+    {
+        if (GameManager.CurrentScene == 0)
+        {
+            transform.position = GameManager.SpawnPointLvl1;
+            GameManager.ChangedLevel = false;
+        }
+        else if (GameManager.CurrentScene == 1)
+        {
+            transform.position = GameManager.SpawnPointLvl2;
+            GameManager.ChangedLevel = false; 
+        }
+        else
+        {
+            transform.position = GameManager.SpawnPointLvl3;
+            GameManager.ChangedLevel = false;
         }
     }
 }

@@ -38,13 +38,19 @@
               <e p="Legacy Project_Read Me!.txt" t="Include" />
             </e>
           </e>
+          <e p="Player Model" t="Include">
+            <e p="textures" t="Include">
+              <e p="ScrollTexture" t="Include">
+                <e p="ScrollTexture.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Spider2D" t="Include">
             <e p="SpiderBlinking.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="ActivateWhenTrigger.cs" t="Include" />
-          <e p="CameraCollider.cs" t="Include" />
           <e p="CanvasFade.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />

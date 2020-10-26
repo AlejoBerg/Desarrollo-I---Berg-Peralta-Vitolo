@@ -34,6 +34,11 @@ public class ThirdCameraController : MonoBehaviour
         RelativePositionFromMouse();
         CalculateCameraPosition();
         CameraZoom();
+        
+        if (Input.GetKey(KeyCode.F1))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void RelativePositionFromMouse()
@@ -57,5 +62,5 @@ public class ThirdCameraController : MonoBehaviour
         fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity; 
         fov = Mathf.Clamp(fov, minFov, maxFov);
         camera.fieldOfView = fov;
-    } 
+    }
 }

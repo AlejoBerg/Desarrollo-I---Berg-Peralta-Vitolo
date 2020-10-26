@@ -25,6 +25,8 @@ public class LoadNextLevel : MonoBehaviour
             fadeOutImage.DoFade();
             StartCoroutine("FadeMusicVolume");
             StartCoroutine("DelayBeforeLoadNextLvl");
+            GameManager.ChangeCurrentScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GameManager.ChangedLevel = true;
         }
     }
 
