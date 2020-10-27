@@ -19,8 +19,8 @@ public class ThirdCameraController : MonoBehaviour
     private float maxFov = 50f;
  
     public void Awake() 
-    { 
-        DontDestroyOnLoad(gameObject); 
+    {
+        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
@@ -35,10 +35,10 @@ public class ThirdCameraController : MonoBehaviour
         CalculateCameraPosition();
         CameraZoom();
         
-        if (Input.GetKey(KeyCode.F1))
+      /* if (Input.GetKey(KeyCode.F1))
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     private void RelativePositionFromMouse()

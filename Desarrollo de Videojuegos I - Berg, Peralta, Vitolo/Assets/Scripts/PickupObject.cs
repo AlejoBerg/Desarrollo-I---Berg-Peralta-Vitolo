@@ -46,7 +46,8 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          PlayerController.PickUpItem = true;
+          //PlayerController.PickUpItem = true;
+          player.pickUpItem = true;
           player.ChangePlayerSpeed(1f);
           pickedObject.transform.SetParent(interactionZone);
           pickedObject.transform.position = interactionZone.position;
@@ -64,14 +65,14 @@ public class PickupObject : MonoBehaviour
         pickedObject.GetComponent<PickeableObject>().isPickeable = true;
         if(pickedObject.CompareTag("Rocks")){pickedObject.transform.localPosition = new Vector3(0,0,1);}
         pickedObject.transform.SetParent(null);
-        //PlayerController.PlayerSpeed = 1.5f;
         player.ChangePlayerSpeed(1.5f);
         if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = true;
           pickedObject.GetComponent<Rigidbody>().isKinematic = false;}
         if(pickedObject.GetComponent<BoxCollider>() != null){pickedObject.GetComponent<BoxCollider>().enabled = true;}
         pickedObject = null;
-        PlayerController.PickUpItem = false;
+        //PlayerController.PickUpItem = false;
+        player.pickUpItem = false;
       }
     }
 
@@ -92,7 +93,8 @@ public class PickupObject : MonoBehaviour
         torchObject = itemToPickUp;
         torchObject.GetComponent<PickeableObject>().audioSFX.Play();
         torchObject.GetComponent<PickeableObject>().isPickeable = false;
-        PlayerController.PickUpTorch = false;
+        //PlayerController.PickUpTorch = false;
+        player.pickUpTorch = false;
         torchObject.transform.SetParent(backpackZone);
         torchObject.transform.localRotation = Quaternion.Euler(torchAngleRotation);
         torchObject.transform.localPosition = torchPosition;

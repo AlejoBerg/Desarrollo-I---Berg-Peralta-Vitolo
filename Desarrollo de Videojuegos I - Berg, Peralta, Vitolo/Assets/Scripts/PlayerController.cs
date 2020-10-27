@@ -8,18 +8,16 @@ public class PlayerController : MonoBehaviour
 {    
     [SerializeField]private Camera mainCamera;
     [SerializeField]private float jumpForce = 4f;
-    [SerializeField]private float _distanceDetectRayCast;
-    [SerializeField]private float _distanceRayCast;
     [SerializeField]private GameObject bagPack;
     [SerializeField]private AudioSource jumpSFX;
-    [SerializeField] private float playerSpeed = 1.5f;
+    [SerializeField]private float playerSpeed = 1.5f;
     private bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
     private Vector3 playerInput;
     private Vector3 camForward;
     private Vector3 camRight;
-    private bool canJump = true;
+    private bool isGrounded = true;
     private bool canRun = false;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
@@ -28,10 +26,8 @@ public class PlayerController : MonoBehaviour
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool wallDetected = false;
     private Animator playerBagAnimator;
-    protected static bool pickUpItem = false;
-    protected static bool pickUpTorch = false;
-    public static bool PickUpItem { get => pickUpItem; set => pickUpItem = value;}
-    public static bool PickUpTorch { get => pickUpTorch; set => pickUpTorch = value;}
+    public bool pickUpItem = false;
+    public bool pickUpTorch = false;
 
     public void Awake() 
     { 
@@ -49,26 +45,25 @@ public class PlayerController : MonoBehaviour
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
         if(GameManager.ChangedLevel){CheckSpawnPosition();}
+        Debug.Log("escena del current del manager" + GameManager.CurrentScene + "escena que detecta realmente" + SceneManager.GetActiveScene().buildIndex);
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
-        
-       //layerMask = ~layerMask; // Con esta línea choco con todo menos con la capa 8
 
        if(wallDetected)
        {
          RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, _distanceDetectRayCast, layerMask))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 0.4f, layerMask))
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 rb.velocity = new Vector3(0, rb.velocity.y, 0);
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * _distanceRayCast, Color.white);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1.5f, Color.white);
                 wallDetected = false;
             }
        }
@@ -114,28 +109,18 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.SetBool("ItemPickUp",false);
         }
-
-        /*if (pickUpTorch)
-        {
-            playerAnimator.SetBool("Torch",true);
-        }
-        else
-        {
-            playerAnimator.SetBool("Torch",false);
-        }*/
         
         CamDirection();
 
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
        
-        if (Input.GetButtonDown("Jump") && canJump && jumpActive)
+        if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
         {
             jumpSFX.Play();
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
-            //playerBagAnimator.SetBool("PlayerJump", true);
-            canJump = false;
+            isGrounded = false;
         }
     }
 
@@ -156,8 +141,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag.Equals("Floor"))
         {
             playerAnimator.SetBool("IsGrounded", true);
-            //playerBagAnimator.SetBool("PlayerJump", false);
-            canJump = true;
+            isGrounded = true;
         }
     }
 
