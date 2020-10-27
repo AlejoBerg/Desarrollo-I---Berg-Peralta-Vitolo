@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerBagAnimator;
     public bool pickUpItem = false;
     public bool pickUpTorch = false;
-
+    
     public void Awake() 
     { 
         DontDestroyOnLoad(gameObject);
@@ -44,8 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
-        if(GameManager.ChangedLevel){CheckSpawnPosition();}
-        Debug.Log("escena del current del manager" + GameManager.CurrentScene + "escena que detecta realmente" + SceneManager.GetActiveScene().buildIndex);
+        //if(GameManager.ChangedLevel){CheckSpawnPosition();}
     }
 
     private void FixedUpdate()
@@ -158,9 +157,9 @@ public class PlayerController : MonoBehaviour
         playerSpeed = speed;
     }
     
-    private void CheckSpawnPosition()
+   /* private void CheckSpawnPosition()
     {
-        if (GameManager.CurrentScene == 0)
+        if (GameManagerOLD.CurrentScene == 0)
         {
             transform.position = GameManager.SpawnPointLvl1;
             GameManager.ChangedLevel = false;
@@ -175,5 +174,5 @@ public class PlayerController : MonoBehaviour
             transform.position = GameManager.SpawnPointLvl3;
             GameManager.ChangedLevel = false;
         }
-    }
+    }*/
 }

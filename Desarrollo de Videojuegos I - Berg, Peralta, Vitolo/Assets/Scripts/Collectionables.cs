@@ -20,7 +20,7 @@ public class Collectionables : MonoBehaviour
             _textFader.Fade();
             isPickUP = false;
             activated = true;
-            GameManager.AddPoints(1);
+            GameManagerOLD.AddPoints(1);
         }
         
         if (activated)

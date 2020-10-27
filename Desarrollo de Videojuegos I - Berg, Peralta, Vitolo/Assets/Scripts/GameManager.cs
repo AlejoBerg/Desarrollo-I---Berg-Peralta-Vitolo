@@ -5,28 +5,80 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class GameManager : MonoBehaviour
+public enum State
+{
+    Menu,
+    Level1,
+    Level2,
+    Level3,
+}
+
+public class GameManager
 {
     private static GameManager instance;
+    private State currenState;
     private static int score = 0;
     private static int parchmentsAmount = 0;
     private static Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private static Vector3 spawnPointLvl2 =  new Vector3(-1355.21f, -703f,576.4408f);
+    private static Vector3 spawnPointLvl2 =  new Vector3(-1355f, -702,578f);
     private static Vector3 spawnPointLvl3 = new Vector3(0,1,0);
-    private static int currentScene = 0;
-    private static bool changedLevel = false;
     
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
     public static Vector3 SpawnPointLvl1 => spawnPointLvl1;
     public static Vector3 SpawnPointLvl2 => spawnPointLvl2;
     public static Vector3 SpawnPointLvl3 => spawnPointLvl3;
-    public static int CurrentScene => currentScene;
-    public static bool ChangedLevel{ get => changedLevel; set => changedLevel = value; }
 
-    public static void ChangeCurrentScene(int newScene)
+    public static GameManager Instance 
     {
-        currentScene = newScene;
+        get
+        {
+            if(instance == null) 
+            {
+                instance = new GameManager(); 
+                Debug.Log("GameManager has been created");
+            }
+            return instance;
+        }
+    }
+    
+    public void Awake()
+    {
+        currenState = State.Level1;
+    }
+
+    public void Update()
+    {
+        switch (currenState)
+            {
+                case State.Menu:
+
+                    break;
+
+                case State.Level1:
+                    Debug.Log("cambie a las coords del lvl 1");
+                    SceneManager.LoadScene(0);
+                    break;
+
+                case State.Level2:
+                    Debug.Log("cambie a las coords del lvl 2");
+                    SceneManager.LoadScene(1);
+                    break;
+
+                case State.Level3:
+                    Debug.Log("cambie a las coords del lvl 3");
+                    SceneManager.LoadScene(2);
+                    break;
+
+               default:
+                    break;
+            }
+    }
+
+
+    public void ChangeCurrentScene(State newState)
+    {
+        currenState = newState;
     }
     
     public static void AddPoints(int newPoints)
@@ -38,4 +90,5 @@ public class GameManager : MonoBehaviour
     {
         parchmentsAmount += newParchment;
     }
+    
 }
