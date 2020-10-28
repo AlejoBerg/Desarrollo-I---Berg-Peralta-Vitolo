@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player_.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadNextLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadNextLevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Temp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Temp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Parchments.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,15 +84,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManagerOLD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Program.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadNextLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Temp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs" />
       </list>
     </option>
   </component>
@@ -196,6 +197,7 @@
       <workItem from="1603729709488" duration="5426000" />
       <workItem from="1603747401908" duration="4903000" />
       <workItem from="1603828886528" duration="17260000" />
+      <workItem from="1603922589620" duration="2064000" />
     </task>
     <servers />
   </component>

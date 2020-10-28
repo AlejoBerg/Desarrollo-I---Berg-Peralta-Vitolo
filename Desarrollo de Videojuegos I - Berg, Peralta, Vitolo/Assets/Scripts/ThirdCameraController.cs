@@ -35,11 +35,6 @@ public class ThirdCameraController : MonoBehaviour
         RelativePositionFromMouse();
         CalculateCameraPosition();
         CameraZoom();
-        
-      /* if (Input.GetKey(KeyCode.F1))
-        {
-            Destroy(gameObject);
-        }*/
     }
 
     private void RelativePositionFromMouse()
