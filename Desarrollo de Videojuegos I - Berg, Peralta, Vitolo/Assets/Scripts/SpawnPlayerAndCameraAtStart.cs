@@ -17,10 +17,10 @@ public class SpawnPlayerAndCameraAtStart : MonoBehaviour
             player = Instantiate(prefab);
             camera = Instantiate(cameraPrefab);
             GameManager.Player.Add(player);
-            GameManager.PlayerIsAlive = true;
             GameManager.Instance.Awake();
-            DontDestroyOnLoad(this);
+            GameManager.PlayerIsAlive = true;
             GameManager.PlayerCreated = true;
+            DontDestroyOnLoad(this);
         }
     }
 

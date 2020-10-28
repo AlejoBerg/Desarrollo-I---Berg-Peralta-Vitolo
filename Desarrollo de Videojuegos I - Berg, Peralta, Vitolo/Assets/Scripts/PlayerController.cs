@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {    
-    //[SerializeField]private Camera mainCamera;
     private Camera mainCamera;
     [SerializeField]private float jumpForce = 4f;
     [SerializeField]private GameObject bagPack;

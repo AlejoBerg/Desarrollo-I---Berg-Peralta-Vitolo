@@ -48,6 +48,7 @@ public class GameManager
     public void Awake()
     {
         currenState = State.Level1;
+        player[0].transform.position = spawnPointLvl1;
     }
 
     public void Update()
