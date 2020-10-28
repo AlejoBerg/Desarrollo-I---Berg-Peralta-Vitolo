@@ -42,15 +42,6 @@ public class LoadNextLevel : MonoBehaviour
     IEnumerator DelayBeforeLoadNextLvl()
     {
         yield return new WaitForSeconds(delayBeforeLoadNextLevel);
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            GameManager.Instance.ChangeCurrentState(State.Level2);
-            GameManager.Instance.Update();
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            GameManager.Instance.ChangeCurrentState(State.Level3);
-            GameManager.Instance.Update();
-        }
+        GameManager.LoadNextLevel = true;
     }
 }

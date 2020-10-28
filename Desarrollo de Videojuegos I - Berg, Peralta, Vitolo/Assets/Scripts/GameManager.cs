@@ -18,18 +18,18 @@ public class GameManager
     private static GameManager instance;
     private State currenState;
     private static int score = 0;
+    private static bool playerIsAlive = false;
+    private static bool loadNextLevel = false;
     private static int parchmentsAmount = 0;
-    //private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private  Vector3 spawnPointLvl1 = new Vector3(-25f, 1.56f, -15.1f);
-    private  Vector3 spawnPointLvl2 =  new Vector3(-1355f, -702,578f);
+    private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    private  Vector3 spawnPointLvl2 =  new Vector3(-1360f, -600,573f);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> player = new List<GameObject>();
 
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
-   /* public static Vector3 SpawnPointLvl1 => spawnPointLvl1;
-    public static Vector3 SpawnPointLvl2 => spawnPointLvl2;
-    public static Vector3 SpawnPointLvl3 => spawnPointLvl3;*/
+    public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
+    public static bool LoadNextLevel { get => loadNextLevel; set => loadNextLevel = value; }
     public static List<GameObject> Player { get => player; set => player = value; }
 
     public static GameManager Instance 
@@ -39,8 +39,6 @@ public class GameManager
             if(instance == null) 
             {
                 instance = new GameManager(); 
-                Debug.Log("GameManager has been created");
-                
             }
             return instance;
         }
@@ -49,11 +47,23 @@ public class GameManager
     public void Awake()
     {
         currenState = State.Level1;
-        Debug.Log("el state actual es:" + currenState);
     }
 
     public void Update()
     {
+        if (parchmentsAmount == 5 && currenState == State.Level1)
+        {
+            instance.ChangeCurrentState(State.Level2);
+            playerIsAlive = false;
+            loadNextLevel = false;
+        }
+        if (parchmentsAmount == 11 && currenState == State.Level2)
+        {
+            instance.ChangeCurrentState(State.Level3);
+            playerIsAlive = false;
+            loadNextLevel = false;
+        }
+        
         switch (currenState)
             {
                 case State.Menu:
@@ -61,34 +71,39 @@ public class GameManager
                     break;
 
                 case State.Level1:
-                    
-                    player[0].transform.position = spawnPointLvl1;
-                    Debug.Log("cambie a las coords del lvl 1");
-                    Debug.Log("el state actual es:" + currenState);
-                    //SceneManager.LoadScene(0);  hasta que no esté el menú
+
+                    if (!playerIsAlive)
+                    {
+                        SceneManager.LoadScene(0);
+                        player[0].transform.position = spawnPointLvl1;
+                        playerIsAlive = true;
+                    } 
                     break;
 
                 case State.Level2:
                     
-                    SceneManager.LoadScene(1);
-                    Debug.Log("cambie a las coords del lvl 2");
-                    Debug.Log("el state actual es:" + currenState);
-                    player[0].transform.position = spawnPointLvl2;
+                    if (!playerIsAlive)
+                    {
+                        SceneManager.LoadScene(1);
+                        player[0].transform.position = spawnPointLvl2;
+                        playerIsAlive = true;
+                    } 
                     break;
 
                 case State.Level3:
                     
-                    SceneManager.LoadScene(2);
-                    Debug.Log("cambie a las coords del lvl 3");
-                    Debug.Log("el state actual es:" + currenState);
-                    player[0].transform.position = spawnPointLvl3;
+                    if (!playerIsAlive)
+                    {
+                        SceneManager.LoadScene(2);
+                        player[0].transform.position = spawnPointLvl3;
+                        playerIsAlive = true;
+                    }
                     break;
 
                default:
                     break;
             }
     }
-
 
     public void ChangeCurrentState(State newState)
     {

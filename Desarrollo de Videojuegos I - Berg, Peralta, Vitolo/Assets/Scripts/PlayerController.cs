@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
-        Debug.Log("posicion" + transform.position);
     }
 
     private void FixedUpdate()

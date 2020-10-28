@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,12 @@ public class SpawnPlayerAtStart : MonoBehaviour
         GameManager.Instance.Awake();
         Instantiate(prefab);
         GameManager.Player.Add(prefab);
+        GameManager.PlayerIsAlive = true;
+        //Destroy(this);
+    }
+
+    private void Update()
+    {
         GameManager.Instance.Update();
-        Destroy(this);
     }
 }
