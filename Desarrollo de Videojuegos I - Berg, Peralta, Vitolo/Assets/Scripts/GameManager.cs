@@ -22,7 +22,7 @@ public class GameManager
     private static bool playerCreated = false;
     private static int parchmentsAmount = 0;
     private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private  Vector3 spawnPointLvl2 =  new Vector3(-1360f, -700,573f);
+    private  Vector3 spawnPointLvl2 =  new Vector3(-1364.938f, -702.552f,574.357f);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> player = new List<GameObject>();
 
