@@ -16,20 +16,19 @@ public class Temp : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F1))
         {
-            SceneManager.LoadScene(0);
             GameManager.Instance.Update();
         }
         
         if (Input.GetKey(KeyCode.F2))
         {
-            SceneManager.LoadScene(1);
             GameManager.Instance.ChangeCurrentState(State.Level2);
+            var pos = GameObject.Find("SpawnPoint");
+            transform.position = pos.transform.position;
             GameManager.Instance.Update();
         }
         
         if (Input.GetKey(KeyCode.F3))
         {
-            SceneManager.LoadScene(2);
             GameManager.Instance.ChangeCurrentState(State.Level3);
             GameManager.Instance.Update();
         }

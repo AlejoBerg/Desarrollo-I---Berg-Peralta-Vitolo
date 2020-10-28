@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public bool pickUpItem = false;
     [HideInInspector]public bool pickUpTorch = false;
     
-    public void Awake() 
+    void Awake() 
     { 
         DontDestroyOnLoad(gameObject);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPlayerAtStart : MonoBehaviour
 {
-    public PlayerController prefab;
+    public GameObject prefab;
     
     void Awake()
     {
