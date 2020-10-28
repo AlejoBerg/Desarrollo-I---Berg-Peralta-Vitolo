@@ -13,7 +13,6 @@ TagManager:
   - Platforms
   - Torch
   - Walls
-  - SpawnPoint
   layers:
   - Default
   - TransparentFX

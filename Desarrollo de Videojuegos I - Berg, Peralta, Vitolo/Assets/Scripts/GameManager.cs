@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public enum State
 {
     Menu,
@@ -22,7 +21,7 @@ public class GameManager
     private static bool loadNextLevel = false;
     private static int parchmentsAmount = 0;
     private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private  Vector3 spawnPointLvl2 =  new Vector3(-1360f, -600,573f);
+    private  Vector3 spawnPointLvl2 =  new Vector3(-1360f, -700,573f);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> player = new List<GameObject>();
 
@@ -51,6 +50,7 @@ public class GameManager
 
     public void Update()
     {
+        Debug.Log("es estado para los state es " + playerIsAlive);
         if (parchmentsAmount == 5 && currenState == State.Level1)
         {
             instance.ChangeCurrentState(State.Level2);
@@ -119,5 +119,4 @@ public class GameManager
     {
         parchmentsAmount += newParchment;
     }
-    
 }

@@ -6,14 +6,14 @@ using UnityEngine;
 public class SpawnPlayerAtStart : MonoBehaviour
 {
     public GameObject prefab;
-    
+    private GameObject player;
     void Awake()
     {
-        GameManager.Instance.Awake();
-        Instantiate(prefab);
-        GameManager.Player.Add(prefab);
-        GameManager.PlayerIsAlive = true;
-        //Destroy(this);
+            player = Instantiate(prefab);
+            GameManager.Player.Add(player);
+            GameManager.PlayerIsAlive = true;
+            GameManager.Instance.Awake();
+            DontDestroyOnLoad(this);
     }
 
     private void Update()

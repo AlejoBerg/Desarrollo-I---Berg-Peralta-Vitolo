@@ -8,28 +8,28 @@ public class Temp : MonoBehaviour
 {
     private void Update()
     {
-       RestartGame();
+       ChangeScene();
        QuitGame();
     }
 
-    void RestartGame()
+    void ChangeScene()
     {
         if (Input.GetKey(KeyCode.F1))
         {
-            GameManager.PlayerIsAlive = false;
             GameManager.Instance.ChangeCurrentState(State.Level1);
+            GameManager.PlayerIsAlive = false;
         }
         
         if (Input.GetKey(KeyCode.F2))
         {
-            GameManager.PlayerIsAlive = false;
             GameManager.Instance.ChangeCurrentState(State.Level2);
+            GameManager.PlayerIsAlive = false;
         }
         
         if (Input.GetKey(KeyCode.F3))
         {
-            GameManager.PlayerIsAlive = false;
             GameManager.Instance.ChangeCurrentState(State.Level3);
+            GameManager.PlayerIsAlive = false;
         }
     }
 
