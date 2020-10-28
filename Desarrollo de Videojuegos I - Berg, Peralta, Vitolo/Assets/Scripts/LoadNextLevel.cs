@@ -44,12 +44,12 @@ public class LoadNextLevel : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeLoadNextLevel);
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            GameManager.Instance.ChangeCurrentScene(State.Level2);
+            GameManager.Instance.ChangeCurrentState(State.Level2);
             GameManager.Instance.Update();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            GameManager.Instance.ChangeCurrentScene(State.Level3);
+            GameManager.Instance.ChangeCurrentState(State.Level3);
             GameManager.Instance.Update();
         }
     }

@@ -19,15 +19,18 @@ public class GameManager
     private State currenState;
     private static int score = 0;
     private static int parchmentsAmount = 0;
-    private static Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private static Vector3 spawnPointLvl2 =  new Vector3(-1355f, -702,578f);
-    private static Vector3 spawnPointLvl3 = new Vector3(0,1,0);
-    
+    private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    //private static Vector3 spawnPointLvl1 = new Vector3(-25f, 1.56f, -15.1f); pruebas para seba scene
+    private  Vector3 spawnPointLvl2 =  new Vector3(-1355f, -702,578f);
+    private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
+    private static List<PlayerController> player = new List<PlayerController>();
+
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
-    public static Vector3 SpawnPointLvl1 => spawnPointLvl1;
+   /* public static Vector3 SpawnPointLvl1 => spawnPointLvl1;
     public static Vector3 SpawnPointLvl2 => spawnPointLvl2;
-    public static Vector3 SpawnPointLvl3 => spawnPointLvl3;
+    public static Vector3 SpawnPointLvl3 => spawnPointLvl3;*/
+    public static List<PlayerController> Player { get => player; set => player = value; }
 
     public static GameManager Instance 
     {
@@ -37,6 +40,7 @@ public class GameManager
             {
                 instance = new GameManager(); 
                 Debug.Log("GameManager has been created");
+                
             }
             return instance;
         }
@@ -45,6 +49,7 @@ public class GameManager
     public void Awake()
     {
         currenState = State.Level1;
+        Debug.Log("el state actual es:" + currenState);
     }
 
     public void Update()
@@ -57,17 +62,22 @@ public class GameManager
 
                 case State.Level1:
                     Debug.Log("cambie a las coords del lvl 1");
-                    SceneManager.LoadScene(0);
+                    player[0].transform.position = spawnPointLvl1;
+                    //SceneManager.LoadScene(0);  hasta que no esté el menú
                     break;
 
                 case State.Level2:
-                    Debug.Log("cambie a las coords del lvl 2");
+                    player[0].transform.position = spawnPointLvl2;
                     SceneManager.LoadScene(1);
+                    Debug.Log("cambie a las coords del lvl 2");
+                    player[0].transform.position = spawnPointLvl2;
+                    
                     break;
 
                 case State.Level3:
-                    Debug.Log("cambie a las coords del lvl 3");
                     SceneManager.LoadScene(2);
+                    Debug.Log("cambie a las coords del lvl 3");
+                    player[0].transform.position = spawnPointLvl3;
                     break;
 
                default:
@@ -76,7 +86,7 @@ public class GameManager
     }
 
 
-    public void ChangeCurrentScene(State newState)
+    public void ChangeCurrentState(State newState)
     {
         currenState = newState;
     }

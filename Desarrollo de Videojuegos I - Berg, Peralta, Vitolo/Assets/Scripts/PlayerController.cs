@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {    
-    [SerializeField]private Camera mainCamera;
+    //[SerializeField]private Camera mainCamera;
+    private Camera mainCamera;
     [SerializeField]private float jumpForce = 4f;
     [SerializeField]private GameObject bagPack;
     [SerializeField]private AudioSource jumpSFX;
@@ -26,8 +27,8 @@ public class PlayerController : MonoBehaviour
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool wallDetected = false;
     private Animator playerBagAnimator;
-    public bool pickUpItem = false;
-    public bool pickUpTorch = false;
+    [HideInInspector]public bool pickUpItem = false;
+    [HideInInspector]public bool pickUpTorch = false;
     
     public void Awake() 
     { 
@@ -38,13 +39,14 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
         playerBagAnimator = bagPack.GetComponent<Animator>();
+        mainCamera = Camera.main;
     }
     
     void Update()
     {
         Movement();
         if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
-        //if(GameManager.ChangedLevel){CheckSpawnPosition();}
+        Debug.Log("posicion" + transform.position);
     }
 
     private void FixedUpdate()
@@ -156,23 +158,4 @@ public class PlayerController : MonoBehaviour
     {
         playerSpeed = speed;
     }
-    
-   /* private void CheckSpawnPosition()
-    {
-        if (GameManagerOLD.CurrentScene == 0)
-        {
-            transform.position = GameManager.SpawnPointLvl1;
-            GameManager.ChangedLevel = false;
-        }
-        else if (GameManager.CurrentScene == 1)
-        {
-            transform.position = GameManager.SpawnPointLvl2;
-            GameManager.ChangedLevel = false; 
-        }
-        else
-        {
-            transform.position = GameManager.SpawnPointLvl3;
-            GameManager.ChangedLevel = false;
-        }
-    }*/
 }

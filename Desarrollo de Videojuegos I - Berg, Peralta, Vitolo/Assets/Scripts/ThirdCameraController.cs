@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ThirdCameraController : MonoBehaviour
 {
-    [SerializeField] private GameObject playerRef = null;
+    private GameObject playerRef = null;
     [SerializeField] private float distanceBetweenPlayer = 3;
     [SerializeField] private float sensitivity;
     [SerializeField] private Camera camera = null;
@@ -24,6 +24,7 @@ public class ThirdCameraController : MonoBehaviour
     }
     private void Start()
     {
+        playerRef = GameObject.FindGameObjectWithTag("Player");
         cameraTransform = this.transform;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

@@ -17,23 +17,21 @@ public class Temp : MonoBehaviour
         if (Input.GetKey(KeyCode.F1))
         {
             SceneManager.LoadScene(0);
-            GameManagerOLD.ChangeCurrentScene(0);
-            GameManagerOLD.ChangedLevel = true;
-            Destroy(gameObject);
+            GameManager.Instance.Update();
         }
         
         if (Input.GetKey(KeyCode.F2))
         {
             SceneManager.LoadScene(1);
-            GameManagerOLD.ChangeCurrentScene(1);
-            GameManagerOLD.ChangedLevel = true;
+            GameManager.Instance.ChangeCurrentState(State.Level2);
+            GameManager.Instance.Update();
         }
         
         if (Input.GetKey(KeyCode.F3))
         {
             SceneManager.LoadScene(2);
-            GameManagerOLD.ChangeCurrentScene(2);
-            GameManagerOLD.ChangedLevel = true;
+            GameManager.Instance.ChangeCurrentState(State.Level3);
+            GameManager.Instance.Update();
         }
     }
 
