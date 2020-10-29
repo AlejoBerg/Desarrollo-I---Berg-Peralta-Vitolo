@@ -4,12 +4,12 @@ using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{    
-    private Camera mainCamera;
+{
     [SerializeField]private float jumpForce = 4f;
     [SerializeField]private GameObject bagPack;
     [SerializeField]private AudioSource jumpSFX;
     [SerializeField]private float playerSpeed = 1.5f;
+    private Camera mainCamera;
     private bool jumpActive = false;
     private float horizontalMove;
     private float verticalMove;
@@ -17,14 +17,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 camForward;
     private Vector3 camRight;
     private bool isGrounded = true;
-    private bool canRun = false;
+    private bool runActive = false;
     private Animator playerAnimator;
     private float playerSpeedForAnimation;
     private Rigidbody rb;
     private float coordsY;
     int layerMask = 1 << 8; // Con esta línea choco solamente con la capa 8
     private bool wallDetected = false;
-    private Animator playerBagAnimator;
     [HideInInspector]public bool pickUpItem = false;
     [HideInInspector]public bool pickUpTorch = false;
     
@@ -36,7 +35,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
-        playerBagAnimator = bagPack.GetComponent<Animator>();
         mainCamera = Camera.main;
     }
     
@@ -78,24 +76,27 @@ public class PlayerController : MonoBehaviour
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
             
-            playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
-            if (Input.GetKey(KeyCode.LeftShift) && canRun)
+            if (Input.GetKey(KeyCode.LeftShift) && runActive)
             {
-                playerSpeed = 6f;
+                playerSpeed = 5f;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
-            
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            if (Input.GetKeyUp(KeyCode.LeftShift) && runActive)
             {
-                playerSpeed = 3f;
+                playerSpeed = 2f;
                 playerSpeedForAnimation = 0.2f; 
             }
         }
         else
-        {   playerSpeedForAnimation = 0;
+        {
+            if (Input.GetKeyUp(KeyCode.LeftShift) && runActive)
+            {
+                playerSpeed = 2f;
+                playerSpeedForAnimation = 0.2f; 
+            }
+            playerSpeedForAnimation = 0;
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            playerBagAnimator.SetFloat("SpeedBagPack", 0f);
         }
         
         if (pickUpItem)
@@ -159,4 +160,15 @@ public class PlayerController : MonoBehaviour
     {
         jumpActive = condition;
     }
+    
+    public void ChangeConditionToRun(bool condition)
+    {
+        runActive = condition;
+    }
+    
+    public void ChangeCameraPos(Vector3 pos)
+    {
+        camRight = pos;
+    }
+    
 }

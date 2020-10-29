@@ -49,7 +49,7 @@ public class ThirdCameraController : MonoBehaviour
         Vector3 direction = new Vector3(0, 0, -distanceBetweenPlayer);
         Quaternion rotation = Quaternion.Euler(currentX,currentY ,0 );
         cameraTransform.position = playerRef.transform.position + rotation * direction;
-        cameraTransform.LookAt(playerRef.transform.position + new Vector3(0,1,0));
+        cameraTransform.LookAt(playerRef.transform.position + new Vector3(0,1f,0));
     }
     
     void CameraZoom()
@@ -63,5 +63,11 @@ public class ThirdCameraController : MonoBehaviour
     public void ChangeDistanceToPlayer(float distance)
     {
         distanceBetweenPlayer = distance;
+    }
+
+    public void ChangeCameraPos(float mouseY, float mouseX)
+    {
+        currentX = mouseY;
+        currentY = mouseX;
     }
 }
