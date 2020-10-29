@@ -3442,7 +3442,7 @@ PrefabInstance:
     - target: {fileID: 6833064987442858456, guid: e582c62aa9810ed4295f63540d6dc97d,
         type: 3}
       propertyPath: CollisionModule.quality
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6833064987442858456, guid: e582c62aa9810ed4295f63540d6dc97d,
         type: 3}
@@ -3477,7 +3477,7 @@ PrefabInstance:
     - target: {fileID: 6833064987442858456, guid: e582c62aa9810ed4295f63540d6dc97d,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 7000
+      value: 7500
       objectReference: {fileID: 0}
     - target: {fileID: 6833064987442858457, guid: e582c62aa9810ed4295f63540d6dc97d,
         type: 3}
@@ -4427,13 +4427,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4559469514319648163}
-  m_LocalRotation: {x: 0.42987904, y: -0.52919054, z: -0.45698318, w: 0.5712511}
-  m_LocalPosition: {x: -19.628, y: -2.427, z: -79.071}
-  m_LocalScale: {x: 1.3602645, y: 1.3602645, z: 1.3602638}
+  m_LocalRotation: {x: 0.458438, y: -0.5052092, z: -0.48336297, w: 0.5485968}
+  m_LocalPosition: {x: -21.094116, y: -2.8547363, z: -81.858154}
+  m_LocalScale: {x: 1.5573668, y: 1.5573668, z: 1.5573663}
   m_Children: []
   m_Father: {fileID: 1370363640}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.42800003, y: -85.967, z: -77.717}
+  m_LocalEulerAnglesHint: {x: 0.836, y: -86.032005, z: -83.546005}
 --- !u!1 &4559469514319648163
 GameObject:
   m_ObjectHideFlags: 0
