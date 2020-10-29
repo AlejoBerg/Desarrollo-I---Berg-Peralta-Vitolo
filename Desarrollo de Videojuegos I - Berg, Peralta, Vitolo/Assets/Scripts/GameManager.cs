@@ -22,7 +22,7 @@ public class GameManager
     private static bool playerCreated = false;
     private static int parchmentsAmount = 0;
     private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    private  Vector3 spawnPointLvl2 =  new Vector3(-1364.938f, -702.552f,574.357f);
+    private  Vector3 spawnPointLvl2 =  new Vector3(-1366f, -702f,568f);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> player = new List<GameObject>();
 
@@ -53,13 +53,13 @@ public class GameManager
 
     public void Update()
     {
-        if (parchmentsAmount == 5 && currenState == State.Level1)
+        if (parchmentsAmount == 5 && currenState == State.Level1 && loadNextLevel)
         {
             instance.ChangeCurrentState(State.Level2);
             playerIsAlive = false;
             loadNextLevel = false;
         }
-        if (parchmentsAmount == 11 && currenState == State.Level2)
+        if (parchmentsAmount == 11 && currenState == State.Level2 && loadNextLevel)
         {
             instance.ChangeCurrentState(State.Level3);
             playerIsAlive = false;
