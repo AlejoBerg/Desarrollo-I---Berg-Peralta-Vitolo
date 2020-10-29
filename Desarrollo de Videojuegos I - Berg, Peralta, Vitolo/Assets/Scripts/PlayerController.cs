@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
-        if (GameManager.ParchmentsAmount == 2) { jumpActive = true;}
     }
 
     private void FixedUpdate()
@@ -78,18 +77,18 @@ public class PlayerController : MonoBehaviour
         {
             playerSpeedForAnimation = 0.2f; 
             playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation));
-            //playerSpeed = 1.5f;
+            
             playerBagAnimator.SetFloat("SpeedBagPack", 0.2f);
             if (Input.GetKey(KeyCode.LeftShift) && canRun)
             {
-                playerSpeed = 3f;
+                playerSpeed = 6f;
                 playerSpeedForAnimation = 1.2f;
                 playerAnimator.SetFloat("Speed",Math.Abs(playerSpeedForAnimation ));
             }
             
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                playerSpeed = 1.5f;
+                playerSpeed = 3f;
                 playerSpeedForAnimation = 0.2f; 
             }
         }
@@ -151,8 +150,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ChangePlayerSpeed(float speed)
+    public void ChangeWalkPlayerSpeed(float speed)
     {
         playerSpeed = speed;
+    }
+    
+    public void ChangeConditionToJump(bool condition)
+    {
+        jumpActive = condition;
     }
 }

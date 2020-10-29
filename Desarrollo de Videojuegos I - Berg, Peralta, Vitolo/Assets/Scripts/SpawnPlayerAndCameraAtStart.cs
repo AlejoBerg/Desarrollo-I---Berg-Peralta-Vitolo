@@ -16,7 +16,8 @@ public class SpawnPlayerAndCameraAtStart : MonoBehaviour
         {
             player = Instantiate(prefab);
             camera = Instantiate(cameraPrefab);
-            GameManager.Player.Add(player);
+            GameManager.GameObjects.Add(player);
+            GameManager.GameObjects.Add(camera);
             GameManager.Instance.Awake();
             GameManager.PlayerIsAlive = true;
             GameManager.PlayerCreated = true;

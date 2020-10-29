@@ -18,11 +18,11 @@ public class ThirdCameraController : MonoBehaviour
     private float minFov = 20f;
     private float maxFov = 50f;
  
-    public void Awake() 
+    void Awake() 
     {
         DontDestroyOnLoad(gameObject);
     }
-    private void Start()
+    void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
         cameraTransform = this.transform;
@@ -30,21 +30,21 @@ public class ThirdCameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void Update()
+    void Update()
     {
         RelativePositionFromMouse();
         CalculateCameraPosition();
         CameraZoom();
     }
 
-    private void RelativePositionFromMouse()
+    void RelativePositionFromMouse()
     {
         currentX -= Input.GetAxis("Mouse Y");
         currentY += Input.GetAxis("Mouse X");
         currentX = Mathf.Clamp(currentX, minXAngle, maxXAngle);
     }
 
-    private void CalculateCameraPosition()
+    void CalculateCameraPosition()
     {      
         Vector3 direction = new Vector3(0, 0, -distanceBetweenPlayer);
         Quaternion rotation = Quaternion.Euler(currentX,currentY ,0 );
@@ -58,5 +58,10 @@ public class ThirdCameraController : MonoBehaviour
         fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity; 
         fov = Mathf.Clamp(fov, minFov, maxFov);
         camera.fieldOfView = fov;
+    }
+
+    public void ChangeDistanceToPlayer(float distance)
+    {
+        distanceBetweenPlayer = distance;
     }
 }

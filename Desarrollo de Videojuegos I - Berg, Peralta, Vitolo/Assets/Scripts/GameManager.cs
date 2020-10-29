@@ -24,14 +24,14 @@ public class GameManager
     private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
     private  Vector3 spawnPointLvl2 =  new Vector3(-1366f, -702f,568f);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
-    private static List<GameObject> player = new List<GameObject>();
+    private static List<GameObject> gameObjects = new List<GameObject>();
 
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
     public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
     public static bool PlayerCreated { get => playerCreated; set => playerCreated = value; }
     public static bool LoadNextLevel { get => loadNextLevel; set => loadNextLevel = value; }
-    public static List<GameObject> Player { get => player; set => player = value; }
+    public static List<GameObject> GameObjects { get => gameObjects; set => gameObjects = value; }
 
     public static GameManager Instance 
     {
@@ -48,7 +48,7 @@ public class GameManager
     public void Awake()
     {
         currenState = State.Level1;
-        player[0].transform.position = spawnPointLvl1;
+        gameObjects[0].transform.position = spawnPointLvl1;
     }
 
     public void Update()
@@ -77,7 +77,9 @@ public class GameManager
                     if (!playerIsAlive)
                     {
                         SceneManager.LoadScene(0);
-                        player[0].transform.position = spawnPointLvl1;
+                        gameObjects[0].transform.position = spawnPointLvl1;
+                        gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(1.5f);
+                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(3f);
                         playerIsAlive = true;
                     } 
                     break;
@@ -87,7 +89,9 @@ public class GameManager
                     if (!playerIsAlive)
                     {
                         SceneManager.LoadScene(1);
-                        player[0].transform.position = spawnPointLvl2;
+                        gameObjects[0].transform.position = spawnPointLvl2;
+                        gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(3f);
+                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
                         playerIsAlive = true;
                     } 
                     break;
@@ -97,7 +101,7 @@ public class GameManager
                     if (!playerIsAlive)
                     {
                         SceneManager.LoadScene(2);
-                        player[0].transform.position = spawnPointLvl3;
+                        gameObjects[0].transform.position = spawnPointLvl3;
                         playerIsAlive = true;
                     }
                     break;
@@ -105,6 +109,11 @@ public class GameManager
                default:
                     break;
             }
+
+        if (parchmentsAmount == 2 && currenState == State.Level1)
+        {
+            gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
+        }
     }
 
     public void ChangeCurrentState(State newState)

@@ -48,7 +48,7 @@ public class PickupObject : MonoBehaviour
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           //PlayerController.PickUpItem = true;
           player.pickUpItem = true;
-          player.ChangePlayerSpeed(1f);
+          player.ChangeWalkPlayerSpeed(1f);
           pickedObject.transform.SetParent(interactionZone);
           pickedObject.transform.position = interactionZone.position;
           if(pickedObject.GetComponent<Rigidbody>() != null){
@@ -65,7 +65,7 @@ public class PickupObject : MonoBehaviour
         pickedObject.GetComponent<PickeableObject>().isPickeable = true;
         if(pickedObject.CompareTag("Rocks")){pickedObject.transform.localPosition = new Vector3(0,0,1);}
         pickedObject.transform.SetParent(null);
-        player.ChangePlayerSpeed(1.5f);
+        player.ChangeWalkPlayerSpeed(1.5f);
         if(pickedObject.GetComponent<Rigidbody>() != null){
           pickedObject.GetComponent<Rigidbody>().useGravity = true;
           pickedObject.GetComponent<Rigidbody>().isKinematic = false;}
