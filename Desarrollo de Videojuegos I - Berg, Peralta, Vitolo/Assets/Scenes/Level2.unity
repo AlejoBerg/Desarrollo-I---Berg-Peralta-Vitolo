@@ -395,7 +395,9 @@ Transform:
   - {fileID: 1986899576}
   - {fileID: 1559639207}
   - {fileID: 794451485}
+  - {fileID: 1573622088}
   - {fileID: 1571148732}
+  - {fileID: 1014924914}
   m_Father: {fileID: 1368974420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1667,8 +1669,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794451484}
   m_LocalRotation: {x: -0, y: -0.00641845, z: -0, w: 0.99997944}
-  m_LocalPosition: {x: 23.81, y: 0.4199829, z: 110.71}
-  m_LocalScale: {x: 95.614365, y: 41.46668, z: -36.189983}
+  m_LocalPosition: {x: 10.81, y: 0.4199829, z: 109.67}
+  m_LocalScale: {x: 76.39779, y: 41.46668, z: -37.988625}
   m_Children: []
   m_Father: {fileID: 214022067}
   m_RootOrder: 8
@@ -2122,6 +2124,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1013448589}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1014924913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1014924914}
+  - component: {fileID: 1014924915}
+  m_Layer: 8
+  m_Name: Collider1 (11)
+  m_TagString: Walls
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1014924914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014924913}
+  m_LocalRotation: {x: -0, y: -0.00641845, z: -0, w: 0.99997944}
+  m_LocalPosition: {x: 134.61, y: 1.3762, z: 85.651}
+  m_LocalScale: {x: 103.10097, y: 44.71352, z: -39.02366}
+  m_Children: []
+  m_Father: {fileID: 214022067}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: -0.73600006, z: 0}
+--- !u!136 &1014924915
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014924913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.16692601
+  m_Height: 1.7166706
+  m_Direction: 1
+  m_Center: {x: -0.17355607, y: -0.29457083, z: -0.34101197}
 --- !u!1001 &1087222282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2836,11 +2883,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571148731}
   m_LocalRotation: {x: -0, y: 0.10393065, z: -0, w: 0.9945846}
-  m_LocalPosition: {x: 138.70996, y: 0.4199829, z: 93.82001}
-  m_LocalScale: {x: 84.52473, y: 41.46668, z: -25.664965}
+  m_LocalPosition: {x: 144.8, y: 0.4199829, z: 92.5}
+  m_LocalScale: {x: 53.82957, y: 41.46668, z: -25.664965}
   m_Children: []
   m_Father: {fileID: 214022067}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 11.931001, z: 0}
 --- !u!65 &1571148733
 BoxCollider:
@@ -2855,6 +2902,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1573622087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573622088}
+  - component: {fileID: 1573622089}
+  m_Layer: 8
+  m_Name: Collider1 (10)
+  m_TagString: Walls
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1573622088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573622087}
+  m_LocalRotation: {x: -0, y: -0.00641845, z: -0, w: 0.99997944}
+  m_LocalPosition: {x: 69.46, y: 1.2035, z: 94.41}
+  m_LocalScale: {x: 101.74325, y: 44.124695, z: -38.50976}
+  m_Children: []
+  m_Father: {fileID: 214022067}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: -0.73600006, z: 0}
+--- !u!136 &1573622089
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573622087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.20709434
+  m_Height: 1.7166706
+  m_Direction: 1
+  m_Center: {x: -0.1735559, y: -0.29457083, z: -0.44713706}
 --- !u!1001 &1637575694
 PrefabInstance:
   m_ObjectHideFlags: 0
