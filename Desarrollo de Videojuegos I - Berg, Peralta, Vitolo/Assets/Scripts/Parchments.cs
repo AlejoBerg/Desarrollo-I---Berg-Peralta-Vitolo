@@ -12,7 +12,6 @@ public class Parchments : MonoBehaviour
     [SerializeField] private float TextExitTime = 1f;
     [HideInInspector] public bool activeType = false;
     private int index;
-    private bool finish = false;
     private float currentTextTime;
     
     private void Update()
@@ -25,16 +24,7 @@ public class Parchments : MonoBehaviour
             activeType = false;
             GameManager.AddParchment(1);
         }
-        
-        if (finish && currentTextTime >= TextExitTime)
-        {
-            textDisplay.GetComponent<TextFader>().Fade();
-            Destroy(gameObject);
-        }
-        else
-        {
-            currentTextTime += Time.deltaTime;
-        }
+       
         if(textDisplay.GetComponent<CanvasGroup>().alpha == 0f){textDisplay.GetComponent<Text>().text = "";}
     }
 
@@ -46,6 +36,8 @@ public class Parchments : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         currentTextTime = 0;
-        finish = true;
+        yield return new WaitForSeconds(TextExitTime);
+        textDisplay.GetComponent<TextFader>().Fade();
+        Destroy(gameObject);
     }
 }
