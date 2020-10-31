@@ -27,7 +27,6 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          pickedObject.transform.position = new Vector3(-1,-1,-1);
           itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
         }
         

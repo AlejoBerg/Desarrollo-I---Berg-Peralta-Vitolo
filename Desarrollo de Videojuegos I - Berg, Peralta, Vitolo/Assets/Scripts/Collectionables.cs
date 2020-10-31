@@ -17,10 +17,12 @@ public class Collectionables : MonoBehaviour
         {
             var sfxCollectable = GetComponent<AudioSource>();
             sfxCollectable.Play();
+            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             _textFader.Fade();
             isPickUP = false;
             activated = true;
             GameManager.AddPoints(1);
+            
         }
         
         if (activated)
