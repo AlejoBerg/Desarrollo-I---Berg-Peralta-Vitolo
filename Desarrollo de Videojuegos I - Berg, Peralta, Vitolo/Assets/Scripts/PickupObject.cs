@@ -60,6 +60,7 @@ public class PickupObject : MonoBehaviour
           {
             itemToPickUp.GetComponent<MeshRenderer>().material.mainTexture = itemToPickUp.GetComponent<Puzzle2>().puzzleEnd;
             itemToPickUp.GetComponent<Puzzle2>().letterComplete.SetActive(true);
+            itemToPickUp.GetComponent<Puzzle2>().textToCloseLetter.SetActive(true);
           }
         }
         

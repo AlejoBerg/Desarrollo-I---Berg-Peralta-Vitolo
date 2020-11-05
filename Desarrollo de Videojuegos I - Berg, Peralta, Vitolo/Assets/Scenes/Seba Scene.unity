@@ -2914,6 +2914,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638615551}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &669773516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669773517}
+  - component: {fileID: 669773519}
+  - component: {fileID: 669773518}
+  m_Layer: 5
+  m_Name: TextCloseLetterComplete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &669773517
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669773516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.58700997, y: 0.58700997, z: 0.58700997}
+  m_Children: []
+  m_Father: {fileID: 1021509150}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 140.9, y: 39.899994}
+  m_SizeDelta: {x: 352.9, y: 60.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &669773518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669773516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press TAB to close
+--- !u!222 &669773519
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669773516}
+  m_CullTransparentMesh: 0
 --- !u!1 &729364553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,6 +3602,7 @@ RectTransform:
   - {fileID: 513827400}
   - {fileID: 1720294871}
   - {fileID: 1986394683}
+  - {fileID: 669773517}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3949,6 +4029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterComplete: {fileID: 1720294870}
+  textToCloseLetter: {fileID: 669773516}
   textDisplay: {fileID: 1986394682}
   sentences:
   - You need to search fragments to complete de letter
@@ -5629,11 +5710,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Coleccionable
       objectReference: {fileID: 0}
-    - target: {fileID: 1715628075427831083, guid: ba5f613a1c8f3844db8b11f4465e38be,
-        type: 3}
-      propertyPath: _textFader
-      value: 
-      objectReference: {fileID: 1775195860}
     - target: {fileID: 6493817724706968432, guid: ba5f613a1c8f3844db8b11f4465e38be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5689,6 +5765,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1715628075427831083, guid: ba5f613a1c8f3844db8b11f4465e38be,
+        type: 3}
+      propertyPath: _textFader
+      value: 
+      objectReference: {fileID: 1775195860}
     - target: {fileID: 4382737397826972111, guid: ba5f613a1c8f3844db8b11f4465e38be,
         type: 3}
       propertyPath: pickUpTextToShow

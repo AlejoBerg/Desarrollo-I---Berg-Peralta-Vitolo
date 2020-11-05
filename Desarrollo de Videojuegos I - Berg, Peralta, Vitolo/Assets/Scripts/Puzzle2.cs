@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Puzzle2 : MonoBehaviour
 {
-    [SerializeField] public GameObject letterComplete;
+    public GameObject letterComplete;
+    public GameObject textToCloseLetter;
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
@@ -51,6 +52,7 @@ public class Puzzle2 : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab))
         {
             letterComplete.SetActive(false);
+            textToCloseLetter.SetActive(false);
         }
     }
 }

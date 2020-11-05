@@ -24,8 +24,8 @@ public class GameManager
     private static int fragmentsNotes = 0;
     private static bool activeFade = false;
     //private static bool activeFadeOut = false;
-    private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    //private  Vector3 spawnPointLvl1 = new Vector3(-33f, 1f, -10f);
+    //private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    private  Vector3 spawnPointLvl1 = new Vector3(-33f, 1f, -10f);
     private  Vector3 spawnPointLvl2 =  new Vector3(-1363f, -703f, 574);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> gameObjects = new List<GameObject>();
