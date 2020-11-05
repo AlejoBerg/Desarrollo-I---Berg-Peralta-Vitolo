@@ -6,7 +6,6 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class WallsOut : MonoBehaviour
 {
-
     [SerializeField] private float platformSpeed = 0;
     [SerializeField] private WallsOut secondPlatform = null;
     [SerializeField] private GameObject eliminateWall = null;

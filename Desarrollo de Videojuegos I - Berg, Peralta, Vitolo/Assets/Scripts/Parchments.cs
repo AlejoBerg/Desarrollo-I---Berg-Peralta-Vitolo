@@ -27,10 +27,7 @@ public class Parchments : MonoBehaviour
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
             activeType = false;
-            GameManager.AddParchment(1);
         }
-       
-        if(textDisplay.GetComponent<CanvasGroup>().alpha == 0f){textDisplay.GetComponent<Text>().text = "";}
     }
 
     IEnumerator Type()
@@ -43,6 +40,8 @@ public class Parchments : MonoBehaviour
         currentTextTime = 0;
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
+        yield return new WaitForSeconds(TextExitTime);
+        textDisplay.GetComponent<Text>().text = "";
         Destroy(gameObject);
     }
 }

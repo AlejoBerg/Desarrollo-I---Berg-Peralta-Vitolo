@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
-
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Equals("Walls"))
@@ -170,5 +170,4 @@ public class PlayerController : MonoBehaviour
     {
         camRight = pos;
     }
-    
 }
