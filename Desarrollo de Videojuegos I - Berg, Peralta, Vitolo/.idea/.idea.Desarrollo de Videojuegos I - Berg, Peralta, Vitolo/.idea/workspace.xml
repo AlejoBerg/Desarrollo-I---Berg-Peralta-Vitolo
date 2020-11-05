@@ -20,13 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/google-trends-1280x720.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/google-trends-1280x720.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FragmentsHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FragmentsMessageHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Musics &amp; SFX/SFX/PickUp Note Fragment.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Musics &amp; SFX/SFX/PickUp Note Fragment.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/google-trends-1280x720.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/google-trends-1280x720.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pergamino.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pergamino.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +52,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FragmentsHUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FragmentsMessageHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Parchments.cs" root0="FORCE_HIGHLIGHTING" />
@@ -44,8 +61,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UADE 50%/Gorriti/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadNextLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FadeOutParticles.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,13 +90,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/test2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LigthsOn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TurnLightsOnWhenEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TextFader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActiveRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RadiusOfLigth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NewGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManagerOLD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Program.cs" />
@@ -87,12 +104,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Temp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAtStart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPlayerAndCameraAtStart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FragmentsHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FragmentsNotes.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FragmentsMessageHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
       </list>
     </option>
   </component>
@@ -201,7 +225,12 @@
       <workItem from="1603971935555" duration="1178000" />
       <workItem from="1603999844564" duration="7538000" />
       <workItem from="1604086294378" duration="883000" />
-      <workItem from="1604155540300" duration="1571000" />
+      <workItem from="1604155540300" duration="1972000" />
+      <workItem from="1604318155948" duration="15654000" />
+      <workItem from="1604354914231" duration="831000" />
+      <workItem from="1604405667441" duration="2749000" />
+      <workItem from="1604413238716" duration="3927000" />
+      <workItem from="1604577654494" duration="6092000" />
     </task>
     <servers />
   </component>

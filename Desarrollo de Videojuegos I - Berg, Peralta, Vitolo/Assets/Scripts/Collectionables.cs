@@ -5,44 +5,25 @@ using UnityEngine;
 
 public class Collectionables : MonoBehaviour
 {
-    [SerializeField] private TextFader _textFader;
-    private float currentFadeTime;
-    private float FadeSpawnTime = 2.5f;
-    [HideInInspector] public bool activated = false;
-    [HideInInspector] public bool isPickUP = false;
+  [SerializeField] private TextFader _textFader;
+  private float FadeSpawnTime = 2.5f;
+  [HideInInspector] public bool isPickUP = false;
     
   private void Update()
+  {
+    if (isPickUP)
     {
-        if (isPickUP)
-        {
-            var sfxCollectable = GetComponent<AudioSource>();
-            sfxCollectable.Play();
-            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            _textFader.Fade();
-            isPickUP = false;
-            activated = true;
-            GameManager.AddPoints(1);
-            
-        }
-        
-        if (activated)
-        {
-            FadeOnOff();
-        }
+      _textFader.Fade();
+      StartCoroutine(FadeOnOff());
+      isPickUP = false;
     }
-  
-  private void FadeOnOff()
-  { 
-      if (currentFadeTime >= FadeSpawnTime)
-      {
-          currentFadeTime = 0f;
-          _textFader.Fade();
-          activated = false;
-          Destroy(gameObject);
-      }
-      else
-      {
-          currentFadeTime += Time.deltaTime;
-      }
+  }
+
+  IEnumerator FadeOnOff()
+  {
+    yield return new WaitForSeconds(FadeSpawnTime);
+    _textFader.Fade();
+    Destroy(gameObject);
+    yield return null;
   }
 }

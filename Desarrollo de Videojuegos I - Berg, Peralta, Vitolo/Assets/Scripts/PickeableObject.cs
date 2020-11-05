@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class PickeableObject : MonoBehaviour
 {
-   [HideInInspector] public bool isPickeable = true;
+   public bool isPickeable = true;
    private Rigidbody rb;
    private bool active = true;
    [HideInInspector] public string tagName;
-   [SerializeField] public GameObject pickUpTextToShow;
-   [SerializeField] public Parchments _parchments;
+   public GameObject pickUpTextToShow;
+   [SerializeField] private Parchments _parchments;
    [SerializeField] private Collectionables _collectionables;
    public AudioSource audioSFX = null;
+   public GameObject mensajedefaltan;
+   
    private void Start()
    {
       rb = GetComponent<Rigidbody>();
@@ -26,6 +28,13 @@ public class PickeableObject : MonoBehaviour
          pickUpTextToShow.SetActive(true);
          tagName = tag;
       }
+      
+      if (other.gameObject.tag.Equals("DetectItem") && !isPickeable && GameManager.FragmentsNotes != 10)
+      {
+         if(tagName == "Poster"){mensajedefaltan.SetActive(true);}
+         tagName = tag;
+      }
+      
    }
    
    private void OnCollisionEnter(Collision other)
@@ -43,6 +52,7 @@ public class PickeableObject : MonoBehaviour
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = null;
          pickUpTextToShow.SetActive(false);
+         if(tagName == "Poster"){mensajedefaltan.SetActive(false);}
       }
    }
 }
