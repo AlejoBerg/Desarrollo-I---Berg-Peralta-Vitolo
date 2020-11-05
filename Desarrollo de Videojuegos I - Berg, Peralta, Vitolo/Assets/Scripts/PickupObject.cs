@@ -40,7 +40,6 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
-          //if(cont == 0){GameManager.ActiveFadeIn = true; cont++;}
           GameManager.AddFragment(1);
           StartCoroutine(Destroy());
         }
@@ -51,8 +50,17 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          GameManager.ActiveFadeIn = true;
-          //GameManager.ActiveFadeOut = true;
+          if (cont != 1)
+          {
+            itemToPickUp.GetComponent<Puzzle2>().activeMision = true;
+            cont++;
+          }
+          GameManager.ActiveFade = true;
+          if(GameManager.FragmentsNotes == 10)
+          {
+            itemToPickUp.GetComponent<MeshRenderer>().material.mainTexture = itemToPickUp.GetComponent<Puzzle2>().puzzleEnd;
+            itemToPickUp.GetComponent<Puzzle2>().letterComplete.SetActive(true);
+          }
         }
         
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Parchments"))

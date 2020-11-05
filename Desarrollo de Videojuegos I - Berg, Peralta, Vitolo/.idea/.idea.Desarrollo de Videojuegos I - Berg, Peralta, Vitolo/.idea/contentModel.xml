@@ -55,12 +55,8 @@
               <e p="Legacy Project_Read Me!.txt" t="Include" />
             </e>
           </e>
-          <e p="Player Model" t="Include">
-            <e p="textures" t="Include">
-              <e p="ScrollTexture" t="Include">
-                <e p="ScrollTexture.cs" t="Include" />
-              </e>
-            </e>
+          <e p="Rocks" t="Include">
+            <e p="readme.txt" t="Include" />
           </e>
           <e p="Spider2D" t="Include">
             <e p="SpiderBlinking.cs" t="Include" />
@@ -85,6 +81,7 @@
           <e p="Puzzle2.cs" t="Include" />
           <e p="RadiusOfLigth.cs" t="Include" />
           <e p="ScoreHUD.cs" t="Include" />
+          <e p="ScrollTexture.cs" t="Include" />
           <e p="SpawnPlayerAndCameraAtStart.cs" t="Include" />
           <e p="Temp.cs" t="Include" />
           <e p="TextFader.cs" t="Include" />
