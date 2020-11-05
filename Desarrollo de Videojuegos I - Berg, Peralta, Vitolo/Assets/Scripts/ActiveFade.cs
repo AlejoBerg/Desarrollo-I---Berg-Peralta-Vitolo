@@ -9,16 +9,16 @@ public class ActiveFade : MonoBehaviour
    
    private void Update()
    {
-      if (GameManager.ActiveFadeIn)
+      if (GameManager.ActiveFade)
       {
          _textFader.Fade();
-         GameManager.ActiveFadeIn = false;
+         GameManager.ActiveFade = false;
       }
       
-      if (GameManager.ActiveFadeOut)
+     /* if (GameManager.ActiveFadeOut)
       {
          _textFader.Fade();
          GameManager.ActiveFadeOut = false;
-      }
+      }*/
    }
 }

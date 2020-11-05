@@ -62,6 +62,9 @@
               </e>
             </e>
           </e>
+          <e p="Rocks" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
           <e p="Spider2D" t="Include">
             <e p="SpiderBlinking.cs" t="Include" />
           </e>

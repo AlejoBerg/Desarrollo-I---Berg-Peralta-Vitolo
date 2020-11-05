@@ -22,10 +22,10 @@ public class GameManager
     private static bool playerCreated = false;
     private static int parchmentsAmount = 0;
     private static int fragmentsNotes = 0;
-    private static bool activeFadeIn = false;
-    private static bool activeFadeOut = false;
-    private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    //private  Vector3 spawnPointLvl1 = new Vector3(-33f, 1f, -10f);
+    private static bool activeFade = false;
+    //private static bool activeFadeOut = false;
+    //private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    private  Vector3 spawnPointLvl1 = new Vector3(-33f, 1f, -10f);
     private  Vector3 spawnPointLvl2 =  new Vector3(-1363f, -703f, 574);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
     private static List<GameObject> gameObjects = new List<GameObject>();
@@ -34,8 +34,8 @@ public class GameManager
     public static int ParchmentsAmount => parchmentsAmount;
     public static int FragmentsNotes => fragmentsNotes;
     public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
-    public static bool ActiveFadeIn { get => activeFadeIn; set => activeFadeIn = value; }
-    public static bool ActiveFadeOut { get => activeFadeOut; set => activeFadeOut = value; }
+    public static bool ActiveFade { get => activeFade; set => activeFade = value; }
+    //public static bool ActiveFadeOut { get => activeFadeOut; set => activeFadeOut = value; }
     public static bool PlayerCreated { get => playerCreated; set => playerCreated = value; }
     public static bool LoadNextLevel { get => loadNextLevel; set => loadNextLevel = value; }
     public static List<GameObject> GameObjects { get => gameObjects; set => gameObjects = value; }

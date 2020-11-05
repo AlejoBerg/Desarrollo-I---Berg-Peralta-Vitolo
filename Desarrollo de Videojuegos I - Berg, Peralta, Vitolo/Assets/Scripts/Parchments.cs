@@ -15,7 +15,7 @@ public class Parchments : MonoBehaviour
     [SerializeField] private MeshRenderer _renderer2;
     [SerializeField] private MeshRenderer _renderer3;
     private int index;
-    private float currentTextTime;
+    //private float currentTextTime;
 
     private void Update()
     {
@@ -37,7 +37,7 @@ public class Parchments : MonoBehaviour
             textDisplay.GetComponent<Text>().text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-        currentTextTime = 0;
+        //currentTextTime = 0;
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
         yield return new WaitForSeconds(TextExitTime);
