@@ -2925,13 +2925,15 @@ GameObject:
   - component: {fileID: 669773517}
   - component: {fileID: 669773519}
   - component: {fileID: 669773518}
+  - component: {fileID: 669773520}
+  - component: {fileID: 669773521}
   m_Layer: 5
   m_Name: TextCloseLetterComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &669773517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2993,6 +2995,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669773516}
   m_CullTransparentMesh: 0
+--- !u!114 &669773520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669773516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922a0915274c88b4f80a2517f42da1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+--- !u!225 &669773521
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669773516}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &729364553
 GameObject:
   m_ObjectHideFlags: 0
@@ -4032,9 +4059,22 @@ MonoBehaviour:
   textToCloseLetter: {fileID: 669773516}
   textDisplay: {fileID: 1986394682}
   sentences:
-  - You need to search fragments to complete de letter
+  - You need to search fragments to complete the letter
+  notes:
+  - {fileID: 1615251035}
+  - {fileID: 1670392594}
+  - {fileID: 1941721000}
+  - {fileID: 98805768}
+  - {fileID: 95709896}
+  - {fileID: 1252849355}
+  - {fileID: 638615553}
+  - {fileID: 549745387}
+  - {fileID: 2099318373}
+  - {fileID: 293536991}
   typingSpeed: 0.1
   TextExitTime: 2
+  imageNoteComplete: {fileID: 1720294874}
+  pressTAB: {fileID: 669773520}
   activeMision: 0
   puzzleEnd: {fileID: 2800000, guid: d25f070e7032eef4abe359151ce386a3, type: 3}
 --- !u!1 &1241462990
@@ -5437,13 +5477,15 @@ GameObject:
   - component: {fileID: 1720294871}
   - component: {fileID: 1720294873}
   - component: {fileID: 1720294872}
+  - component: {fileID: 1720294874}
+  - component: {fileID: 1720294875}
   m_Layer: 5
   m_Name: LetterWith10Fragments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1720294871
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5498,6 +5540,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720294870}
   m_CullTransparentMesh: 0
+--- !u!114 &1720294874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720294870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922a0915274c88b4f80a2517f42da1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+--- !u!225 &1720294875
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720294870}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1762925544
 PrefabInstance:
   m_ObjectHideFlags: 0

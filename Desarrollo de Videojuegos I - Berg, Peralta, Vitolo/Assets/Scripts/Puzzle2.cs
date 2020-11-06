@@ -6,17 +6,32 @@ using UnityEngine.UI;
 
 public class Puzzle2 : MonoBehaviour
 {
-    public GameObject letterComplete;
-    public GameObject textToCloseLetter;
+    [SerializeField] private GameObject letterComplete;
+    [SerializeField] private GameObject textToCloseLetter;
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
+    [SerializeField] private PickeableObject[] notes;
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime = 1f;
+    [SerializeField] private TextFader imageNoteComplete;
+    [SerializeField] private TextFader pressTAB;
     public bool activeMision = false;
     public Texture puzzleEnd;
     private int cont = 0;
     private int index;
+    private bool activeFadeAgain = true;
+    private bool notAtStart = false;
+    private float time = 20f;
+    private float currentTime = 0;
+    
 
+    private void Awake()
+    {
+        for (int i = 0; i < notes.Length; i++)
+        {
+            notes[i].isPickeable = false;
+        }
+    }
 
     private void Update()
     {
@@ -24,6 +39,10 @@ public class Puzzle2 : MonoBehaviour
         {
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
+            for (int i = 0; i < notes.Length; i++)
+            {
+                notes[i].isPickeable = true;
+            }
             activeMision = false;
         }
         
@@ -32,7 +51,6 @@ public class Puzzle2 : MonoBehaviour
             this.gameObject.GetComponent<PickeableObject>().isPickeable = true;
             cont++;
         }
-        
         OccultPanel();
     }
     
@@ -47,12 +65,37 @@ public class Puzzle2 : MonoBehaviour
         textDisplay.GetComponent<TextFader>().Fade();
     }
 
+    public void FadeText()
+    {
+        letterComplete.GetComponent<TextFader>().Fade();
+        textToCloseLetter.GetComponent<TextFader>().Fade();
+        currentTime = 0;
+        notAtStart = true;
+    }
+    
     void OccultPanel()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKey(KeyCode.Tab) && activeFadeAgain && notAtStart)
         {
-            letterComplete.SetActive(false);
-            textToCloseLetter.SetActive(false);
+            letterComplete.GetComponent<TextFader>().Fade();
+            textToCloseLetter.GetComponent<TextFader>().Fade();
+            activeFadeAgain = false;
+        }
+        
+        if(notAtStart){TimerToFade();}
+    }
+
+    void TimerToFade()
+    {
+        if (currentTime >= time && activeFadeAgain)
+        {
+            letterComplete.GetComponent<TextFader>().Fade();
+            textToCloseLetter.GetComponent<TextFader>().Fade();
+            activeFadeAgain = false;
+        }
+        else
+        {
+            currentTime += Time.deltaTime;
         }
     }
 }

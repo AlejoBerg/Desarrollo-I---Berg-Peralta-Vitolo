@@ -20,14 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/NewRunning.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Animaciones basicas/NewRunning.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Candle/3 (4).jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Candle/3 (4).jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Candle/3 (8).JPG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Candle/3 (8).JPG.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +101,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collectionables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
       </list>
     </option>
   </component>
@@ -217,7 +219,7 @@
       <workItem from="1604405667441" duration="2749000" />
       <workItem from="1604413238716" duration="3927000" />
       <workItem from="1604577654494" duration="10873000" />
-      <workItem from="1604609575285" duration="1258000" />
+      <workItem from="1604609575285" duration="8476000" />
     </task>
     <servers />
   </component>

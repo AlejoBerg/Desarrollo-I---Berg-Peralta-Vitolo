@@ -50,17 +50,17 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          if (cont != 1)
+          if (cont != 1) //ver
           {
             itemToPickUp.GetComponent<Puzzle2>().activeMision = true;
             cont++;
           }
           GameManager.ActiveFade = true;
-          if(GameManager.FragmentsNotes == 10)
+          if(GameManager.FragmentsNotes == 10 && cont != 2)
           {
             itemToPickUp.GetComponent<MeshRenderer>().material.mainTexture = itemToPickUp.GetComponent<Puzzle2>().puzzleEnd;
-            itemToPickUp.GetComponent<Puzzle2>().letterComplete.SetActive(true);
-            itemToPickUp.GetComponent<Puzzle2>().textToCloseLetter.SetActive(true);
+            itemToPickUp.GetComponent<Puzzle2>().FadeText();
+            cont++;
           }
         }
         
