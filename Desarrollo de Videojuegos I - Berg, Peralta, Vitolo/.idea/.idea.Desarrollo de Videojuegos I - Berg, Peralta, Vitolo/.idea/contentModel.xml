@@ -67,6 +67,7 @@
           <e p="ActiveFade.cs" t="Include" />
           <e p="CanvasFade.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
+          <e p="CursorCameraHide.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />
           <e p="FallingRocks.cs" t="Include" />
           <e p="FollowTarget.cs" t="Include" />
@@ -79,6 +80,7 @@
           <e p="PickupObject.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="Puzzle2.cs" t="Include" />
+          <e p="Puzzle3.cs" t="Include" />
           <e p="RadiusOfLigth.cs" t="Include" />
           <e p="ScoreHUD.cs" t="Include" />
           <e p="ScrollTexture.cs" t="Include" />

@@ -34,7 +34,6 @@ public class PickeableObject : MonoBehaviour
          if(tagName == "Poster"){mensajedefaltan.SetActive(true);}
          tagName = tag;
       }
-      
    }
    
    private void OnCollisionEnter(Collision other)
