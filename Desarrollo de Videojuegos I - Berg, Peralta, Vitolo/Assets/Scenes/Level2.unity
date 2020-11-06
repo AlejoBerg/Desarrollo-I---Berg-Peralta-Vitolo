@@ -14588,6 +14588,7 @@ Transform:
   m_LocalScale: {x: 6.691, y: 10.505, z: 33.107166}
   m_Children:
   - {fileID: 1727087189}
+  - {fileID: 1669842813}
   m_Father: {fileID: 1895349302}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -18.505001, z: 0}
@@ -14773,6 +14774,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668483655}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1669842810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669842813}
+  - component: {fileID: 1669842812}
+  - component: {fileID: 1669842811}
+  - component: {fileID: 1669842814}
+  m_Layer: 0
+  m_Name: Disminuir Lluvia
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1669842811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669842810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f62e11b3312c4a4fa4329060eb3925f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeWhenCollide: 1
+  particlesToFade: {fileID: 1734176816}
+  fadeOutTime: 0.1
+--- !u!65 &1669842812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669842810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1669842813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669842810}
+  m_LocalRotation: {x: -0, y: 0.25168455, z: -0, w: 0.9678093}
+  m_LocalPosition: {x: 19.31309, y: 0.39167082, z: 2.844862}
+  m_LocalScale: {x: 2.6365325, y: 0.9816086, z: 0.058506437}
+  m_Children: []
+  m_Father: {fileID: 1662303787}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 10.650001, z: 0}
+--- !u!114 &1669842814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669842810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec68f254192412e4f9fcca248c5fc834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicToFadeOut: {fileID: 1168553916}
+  fadeOutTime: 0.6
 --- !u!1001 &1671922146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15683,6 +15759,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e582c62aa9810ed4295f63540d6dc97d, type: 3}
+--- !u!198 &1734176816 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6833064987442858456, guid: e582c62aa9810ed4295f63540d6dc97d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1734176815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739273921
 GameObject:
   m_ObjectHideFlags: 0
