@@ -68,12 +68,14 @@
           <e p="CanvasFade.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
           <e p="CursorCameraHide.cs" t="Include" />
+          <e p="FadeOutMusic.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />
           <e p="FallingRocks.cs" t="Include" />
           <e p="FollowTarget.cs" t="Include" />
           <e p="FragmentsHUD.cs" t="Include" />
           <e p="FragmentsMessageHUD.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GetIntoBuilding.cs" t="Include" />
           <e p="LoadNextLevel.cs" t="Include" />
           <e p="Parchments.cs" t="Include" />
           <e p="PickeableObject.cs" t="Include" />

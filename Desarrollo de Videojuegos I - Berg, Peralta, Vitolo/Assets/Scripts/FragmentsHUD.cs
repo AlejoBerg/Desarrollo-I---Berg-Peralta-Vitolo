@@ -9,6 +9,6 @@ public class FragmentsHUD : MonoBehaviour
     
     void Update()
     {
-        FragmentsPicked.text = GameManager.FragmentsNotes.ToString();
+        FragmentsPicked.text = ((GameManager.FragmentsNotes).ToString()+ " " + "/ 10");
     }
 }
