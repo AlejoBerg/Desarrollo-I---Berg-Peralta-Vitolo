@@ -6,15 +6,17 @@ using UnityEngine;
 
 public class PickupObject : MonoBehaviour
 {
-  [SerializeField] private Transform interactionZone;
-  [SerializeField] private Transform backpackZone;
-  [HideInInspector] public GameObject itemToPickUp;
-  [HideInInspector] public GameObject pickedObject;
-  [HideInInspector] public GameObject torchObject;
-  [SerializeField] private PlayerController player;
-  [SerializeField] private Vector3 torchPosition;
-  [SerializeField] private Vector3 torchAngleRotation;
-  private int cont = 0;
+    [SerializeField] private Transform interactionZone;
+    [SerializeField] private Transform backpackZone;
+    [HideInInspector] public GameObject itemToPickUp;
+    [HideInInspector] public GameObject pickedObject;
+    [HideInInspector] public GameObject torchObject;
+    [SerializeField] private PlayerController player;
+    [SerializeField] private Vector3 torchPosition;
+    [SerializeField] private Vector3 torchAngleRotation;
+    public event Action OnPuzzle2Victory;
+  
+      private int cont = 0;
  
   private void Update()
   {
@@ -61,6 +63,7 @@ public class PickupObject : MonoBehaviour
             itemToPickUp.GetComponent<MeshRenderer>().material.mainTexture = itemToPickUp.GetComponent<Puzzle2>().puzzleEnd;
             itemToPickUp.GetComponent<Puzzle2>().FadeText();
             cont++;
+            OnPuzzle2Victory?.Invoke();
           }
         }
         

@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Puzzle2 : MonoBehaviour
 {
+    private PickupObject pickupObjRef = null;
+    [SerializeField] private FadeOutParticles fadeOutParticlesRef = null;
+    [SerializeField] private FadeOutMusic[] fadeOutMusicRef = null;
+    
+
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
     [SerializeField] private GameObject textDisplay;
@@ -27,6 +32,9 @@ public class Puzzle2 : MonoBehaviour
 
     private void Awake()
     {
+        pickupObjRef = GameManager.GameObjects[0].GetComponent<PickupObject>();
+        pickupObjRef.OnPuzzle2Victory += OnPuzzle2VictoryHandler;
+
         for (int i = 0; i < notes.Length; i++)
         {
             notes[i].isPickeable = false;
@@ -83,7 +91,7 @@ public class Puzzle2 : MonoBehaviour
         }
         
         if(notAtStart){TimerToFade();}
-    }
+    } 
 
     void TimerToFade()
     {
@@ -96,6 +104,15 @@ public class Puzzle2 : MonoBehaviour
         else
         {
             currentTime += Time.deltaTime;
+        }
+    }
+
+    private void OnPuzzle2VictoryHandler()
+    {
+        fadeOutParticlesRef.ExecuteFadeParticle();
+        for (int i = 0; i < fadeOutMusicRef.Length; i++)
+        {
+            fadeOutMusicRef[i].ExecuteFadeOutMusic();
         }
     }
 }

@@ -17,6 +17,11 @@ public class FadeOutMusic : MonoBehaviour
         }
     }
 
+    public void ExecuteFadeOutMusic()
+    {
+        StartCoroutine("FadeMusicVolume");
+    }
+
     IEnumerator FadeMusicVolume()
     {
         float counter = 0f;
