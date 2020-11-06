@@ -65,6 +65,11 @@ public class ThirdCameraController : MonoBehaviour
         distanceBetweenPlayer = distance;
     }
 
+    public float GetCurrentDistanceToPlayer()
+    {
+        return distanceBetweenPlayer;
+    }
+
     public void ChangeCameraPos(float mouseY, float mouseX)
     {
         currentX = mouseY;
