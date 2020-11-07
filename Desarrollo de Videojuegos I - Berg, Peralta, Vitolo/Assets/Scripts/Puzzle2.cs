@@ -15,7 +15,7 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] private GameObject textToCloseLetter;
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
-    [SerializeField] private PickeableObject[] notes;
+    //[SerializeField] private PickeableObject[] notes;
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime = 1f;
     [SerializeField] private TextFader imageNoteComplete;
@@ -35,10 +35,10 @@ public class Puzzle2 : MonoBehaviour
         pickupObjRef = GameManager.GameObjects[0].GetComponent<PickupObject>();
         pickupObjRef.OnPuzzle2Victory += OnPuzzle2VictoryHandler;
 
-        for (int i = 0; i < notes.Length; i++)
+       /* for (int i = 0; i < notes.Length; i++)
         {
             notes[i].isPickeable = false;
-        }
+        }*/
     }
 
     private void Update()
@@ -46,11 +46,11 @@ public class Puzzle2 : MonoBehaviour
         if (activeMision)
         {
             StartCoroutine(Type());
-            textDisplay.GetComponent<TextFader>().Fade();
-            for (int i = 0; i < notes.Length; i++)
+            //textDisplay.GetComponent<TextFader>().Fade();
+            /*for (int i = 0; i < notes.Length; i++)
             {
                 notes[i].isPickeable = true;
-            }
+            }*/
             activeMision = false;
         }
         

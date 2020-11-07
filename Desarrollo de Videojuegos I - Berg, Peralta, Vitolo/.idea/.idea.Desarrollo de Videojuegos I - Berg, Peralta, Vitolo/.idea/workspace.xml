@@ -21,7 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Seba Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +98,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ActiveFade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parchments.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WallsOut.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdCameraController.cs" />
@@ -101,6 +105,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
       </list>
     </option>
   </component>
