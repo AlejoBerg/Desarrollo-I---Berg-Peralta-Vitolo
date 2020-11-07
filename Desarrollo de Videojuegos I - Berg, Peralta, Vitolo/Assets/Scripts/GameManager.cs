@@ -99,7 +99,7 @@ public class GameManager
                     
                     if (!playerIsAlive)
                     {
-                        SceneManager.LoadScene(1);
+                        SceneManager.LoadScene(2);
                         gameObjects[0].transform.position = spawnPointLvl2;
                         gameObjects[0].transform.eulerAngles = new Vector3(0,90,0);
                         gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(2f);
@@ -115,7 +115,7 @@ public class GameManager
                     
                     if (!playerIsAlive)
                     {
-                        SceneManager.LoadScene(2);
+                        SceneManager.LoadScene(3);
                         gameObjects[0].transform.position = spawnPointLvl3;
                         playerIsAlive = true;
                     }
