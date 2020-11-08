@@ -92,6 +92,7 @@
           <e p="ThirdCameraController.cs" t="Include" />
           <e p="WallsOut.cs" t="Include" />
         </e>
+        <e p="ShowImageWhenCollide.cs" t="Include" />
       </e>
       <e p="Desarrollo de Videojuegos I - Berg, Peralta, Vitolo.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
