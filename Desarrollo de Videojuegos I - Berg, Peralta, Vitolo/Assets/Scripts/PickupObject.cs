@@ -14,9 +14,10 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] private Vector3 torchPosition;
     [SerializeField] private Vector3 torchAngleRotation;
+    private int cont = 0;
     public event Action OnPuzzle2Victory;
   
-      private int cont = 0;
+     
  
   private void Update()
   {
@@ -42,6 +43,11 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
+          if (cont != 1) //ver
+          {
+            pickedObject.GetComponent<Fragments>().activeMision = true;
+            cont++;
+          }
           GameManager.AddFragment(1);
           StartCoroutine(Destroy());
         }
@@ -52,11 +58,7 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          if (cont != 1) //ver
-          {
-            itemToPickUp.GetComponent<Puzzle2>().activeMision = true;
-            cont++;
-          }
+        
           GameManager.ActiveFade = true;
           if(GameManager.FragmentsNotes == 10 && cont != 2)
           {
@@ -140,18 +142,15 @@ public class PickupObject : MonoBehaviour
         yield return null;
     }
 
-    if (SceneManager.GetActiveScene().buildIndex == 1)
+    if (SceneManager.GetActiveScene().buildIndex == 2)
     {
       Destroy(torchObject);
-      Destroy(pickedObject);
-      torchObject = null;
-      pickedObject = null;
     }
   }
   
   IEnumerator Destroy()
   {
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(2f);
     Destroy(pickedObject);
   }
 }

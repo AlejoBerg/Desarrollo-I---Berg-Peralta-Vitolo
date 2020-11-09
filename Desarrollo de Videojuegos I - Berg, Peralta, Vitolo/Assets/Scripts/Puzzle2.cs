@@ -10,20 +10,12 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] private FadeOutParticles fadeOutParticlesRef = null;
     [SerializeField] private FadeOutMusic[] fadeOutMusicRef = null;
     
-
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
-    [SerializeField] private GameObject textDisplay;
-    [SerializeField] private string[] sentences;
-    //[SerializeField] private PickeableObject[] notes;
-    [SerializeField] private float typingSpeed = 0f;
-    [SerializeField] private float TextExitTime = 1f;
     [SerializeField] private TextFader imageNoteComplete;
     [SerializeField] private TextFader pressTAB;
-    public bool activeMision = false;
     public Texture puzzleEnd;
     private int cont = 0;
-    private int index;
     private bool activeFadeAgain = true;
     private bool notAtStart = false;
     private float time = 20f;
@@ -34,26 +26,10 @@ public class Puzzle2 : MonoBehaviour
     {
         pickupObjRef = GameManager.GameObjects[0].GetComponent<PickupObject>();
         pickupObjRef.OnPuzzle2Victory += OnPuzzle2VictoryHandler;
-
-       /* for (int i = 0; i < notes.Length; i++)
-        {
-            notes[i].isPickeable = false;
-        }*/
     }
 
     private void Update()
     {
-        if (activeMision)
-        {
-            StartCoroutine(Type());
-            //textDisplay.GetComponent<TextFader>().Fade();
-            /*for (int i = 0; i < notes.Length; i++)
-            {
-                notes[i].isPickeable = true;
-            }*/
-            activeMision = false;
-        }
-        
         if (GameManager.FragmentsNotes == 10 && cont == 0)
         {
             this.gameObject.GetComponent<PickeableObject>().isPickeable = true;
@@ -62,17 +38,6 @@ public class Puzzle2 : MonoBehaviour
         OccultPanel();
     }
     
-    IEnumerator Type()
-    {
-        foreach (char letter in sentences[index].ToCharArray())
-        {
-            textDisplay.GetComponent<Text>().text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-        yield return new WaitForSeconds(TextExitTime);
-        textDisplay.GetComponent<TextFader>().Fade();
-    }
-
     public void FadeText()
     {
         letterComplete.GetComponent<TextFader>().Fade();
