@@ -43,8 +43,9 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
-          if (cont != 1) //ver
+          if (cont != 1)
           {
+            GameManager.ActiveFade = true;
             pickedObject.GetComponent<Fragments>().activeMision = true;
             cont++;
           }
@@ -59,11 +60,11 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
         
-          GameManager.ActiveFade = true;
           if(GameManager.FragmentsNotes == 10 && cont != 2)
           {
             itemToPickUp.GetComponent<MeshRenderer>().material.mainTexture = itemToPickUp.GetComponent<Puzzle2>().puzzleEnd;
             itemToPickUp.GetComponent<Puzzle2>().FadeText();
+            GameManager.ActiveFade = true;
             cont++;
             OnPuzzle2Victory?.Invoke();
           }
@@ -150,7 +151,7 @@ public class PickupObject : MonoBehaviour
   
   IEnumerator Destroy()
   {
-    yield return new WaitForSeconds(2f);
+    yield return new WaitForSeconds(5f);
     Destroy(pickedObject);
   }
 }

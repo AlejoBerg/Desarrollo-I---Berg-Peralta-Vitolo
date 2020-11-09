@@ -18,8 +18,8 @@ public class Fragments : MonoBehaviour
     {
        if (activeMision)
        {
-           Debug.Log("entre");
            StartCoroutine(Type());
+           textDisplay.GetComponent<TextFader>().Fade();
            activeMision = false;
        }
     }
@@ -28,11 +28,12 @@ public class Fragments : MonoBehaviour
     {
         foreach (char letter in sentences[index].ToCharArray())
         {
-            Debug.Log("entre2");
             textDisplay.GetComponent<Text>().text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
+        yield return new WaitForSeconds(TextExitTime);
+        textDisplay.GetComponent<Text>().text = "";
     }
 }

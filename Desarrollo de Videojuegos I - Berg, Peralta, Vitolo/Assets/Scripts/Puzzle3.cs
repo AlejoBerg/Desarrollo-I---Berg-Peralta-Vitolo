@@ -55,7 +55,7 @@ public class Puzzle3 : MonoBehaviour
 
     private void PlatformAnimation()
     {
-       transform.position = new Vector3(initialPosition.x,initialPosition.y,initialPosition.z + 0.10f);
+       transform.position = new Vector3(initialPosition.x,initialPosition.y,initialPosition.z - 0.10f);
     }
 
     IEnumerator RestartPlatformsPos()

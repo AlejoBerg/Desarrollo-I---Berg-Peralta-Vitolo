@@ -12,8 +12,6 @@ public class Puzzle2 : MonoBehaviour
     
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
-    [SerializeField] private TextFader imageNoteComplete;
-    [SerializeField] private TextFader pressTAB;
     public Texture puzzleEnd;
     private int cont = 0;
     private bool activeFadeAgain = true;
@@ -21,7 +19,6 @@ public class Puzzle2 : MonoBehaviour
     private float time = 20f;
     private float currentTime = 0;
     
-
     private void Awake()
     {
         pickupObjRef = GameManager.GameObjects[0].GetComponent<PickupObject>();

@@ -2945,7 +2945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcffa789059405498da39940da7a474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Puntaje: {fileID: 513827398}
 --- !u!1 &549745385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5718,7 +5717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994780161be0155498adbe2163738e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickeable: 1
+  isPickeable: 0
   tagName: 
   pickUpTextToShow: {fileID: 1463477653}
   _parchments: {fileID: 0}
@@ -5741,14 +5740,6 @@ MonoBehaviour:
   fadeOutMusicRef: []
   letterComplete: {fileID: 337062358}
   textToCloseLetter: {fileID: 246624929}
-  textDisplay: {fileID: 968787376}
-  sentences:
-  - You need to search fragments to complete the letter
-  typingSpeed: 0.1
-  TextExitTime: 2
-  imageNoteComplete: {fileID: 337062363}
-  pressTAB: {fileID: 246624934}
-  activeMision: 0
   puzzleEnd: {fileID: 2800000, guid: d25f070e7032eef4abe359151ce386a3, type: 3}
 --- !u!1 &1106481888
 GameObject:

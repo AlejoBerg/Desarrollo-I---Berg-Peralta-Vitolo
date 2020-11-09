@@ -31,11 +31,11 @@ public class PickeableObject : MonoBehaviour
       
       if (other.gameObject.tag.Equals("DetectItem") && !isPickeable && GameManager.FragmentsNotes != 10)
       {
-         if(tagName == "Poster"){mensajedefaltan.SetActive(true);}
          tagName = tag;
+         if(tagName == "Poster"){mensajedefaltan.SetActive(true);}
       }
    }
-   
+
    private void OnCollisionEnter(Collision other)
    {
       if (other.gameObject.tag.Equals("Platforms"))

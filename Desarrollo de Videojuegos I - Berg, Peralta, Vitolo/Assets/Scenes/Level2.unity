@@ -4887,7 +4887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -5542,7 +5542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -8551,7 +8551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -11261,8 +11261,6 @@ MonoBehaviour:
   - {fileID: 991330449}
   letterComplete: {fileID: 519030772}
   textToCloseLetter: {fileID: 1532923567}
-  imageNoteComplete: {fileID: 519030776}
-  pressTAB: {fileID: 1532923572}
   puzzleEnd: {fileID: 2800000, guid: d25f070e7032eef4abe359151ce386a3, type: 3}
 --- !u!82 &991330453
 AudioSource:
@@ -11372,7 +11370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994780161be0155498adbe2163738e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickeable: 1
+  isPickeable: 0
   tagName: 
   pickUpTextToShow: {fileID: 460612234}
   _parchments: {fileID: 0}
@@ -12586,7 +12584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -15546,8 +15544,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350897993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3286667, y: -0.47000027, z: 0.16700006}
-  m_LocalScale: {x: 0.20000002, y: 0.5000026, z: 0.16666757}
+  m_LocalPosition: {x: -0.32865247, y: -0.47003174, z: 0.16700935}
+  m_LocalScale: {x: 0.20000036, y: 0.5000031, z: 0.16666774}
   m_Children: []
   m_Father: {fileID: 2124486392}
   m_RootOrder: 0
@@ -16561,7 +16559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -16790,7 +16788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -17356,7 +17354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -18211,7 +18209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -19938,7 +19936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -21324,7 +21322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab514903c593ce0429e5b74ae2d070d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 1211194650}
+  textDisplay: {fileID: 325748722}
   sentences:
   - Frase de prueba
   typingSpeed: 0.1
@@ -23714,8 +23712,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124486391}
-  m_LocalRotation: {x: -0.32650557, y: 0.6272114, z: -0.6272114, w: -0.32650557}
-  m_LocalPosition: {x: 8.9, y: -16.062, z: 177.438}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 13.12, y: -15.49, z: 170.81}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children:
   - {fileID: 1350897998}
@@ -23729,7 +23727,7 @@ Transform:
   - {fileID: 1230939272}
   m_Father: {fileID: 1280992347}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 235, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!65 &2124486393
 BoxCollider:
   m_ObjectHideFlags: 0
