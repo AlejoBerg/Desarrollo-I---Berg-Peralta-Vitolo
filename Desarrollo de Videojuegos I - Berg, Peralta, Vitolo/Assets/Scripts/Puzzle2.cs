@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class Puzzle2 : MonoBehaviour
 {
-    private PickupObject pickupObjRef = null;
     [SerializeField] private FadeOutParticles fadeOutParticlesRef = null;
-    [SerializeField] private FadeOutMusic[] fadeOutMusicRef = null;
+    [SerializeField] private FadeMusic[] fadeOutMusicRef = null;
     
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
@@ -19,11 +18,6 @@ public class Puzzle2 : MonoBehaviour
     private float time = 20f;
     private float currentTime = 0;
     
-    private void Awake()
-    {
-        pickupObjRef = GameManager.GameObjects[0].GetComponent<PickupObject>();
-        pickupObjRef.OnPuzzle2Victory += OnPuzzle2VictoryHandler;
-    }
 
     private void Update()
     {
@@ -47,6 +41,7 @@ public class Puzzle2 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab) && activeFadeAgain && notAtStart)
         {
+            OnPuzzle2Victory();
             letterComplete.GetComponent<TextFader>().Fade();
             textToCloseLetter.GetComponent<TextFader>().Fade();
             activeFadeAgain = false;
@@ -69,8 +64,9 @@ public class Puzzle2 : MonoBehaviour
         }
     }
 
-    private void OnPuzzle2VictoryHandler()
+    private void OnPuzzle2Victory()
     {
+        print("se ejecuta fade");
         fadeOutParticlesRef.ExecuteFadeParticle();
         for (int i = 0; i < fadeOutMusicRef.Length; i++)
         {

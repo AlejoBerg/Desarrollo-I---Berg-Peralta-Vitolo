@@ -15,9 +15,6 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private Vector3 torchPosition;
     [SerializeField] private Vector3 torchAngleRotation;
     private int cont = 0;
-    public event Action OnPuzzle2Victory;
-  
-     
  
   private void Update()
   {
@@ -66,7 +63,6 @@ public class PickupObject : MonoBehaviour
             itemToPickUp.GetComponent<Puzzle2>().FadeText();
             GameManager.ActiveFade = true;
             cont++;
-            OnPuzzle2Victory?.Invoke();
           }
         }
         
