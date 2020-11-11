@@ -10,7 +10,7 @@ public class Fragments : MonoBehaviour
     [SerializeField] private string[] sentences;
     private int index;
     [SerializeField] private float typingSpeed = 0f;
-    [SerializeField] private float TextExitTime = 1f;
+    [SerializeField] private float TextExitTime = 3f;
     public bool activeMision = false;
 
 

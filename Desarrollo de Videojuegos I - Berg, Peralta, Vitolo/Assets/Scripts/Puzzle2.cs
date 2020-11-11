@@ -8,17 +8,18 @@ public class Puzzle2 : MonoBehaviour
 {
     [SerializeField] private FadeOutParticles fadeOutParticlesRef = null;
     [SerializeField] private FadeMusic[] fadeOutMusicRef = null;
-    
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
+    [SerializeField] private GameObject brushGObject;
+    [SerializeField] private GameObject parchmentToUnlock;
     public Texture puzzleEnd;
     private int cont = 0;
     private bool activeFadeAgain = true;
     private bool notAtStart = false;
     private float time = 20f;
     private float currentTime = 0;
+    private float timeToMoveBrush;
     
-
     private void Update()
     {
         if (GameManager.FragmentsNotes == 10 && cont == 0)
@@ -44,7 +45,7 @@ public class Puzzle2 : MonoBehaviour
             OnPuzzle2Victory();
             letterComplete.GetComponent<TextFader>().Fade();
             textToCloseLetter.GetComponent<TextFader>().Fade();
-            activeFadeAgain = false;
+            StartCoroutine(ItemToUnlock());
         }
         
         if(notAtStart){TimerToFade();}
@@ -56,7 +57,7 @@ public class Puzzle2 : MonoBehaviour
         {
             letterComplete.GetComponent<TextFader>().Fade();
             textToCloseLetter.GetComponent<TextFader>().Fade();
-            activeFadeAgain = false;
+            StartCoroutine(ItemToUnlock());
         }
         else
         {
@@ -72,5 +73,15 @@ public class Puzzle2 : MonoBehaviour
         {
             fadeOutMusicRef[i].ExecuteFadeOutMusic();
         }
+    }
+    
+    IEnumerator ItemToUnlock()
+    {
+        parchmentToUnlock.SetActive(true);
+        timeToMoveBrush += Time.deltaTime * 0.5f;
+        brushGObject.transform.position = new Vector3(brushGObject.transform.position.x, (Mathf.Lerp(brushGObject.transform.position.y, brushGObject.transform.position.y - 6, timeToMoveBrush)), brushGObject.transform.position.z);
+        yield return new WaitForSeconds(3f);
+        activeFadeAgain = false;
+        yield return null;
     }
 }

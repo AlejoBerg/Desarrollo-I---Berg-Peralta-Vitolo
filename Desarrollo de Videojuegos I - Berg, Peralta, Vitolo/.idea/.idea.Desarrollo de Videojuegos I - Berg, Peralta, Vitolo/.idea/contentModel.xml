@@ -68,7 +68,7 @@
           <e p="CanvasFade.cs" t="Include" />
           <e p="Collectionables.cs" t="Include" />
           <e p="CursorCameraHide.cs" t="Include" />
-          <e p="FadeOutMusic.cs" t="Include" />
+          <e p="FadeMusic.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />
           <e p="FallingRocks.cs" t="Include" />
           <e p="FollowTarget.cs" t="Include" />

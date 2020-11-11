@@ -2343,7 +2343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 468.59, y: 56.195}
+  m_AnchoredPosition: {x: 468.59, y: 56.194946}
   m_SizeDelta: {x: 968.86, y: 129.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253044143
@@ -11693,6 +11693,8 @@ MonoBehaviour:
   - {fileID: 991330455}
   letterComplete: {fileID: 519030772}
   textToCloseLetter: {fileID: 1532923567}
+  brushGObject: {fileID: 1111418052}
+  parchmentToUnlock: {fileID: 1873942635}
   puzzleEnd: {fileID: 2800000, guid: d25f070e7032eef4abe359151ce386a3, type: 3}
 --- !u!82 &991330453
 AudioSource:
@@ -13728,6 +13730,12 @@ PrefabInstance:
 --- !u!4 &1111418051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 429508, guid: 9c74caa742791864f9c678287121e6c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1111418050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1111418052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 193742, guid: 9c74caa742791864f9c678287121e6c9,
     type: 3}
   m_PrefabInstance: {fileID: 1111418050}
   m_PrefabAsset: {fileID: 0}
@@ -22645,6 +22653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PergaminoLvl2 -8
       objectReference: {fileID: 0}
+    - target: {fileID: 5738036478517864337, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5738036478517864336, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22730,6 +22743,12 @@ PrefabInstance:
 --- !u!4 &1873942634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5738036478517864336, guid: 1601d4d9b37d474469afb43a879fc82a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1873942633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1873942635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5738036478517864337, guid: 1601d4d9b37d474469afb43a879fc82a,
     type: 3}
   m_PrefabInstance: {fileID: 1873942633}
   m_PrefabAsset: {fileID: 0}
