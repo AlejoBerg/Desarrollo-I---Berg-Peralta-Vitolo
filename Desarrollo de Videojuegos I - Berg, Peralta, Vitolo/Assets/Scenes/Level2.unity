@@ -841,7 +841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2992,7 +2992,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4117,7 +4117,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4979,9 +4979,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1001 &480885507
 PrefabInstance:
@@ -5222,7 +5222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5634,9 +5634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1001 &538746127
 PrefabInstance:
@@ -6011,7 +6011,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 04d55cde74dfb4847aa43b59a68e18c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7781,7 +7781,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7861,7 +7861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1046, y: -100}
+  m_AnchoredPosition: {x: 1046, y: -72}
   m_SizeDelta: {x: 202, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672844345
@@ -7877,7 +7877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_Color: {r: 0.6037736, g: 0.5895336, b: 0.5895336, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8761,9 +8761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1 &770685121
 GameObject:
@@ -9381,8 +9381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.29413, y: 0}
-  m_SizeDelta: {x: 450, y: 450}
+  m_AnchoredPosition: {x: -170, y: -7}
+  m_SizeDelta: {x: 315, y: 374.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806083332
 MonoBehaviour:
@@ -9410,14 +9410,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31c58439c7802d14db18441ba9941c04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b9c2073638b6e64899d314589fea9a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12922,9 +12922,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1 &1061503185
 GameObject:
@@ -14639,7 +14639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 959.94, y: -1032.9}
+  m_AnchoredPosition: {x: 960, y: -1030}
   m_SizeDelta: {x: 1315.3, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211194652
@@ -15048,7 +15048,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 04d55cde74dfb4847aa43b59a68e18c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16240,7 +16240,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 04d55cde74dfb4847aa43b59a68e18c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17413,9 +17413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1 &1485895245
 GameObject:
@@ -17642,9 +17642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1001 &1489564823
 PrefabInstance:
@@ -18208,9 +18208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1 &1520685810
 GameObject:
@@ -19063,9 +19063,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1 &1632955054
 GameObject:
@@ -20680,9 +20680,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!4 &1727087189 stripped
 Transform:
@@ -22087,13 +22087,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836734435}
-  m_LocalRotation: {x: 0.6725049, y: -0.14910196, z: 0.14214668, w: 0.71084464}
-  m_LocalPosition: {x: 70.2714, y: 7.408, z: -92.893}
+  m_LocalRotation: {x: 0.52752304, y: -0.4429601, z: 0.45450646, w: 0.56473863}
+  m_LocalPosition: {x: 70.105, y: 7.396, z: -93.119}
   m_LocalScale: {x: 0.034200095, y: 0.04143387, z: 0.046995603}
   m_Children: []
   m_Father: {fileID: 694896106}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 86.842, y: -22.172, z: 1.6070001}
+  m_LocalEulerAnglesHint: {x: 86.842, y: -22.172, z: 56.645004}
 --- !u!64 &1836734437
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22283,9 +22283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 325748722}
   sentences:
-  - Frase de prueba
-  typingSpeed: 0.1
-  TextExitTime: 2
+  - 'It looks like a broken letter, I need to find the rest. '
+  typingSpeed: 0.085
+  TextExitTime: 3.5
   activeMision: 0
 --- !u!1001 &1839638071
 PrefabInstance:
@@ -23404,7 +23404,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3c96e18eaff53d44d9b343e371259faf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.435
+  m_Volume: 0.18
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -24747,7 +24747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6a49991cc8fe4e84fbffd31c3e68624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29117,7 +29117,7 @@ PrefabInstance:
     - target: {fileID: 22477911942618049, guid: bb27c13c33351424e9e601f8f9493ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1271.4791
+      value: -1226.09
       objectReference: {fileID: 0}
     - target: {fileID: 22477911942618049, guid: bb27c13c33351424e9e601f8f9493ef7,
         type: 3}
@@ -29168,6 +29168,136 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.596
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.928
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.26241645
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6275964
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6542754
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.33043027
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 84.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 43.762
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -86.59801
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02573775
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.033295013
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050438702380759067, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.033295013
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.619
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.9584
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.5795
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.37750012
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.20214875
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.8920794
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.1443053
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 28.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -44.170002
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -173.18001
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.022532608
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.022532603
+      objectReference: {fileID: 0}
+    - target: {fileID: 707234469796427306, guid: bb27c13c33351424e9e601f8f9493ef7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.022532603
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb27c13c33351424e9e601f8f9493ef7, type: 3}
