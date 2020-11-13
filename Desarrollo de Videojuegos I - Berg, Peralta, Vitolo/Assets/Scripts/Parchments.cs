@@ -38,7 +38,7 @@ public class Parchments : MonoBehaviour
         }
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
-        yield return new WaitForSeconds(TextExitTime);
+        yield return new WaitForSeconds(TextExitTime/2);
         textDisplay.GetComponent<Text>().text = "";
         Destroy(gameObject);
     }
