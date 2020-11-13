@@ -12,6 +12,7 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] private GameObject textToCloseLetter;
     [SerializeField] private GameObject brushGObject;
     [SerializeField] private GameObject parchmentToUnlock;
+    [SerializeField] private AudioSource finishMissionSFX;
     public Texture puzzleEnd;
     private int cont = 0;
     private bool activeFadeAgain = true;
@@ -24,6 +25,7 @@ public class Puzzle2 : MonoBehaviour
     {
         if (GameManager.FragmentsNotes == 10 && cont == 0)
         {
+            StartCoroutine(PlaySoundWithDelay());
             this.gameObject.GetComponent<PickeableObject>().isPickeable = true;
             cont++;
         }
@@ -83,5 +85,11 @@ public class Puzzle2 : MonoBehaviour
         yield return new WaitForSeconds(3f);
         activeFadeAgain = false;
         yield return null;
+    }
+
+    IEnumerator PlaySoundWithDelay()
+    {
+        yield return new WaitForSeconds(0.4f);
+        finishMissionSFX.Play();
     }
 }
