@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9981bb83-73da-4025-bded-7718868028fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo de Videojuegos I - Berg, Peralta, Vitolo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fragments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fragments.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Inf.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Cascade/Water_Cascade_Sup.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Player Model/textures/ScrollTexture/ScrollTextPlayer.mat" afterDir="false" />
@@ -104,11 +102,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CursorCameraHide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle3.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickeableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Fragments.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Fragments.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PickupObject.cs" />
       </list>
     </option>
   </component>
@@ -228,7 +226,8 @@
       <workItem from="1604681325678" duration="18000" />
       <workItem from="1604873925309" duration="3091000" />
       <workItem from="1604918748715" duration="6818000" />
-      <workItem from="1605094303111" duration="2318000" />
+      <workItem from="1605094303111" duration="2529000" />
+      <workItem from="1605299323519" duration="1207000" />
     </task>
     <servers />
   </component>

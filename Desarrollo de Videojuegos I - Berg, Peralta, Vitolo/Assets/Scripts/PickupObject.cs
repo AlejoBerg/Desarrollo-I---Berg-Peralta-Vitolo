@@ -147,7 +147,7 @@ public class PickupObject : MonoBehaviour
   
   IEnumerator Destroy()
   {
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(12f);
     Destroy(pickedObject);
   }
 }
