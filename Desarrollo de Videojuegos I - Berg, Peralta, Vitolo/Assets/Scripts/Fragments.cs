@@ -12,7 +12,7 @@ public class Fragments : MonoBehaviour
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
     public bool activeMision = false;
-    private bool canDestroyDirectly = false;
+    public bool isPickup = false;
 
 
     private void Update()
@@ -23,6 +23,8 @@ public class Fragments : MonoBehaviour
            textDisplay.GetComponent<TextFader>().Fade();
            activeMision = false;
        }
+       
+       if (GameManager.CanDestroyDirectly && isPickup) {StartCoroutine(FragmentsDestroy());}
     }
 
     IEnumerator Type()
@@ -35,6 +37,14 @@ public class Fragments : MonoBehaviour
         }
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
+        GameManager.CanDestroyDirectly = true;
+        Destroy(gameObject);
+    }
+    
+    
+    IEnumerator FragmentsDestroy()
+    {
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 }

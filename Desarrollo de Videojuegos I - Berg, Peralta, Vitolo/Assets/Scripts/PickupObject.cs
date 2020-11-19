@@ -41,6 +41,7 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
+          pickedObject.GetComponent<Fragments>().isPickup = true;
           if (cont != 1)
           {
             GameManager.ActiveFade = true;
@@ -71,7 +72,6 @@ public class PickupObject : MonoBehaviour
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          //itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<Parchments>().activeType = true; 
           GameManager.AddParchment(1);
@@ -139,7 +139,7 @@ public class PickupObject : MonoBehaviour
         torchObject.transform.localPosition = torchPosition;
         yield return null;
     }
-    
+
     if (SceneManager.GetActiveScene().buildIndex == 2)
     {
       Destroy(torchObject);

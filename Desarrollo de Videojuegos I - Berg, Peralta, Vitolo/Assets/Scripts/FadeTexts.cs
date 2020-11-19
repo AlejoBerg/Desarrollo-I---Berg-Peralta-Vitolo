@@ -14,13 +14,7 @@ public class FadeTexts : MonoBehaviour
         {
             letterToFade.Fade();
             imageMenssageToFade.Fade();
-            StartCoroutine(ColliderOff());
+            this.gameObject.SetActive(false);
         }
-    }
-
-    IEnumerator ColliderOff()
-    {
-        yield return new WaitForSeconds(1);
-        this.gameObject.SetActive(false);
     }
 }
