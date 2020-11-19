@@ -12,6 +12,7 @@ public class Fragments : MonoBehaviour
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
     public bool activeMision = false;
+    private bool canDestroyDirectly = false;
 
 
     private void Update()
@@ -26,6 +27,7 @@ public class Fragments : MonoBehaviour
 
     IEnumerator Type()
     {
+        textDisplay.GetComponent<Text>().text = "";
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.GetComponent<Text>().text += letter;
@@ -33,7 +35,6 @@ public class Fragments : MonoBehaviour
         }
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
-        yield return new WaitForSeconds(TextExitTime);
-        textDisplay.GetComponent<Text>().text = "";
+        Destroy(gameObject);
     }
 }

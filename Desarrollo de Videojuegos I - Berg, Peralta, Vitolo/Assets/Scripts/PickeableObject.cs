@@ -13,7 +13,7 @@ public class PickeableObject : MonoBehaviour
    [SerializeField] private Parchments _parchments;
    [SerializeField] private Collectionables _collectionables;
    public AudioSource audioSFX = null;
-   public GameObject mensajedefaltan;
+   public GameObject messageMissingNotes;
    
    private void Start()
    {
@@ -32,7 +32,7 @@ public class PickeableObject : MonoBehaviour
       if (other.gameObject.tag.Equals("DetectItem") && !isPickeable && GameManager.FragmentsNotes != 10)
       {
          tagName = tag;
-         if(tagName == "Poster"){mensajedefaltan.SetActive(true);}
+         if(tagName == "Poster"){messageMissingNotes.SetActive(true);}
       }
    }
 
@@ -51,7 +51,7 @@ public class PickeableObject : MonoBehaviour
       {
          other.GetComponentInParent<PickupObject>().itemToPickUp = null;
          pickUpTextToShow.SetActive(false);
-         if(tagName == "Poster"){mensajedefaltan.SetActive(false);}
+         if(tagName == "Poster"){messageMissingNotes.SetActive(false);}
       }
    }
 }

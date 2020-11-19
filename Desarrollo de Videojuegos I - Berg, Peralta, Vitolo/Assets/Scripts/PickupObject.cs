@@ -8,8 +8,8 @@ public class PickupObject : MonoBehaviour
 {
     [SerializeField] private Transform interactionZone;
     [SerializeField] private Transform backpackZone;
-    [HideInInspector] public GameObject itemToPickUp;
-    [HideInInspector] public GameObject pickedObject;
+     public GameObject itemToPickUp;
+    public GameObject pickedObject;
     [HideInInspector] public GameObject torchObject;
     [SerializeField] private PlayerController player;
     [SerializeField] private Vector3 torchPosition;
@@ -22,12 +22,13 @@ public class PickupObject : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.E))
       {
+        
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Collectable"))
         {
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
           itemToPickUp.GetComponent<Collectionables>().isPickUP = true;
           GameManager.AddPoints(1);
@@ -38,7 +39,7 @@ public class PickupObject : MonoBehaviour
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
           if (cont != 1)
           {
@@ -47,7 +48,6 @@ public class PickupObject : MonoBehaviour
             cont++;
           }
           GameManager.AddFragment(1);
-          StartCoroutine(Destroy());
         }
         
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Poster"))
@@ -55,7 +55,7 @@ public class PickupObject : MonoBehaviour
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
         
           if(GameManager.FragmentsNotes == 10 && cont != 2)
           {
@@ -71,7 +71,8 @@ public class PickupObject : MonoBehaviour
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          //itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<Parchments>().activeType = true; 
           GameManager.AddParchment(1);
         }
@@ -81,7 +82,7 @@ public class PickupObject : MonoBehaviour
           pickedObject = itemToPickUp;
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
-          itemToPickUp.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           player.pickUpItem = true;
           player.ChangeWalkPlayerSpeed(1f);
           pickedObject.transform.SetParent(interactionZone);
@@ -138,16 +139,10 @@ public class PickupObject : MonoBehaviour
         torchObject.transform.localPosition = torchPosition;
         yield return null;
     }
-
+    
     if (SceneManager.GetActiveScene().buildIndex == 2)
     {
       Destroy(torchObject);
     }
-  }
-  
-  IEnumerator Destroy()
-  {
-    yield return new WaitForSeconds(12f);
-    Destroy(pickedObject);
   }
 }

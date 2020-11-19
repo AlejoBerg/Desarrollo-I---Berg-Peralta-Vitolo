@@ -31,6 +31,7 @@ public class Parchments : MonoBehaviour
 
     IEnumerator Type()
     {
+        textDisplay.GetComponent<Text>().text = "";
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.GetComponent<Text>().text += letter;
@@ -38,8 +39,6 @@ public class Parchments : MonoBehaviour
         }
         yield return new WaitForSeconds(TextExitTime);
         textDisplay.GetComponent<TextFader>().Fade();
-        yield return new WaitForSeconds(TextExitTime/2);
-        textDisplay.GetComponent<Text>().text = "";
         Destroy(gameObject);
     }
 }

@@ -70,6 +70,7 @@
           <e p="CursorCameraHide.cs" t="Include" />
           <e p="FadeMusic.cs" t="Include" />
           <e p="FadeOutParticles.cs" t="Include" />
+          <e p="FadeTexts.cs" t="Include" />
           <e p="FallingRocks.cs" t="Include" />
           <e p="FollowTarget.cs" t="Include" />
           <e p="Fragments.cs" t="Include" />
@@ -84,15 +85,16 @@
           <e p="Puzzle2.cs" t="Include" />
           <e p="Puzzle3.cs" t="Include" />
           <e p="RadiusOfLigth.cs" t="Include" />
+          <e p="Respawn.cs" t="Include" />
           <e p="ScoreHUD.cs" t="Include" />
           <e p="ScrollTexture.cs" t="Include" />
+          <e p="ShowImageWhenCollide.cs" t="Include" />
           <e p="SpawnPlayerAndCameraAtStart.cs" t="Include" />
           <e p="Temp.cs" t="Include" />
           <e p="TextFader.cs" t="Include" />
           <e p="ThirdCameraController.cs" t="Include" />
           <e p="WallsOut.cs" t="Include" />
         </e>
-        <e p="ShowImageWhenCollide.cs" t="Include" />
       </e>
       <e p="Desarrollo de Videojuegos I - Berg, Peralta, Vitolo.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

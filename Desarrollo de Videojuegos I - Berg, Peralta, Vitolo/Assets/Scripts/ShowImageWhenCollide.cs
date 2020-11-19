@@ -7,10 +7,11 @@ public class ShowImageWhenCollide : MonoBehaviour
 {
     [SerializeField] private GameObject imageToShow = null;
     [SerializeField] private float imageToShowTimer = 0;
+    private int cont = 0;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.CompareTag("Player") && cont != 1)
         {
             imageToShow.SetActive(true);
             StartCoroutine(HideImage());
@@ -19,6 +20,7 @@ public class ShowImageWhenCollide : MonoBehaviour
 
     IEnumerator HideImage()
     {
+        cont++;
         yield return new WaitForSeconds(imageToShowTimer);
         imageToShow.SetActive(false);
     }
