@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Puzzle2 : MonoBehaviour
 {
-    [SerializeField] private FadeOutParticles fadeOutParticlesRef = null;
+    [SerializeField] private FadeOutParticles fadeOutRainParticlesRef = null;
+    [SerializeField] private FadeOutParticles fadeOutWallParticlesRef = null;
     [SerializeField] private FadeMusic[] fadeOutMusicRef = null;
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
@@ -19,7 +20,7 @@ public class Puzzle2 : MonoBehaviour
     private float time = 20f;
     private float currentTime = 0;
     private float timeToMoveBrush;
-    
+
     private void Update()
     {
         if (GameManager.FragmentsNotes == 10 && cont == 0)
@@ -53,7 +54,8 @@ public class Puzzle2 : MonoBehaviour
 
     private void OnPuzzle2Victory()
     {
-        fadeOutParticlesRef.ExecuteFadeParticle();
+        fadeOutWallParticlesRef.ExecuteFadeParticle();
+        fadeOutRainParticlesRef.ExecuteFadeParticle();
         for (int i = 0; i < fadeOutMusicRef.Length; i++)
         {
             fadeOutMusicRef[i].ExecuteFadeOutMusic();
