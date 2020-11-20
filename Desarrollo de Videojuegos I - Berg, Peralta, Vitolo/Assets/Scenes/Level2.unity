@@ -17776,6 +17776,7 @@ MonoBehaviour:
   letterComplete: {fileID: 519030772}
   textToCloseLetter: {fileID: 1532923567}
   wallOut: {fileID: 640159121}
+  colliderOut: {fileID: 302714732}
   finishMissionSFX: {fileID: 991330456}
   puzzleEnd: {fileID: 2800000, guid: d25f070e7032eef4abe359151ce386a3, type: 3}
 --- !u!82 &991330453

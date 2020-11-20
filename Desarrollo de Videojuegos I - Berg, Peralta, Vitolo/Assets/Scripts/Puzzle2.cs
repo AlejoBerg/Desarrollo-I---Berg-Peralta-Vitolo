@@ -12,6 +12,7 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] private GameObject letterComplete;
     [SerializeField] private GameObject textToCloseLetter;
     [SerializeField] private GameObject wallOut = null;
+    [SerializeField] private GameObject colliderOut = null;
     [SerializeField] private AudioSource finishMissionSFX;
     public Texture puzzleEnd;
     private int cont = 0;
@@ -49,6 +50,7 @@ public class Puzzle2 : MonoBehaviour
             letterComplete.GetComponent<TextFader>().Fade();
             textToCloseLetter.GetComponent<TextFader>().Fade();
             activeFadeAgain = false;
+            colliderOut.SetActive(false);
         }
     } 
 
