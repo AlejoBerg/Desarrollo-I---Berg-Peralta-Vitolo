@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
             isGrounded = false;
-            Puzzle3.Condition = true;
+            //PlatformsPuzzle3.Condition = true;
         }
     }
 
