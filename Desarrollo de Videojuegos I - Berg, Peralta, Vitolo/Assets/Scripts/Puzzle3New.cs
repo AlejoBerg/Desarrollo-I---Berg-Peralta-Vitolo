@@ -2,17 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Puzzle3New : MonoBehaviour
 {
   [SerializeField] private GameObject wallToEliminate;
   [SerializeField] private List<GameObject> conditionToFinish = new List<GameObject>();
+  [SerializeField] private AudioSource finishMissionSFX;
+  [SerializeField] private GameObject textDisplay;
+  [SerializeField] private string[] sentences;
+  [SerializeField] private float typingSpeed = 0f;
+  [SerializeField] private float TextExitTime;
+  protected static List<GameObject> playerResult = new List<GameObject>();
   protected static List<GameObject> itemsSelected = new List<GameObject>();
-  List<GameObject> playerResult = new List<GameObject>();
   protected static int amountItemsSelected = 0;
+  private int index;
+  private int cont = 0;
   
- 
   public static List<GameObject> ItemsSelected { get => itemsSelected; set => itemsSelected = value; }
+  
+  public static List<GameObject> PlayerResult { get => playerResult; set => playerResult = value; }
   public static int AmountItemsSelected { get => amountItemsSelected; set => amountItemsSelected = value; }
 
   private void Update()
@@ -22,6 +31,12 @@ public class Puzzle3New : MonoBehaviour
       CheckPuzzle();
       amountItemsSelected = 0;
     }
+    
+    if (PlayerController.DoSuperJump)
+    {
+      StartCoroutine(ResetWall());
+      Reset();
+    }
   }
 
   void CheckPuzzle()
@@ -30,13 +45,11 @@ public class Puzzle3New : MonoBehaviour
     {
       if(conditionToFinish[i].GetInstanceID() == itemsSelected[i].GetInstanceID())
       {
-        Debug.Log("condition" + conditionToFinish[i].GetInstanceID());
-        Debug.Log("item" + itemsSelected[i].GetInstanceID());
         playerResult.Add(itemsSelected[i]);
       }
       else
       {
-        Debug.Log("Deberia resetearse");
+        Reset();
       }
     }
 
@@ -44,6 +57,54 @@ public class Puzzle3New : MonoBehaviour
     {
       GameManager.GameObjects[0].GetComponent<PlayerController>().ChangeJumpForce(7f);
       wallToEliminate.SetActive(false);
+      finishMissionSFX.Play();
     }
+  }
+
+  void Reset()
+  {
+    for (int i = 0; i < conditionToFinish.Count; i++)
+    {
+      itemsSelected[i].GetComponent<PlatformsPuzzle3>().ResetPositionOfPlattforms();
+    }
+    StartCoroutine(DelayToClearList());
+  }
+
+  private void OnTriggerEnter(Collider other)
+  {
+    if (other.gameObject.tag.Equals("Player") && cont !=1)
+    {
+      StartCoroutine(Type());
+      textDisplay.GetComponent<TextFader>().Fade();
+    }
+  }
+  
+  IEnumerator DelayToClearList()
+  {
+    yield return new WaitForSeconds(0.35f);
+    itemsSelected.Clear();
+    playerResult.Clear();
+    GameManager.GameObjects[0].GetComponent<PlayerController>().ChangeJumpForce(4f);
+    PlayerController.DoSuperJump = false;
+    yield return null;
+  }
+
+  IEnumerator ResetWall()
+  {
+    yield return new WaitForSeconds(3f);
+    wallToEliminate.SetActive(true);
+  }
+  
+  IEnumerator Type()
+  {
+    cont++;
+    textDisplay.GetComponent<Text>().text = "";
+    foreach (char letter in sentences[index].ToCharArray())
+    {
+      textDisplay.GetComponent<Text>().text += letter;
+      yield return new WaitForSeconds(typingSpeed);
+    }
+    yield return new WaitForSeconds(TextExitTime);
+    textDisplay.GetComponent<TextFader>().Fade();
   }
 }

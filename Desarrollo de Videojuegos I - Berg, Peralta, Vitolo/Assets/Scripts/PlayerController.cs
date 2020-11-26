@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     private bool wallDetected = false;
     [HideInInspector]public bool pickUpItem = false;
     [HideInInspector]public bool pickUpTorch = false;
+    protected static bool doSuperJump = false;
+    
+    public static bool DoSuperJump { get => doSuperJump; set => doSuperJump = value;}
     
     void Awake() 
     { 
@@ -119,7 +122,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
             isGrounded = false;
-            //PlatformsPuzzle3.Condition = true;
+            if(jumpForce == 7f){doSuperJump = true;}
         }
     }
 

@@ -8,6 +8,7 @@ public class PlatformsPuzzle3 : MonoBehaviour
 {
     private Vector3 initialPosition;
     private bool active = false;
+    [SerializeField] private float valueToPush;
     
     private void Awake()
     {
@@ -27,6 +28,12 @@ public class PlatformsPuzzle3 : MonoBehaviour
 
     private void PlatformAnimation()
     {
-        transform.Translate(-transform.forward / 6);
+        transform.Translate(-transform.forward / valueToPush);
+    }
+    
+    public void ResetPositionOfPlattforms()
+    {
+        transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
+        active = false;
     }
 }
