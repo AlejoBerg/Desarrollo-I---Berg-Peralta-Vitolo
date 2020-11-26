@@ -13,16 +13,26 @@ public class Puzzle3New : MonoBehaviour
   [SerializeField] private string[] sentences;
   [SerializeField] private float typingSpeed = 0f;
   [SerializeField] private float TextExitTime;
+  [SerializeField] private GameObject prefabTraill;
+  [SerializeField] private Vector3 traillPosition;
   protected static List<GameObject> playerResult = new List<GameObject>();
   protected static List<GameObject> itemsSelected = new List<GameObject>();
   protected static int amountItemsSelected = 0;
+  protected static bool activeFalse;
   private int index;
   private int cont = 0;
+  private GameObject instanciatedTraill;
   
   public static List<GameObject> ItemsSelected { get => itemsSelected; set => itemsSelected = value; }
-  
   public static List<GameObject> PlayerResult { get => playerResult; set => playerResult = value; }
   public static int AmountItemsSelected { get => amountItemsSelected; set => amountItemsSelected = value; }
+  public static bool ActiveFalse { get => activeFalse; set => activeFalse = value; }
+
+  private void Awake()
+  {
+    instanciatedTraill = Instantiate(prefabTraill);
+    instanciatedTraill.SetActive(false);
+  }
 
   private void Update()
   {
@@ -34,7 +44,7 @@ public class Puzzle3New : MonoBehaviour
     
     if (PlayerController.DoSuperJump)
     {
-      StartCoroutine(ResetWall());
+      StartCoroutine(ResetWallAndTraill());
       Reset();
     }
   }
@@ -56,8 +66,12 @@ public class Puzzle3New : MonoBehaviour
     if (playerResult.Count == conditionToFinish.Count)
     {
       GameManager.GameObjects[0].GetComponent<PlayerController>().ChangeJumpForce(7f);
+      instanciatedTraill.transform.SetParent(GameManager.GameObjects[0].transform);
+      instanciatedTraill.transform.localPosition = traillPosition;
+      instanciatedTraill.SetActive(true);
       wallToEliminate.SetActive(false);
       finishMissionSFX.Play();
+      activeFalse = true;
     }
   }
 
@@ -89,9 +103,11 @@ public class Puzzle3New : MonoBehaviour
     yield return null;
   }
 
-  IEnumerator ResetWall()
+  IEnumerator ResetWallAndTraill()
   {
-    yield return new WaitForSeconds(3f);
+    yield return new WaitForSeconds(1.8f);
+    instanciatedTraill.SetActive(false);
+    yield return new WaitForSeconds(1.2f);
     wallToEliminate.SetActive(true);
   }
   

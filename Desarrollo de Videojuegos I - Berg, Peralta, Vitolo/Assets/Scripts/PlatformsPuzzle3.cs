@@ -15,6 +15,18 @@ public class PlatformsPuzzle3 : MonoBehaviour
         initialPosition = transform.position;
     }
 
+    private void Update()
+    {
+        if (Puzzle3New.ActiveFalse)
+        {
+            active = true;
+        }
+        else
+        {
+            active = false;
+        }
+    }
+
     private void OnMouseDown()
     {
         if (!active)
@@ -35,5 +47,6 @@ public class PlatformsPuzzle3 : MonoBehaviour
     {
         transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
         active = false;
+        Puzzle3New.ActiveFalse = false;
     }
 }

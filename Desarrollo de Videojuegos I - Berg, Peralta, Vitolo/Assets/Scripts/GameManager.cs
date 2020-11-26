@@ -23,8 +23,8 @@ public class GameManager
     private static int parchmentsAmount = 0;
     private static int fragmentsNotes = 0;
     private static bool activeFade = false;
-    private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);  
-    //private  Vector3 spawnPointLvl1 = new Vector3(-34f, 1f, -11f); //Seba Scene Coords
+    //private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);  
+    private  Vector3 spawnPointLvl1 = new Vector3(-34f, 1f, -11f); //Seba Scene Coords
     private  static bool canDestroyDirectly = false;
     private  Vector3 spawnPointLvl2 =  new Vector3(-1363f, -703f, 574);
     private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);

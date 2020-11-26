@@ -8,8 +8,8 @@ public class PickupObject : MonoBehaviour
 {
     [SerializeField] private Transform interactionZone;
     [SerializeField] private Transform backpackZone;
-     public GameObject itemToPickUp;
-    public GameObject pickedObject;
+    [HideInInspector] public GameObject itemToPickUp;
+    [HideInInspector] public GameObject pickedObject;
     [HideInInspector] public GameObject torchObject;
     [SerializeField] private PlayerController player;
     [SerializeField] private Vector3 torchPosition;
