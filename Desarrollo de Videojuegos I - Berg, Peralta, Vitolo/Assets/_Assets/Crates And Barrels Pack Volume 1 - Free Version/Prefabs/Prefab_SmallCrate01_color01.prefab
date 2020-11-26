@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4939829665273843058}
   m_Layer: 0
   m_Name: Mod_SmallCrate01
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2570254544435550017}
   m_Layer: 0
   m_Name: Prefab_SmallCrate01_color01
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
