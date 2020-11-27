@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6535752}
   m_Layer: 0
   m_Name: Sack_a
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -89,5 +90,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9781246, y: 2.248809, z: 0.9838122}
-  m_Center: {x: 0.1375171, y: 0.053119473, z: 0.4825452}
+  m_Size: {x: 1.9781246, y: 2.248809, z: 6.1115084}
+  m_Center: {x: 0.1375171, y: 0.053119425, z: 3.046397}

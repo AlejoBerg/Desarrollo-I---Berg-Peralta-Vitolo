@@ -23,11 +23,11 @@ public class GameManager
     private static int parchmentsAmount = 0;
     private static int fragmentsNotes = 0;
     private static bool activeFade = false;
-    //private  Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);  
-    private  Vector3 spawnPointLvl1 = new Vector3(-34f, 1f, -11f); //Seba Scene Coords
-    private  static bool canDestroyDirectly = false;
-    private  Vector3 spawnPointLvl2 =  new Vector3(-1363f, -703f, 574);
-    private  Vector3 spawnPointLvl3 = new Vector3(0,1,0);
+    private Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    //private  Vector3 spawnPointLvl1 = new Vector3(-34f, 1f, -11f); //Seba Scene Coords
+    private static bool canDestroyDirectly = false;
+    private Vector3 spawnPointLvl2 = new Vector3(-1363f, -703f, 574);
+    private Vector3 spawnPointLvl3 = new Vector3(-22f, 1.5f, 80f);
     private static List<GameObject> gameObjects = new List<GameObject>();
 
     public static int Score => score;
@@ -40,24 +40,24 @@ public class GameManager
     public static bool LoadNextLevel { get => loadNextLevel; set => loadNextLevel = value; }
     public static List<GameObject> GameObjects { get => gameObjects; set => gameObjects = value; }
 
-    public static GameManager Instance 
+    public static GameManager Instance
     {
         get
         {
-            if(instance == null) 
+            if (instance == null)
             {
-                instance = new GameManager(); 
+                instance = new GameManager();
             }
             return instance;
         }
     }
-    
+
     public void Awake()
     {
         currenState = State.Level1;
         gameObjects[0].transform.position = spawnPointLvl1;
-        gameObjects[0].transform.rotation = Quaternion.Euler(0,0f,0);
-        gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(18f,-359f);
+        gameObjects[0].transform.rotation = Quaternion.Euler(0, 0f, 0);
+        gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(18f, -359f);
     }
 
     public void Update()
@@ -68,64 +68,67 @@ public class GameManager
             playerIsAlive = false;
             loadNextLevel = false;
         }
-        if (parchmentsAmount == 11 && currenState == State.Level2 && loadNextLevel)
+        if (parchmentsAmount == 7 && currenState == State.Level2 && loadNextLevel)
         {
             instance.ChangeCurrentState(State.Level3);
             playerIsAlive = false;
             loadNextLevel = false;
         }
-        
+
         switch (currenState)
-            {
-                case State.Menu:
+        {
+            case State.Menu:
 
-                    break;
+                break;
 
-                case State.Level1:
+            case State.Level1:
 
-                    if (!playerIsAlive)
-                    {
-                        SceneManager.LoadScene(0);
-                        gameObjects[0].transform.position = spawnPointLvl1;
-                        gameObjects[0].transform.rotation = Quaternion.Euler(0,0f,0);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(1.5f);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(false);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(false);
-                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(3f);
-                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(18f,-359f);
-                        playerIsAlive = true;
-                    } 
-                    break;
+                if (!playerIsAlive)
+                {
+                    SceneManager.LoadScene(0);
+                    gameObjects[0].transform.position = spawnPointLvl1;
+                    gameObjects[0].transform.rotation = Quaternion.Euler(0, 0f, 0);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(1.5f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(false);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(false);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(3f);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(18f, -359f);
+                    parchmentsAmount = 0;
+                    playerIsAlive = true;
+                }
+                break;
 
-                case State.Level2:
-                    
-                    if (!playerIsAlive)
-                    {
-                        SceneManager.LoadScene(2);
-                        gameObjects[0].transform.position = spawnPointLvl2;
-                        gameObjects[0].transform.eulerAngles = new Vector3(0,90,0);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(2f);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(true);
-                        gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
-                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
-                        gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(20f,-270f);
-                        playerIsAlive = true;
-                    } 
-                    break;
+            case State.Level2:
 
-                case State.Level3:
-                    
-                    if (!playerIsAlive)
-                    {
-                        SceneManager.LoadScene(3);
-                        gameObjects[0].transform.position = spawnPointLvl3;
-                        playerIsAlive = true;
-                    }
-                    break;
+                if (!playerIsAlive)
+                {
+                    SceneManager.LoadScene(2);
+                    gameObjects[0].transform.position = spawnPointLvl2;
+                    gameObjects[0].transform.eulerAngles = new Vector3(0, 90, 0);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(2f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(true);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(20f, -270f);
+                    parchmentsAmount = 0;
+                    playerIsAlive = true;
+                }
+                break;
 
-               default:
-                    break;
-            }
+            case State.Level3:
+
+                if (!playerIsAlive)
+                {
+                    SceneManager.LoadScene(3);
+                    gameObjects[0].transform.position = spawnPointLvl3;
+                    parchmentsAmount = 0;
+                    playerIsAlive = true;
+                }
+                break;
+
+            default:
+                break;
+        }
 
         if (parchmentsAmount == 2 && currenState == State.Level1)
         {
@@ -137,17 +140,17 @@ public class GameManager
     {
         currenState = newState;
     }
-    
+
     public static void AddPoints(int newPoints)
     {
-        score += newPoints;  
+        score += newPoints;
     }
-    
+
     public static void AddParchment(int newParchment)
     {
         parchmentsAmount += newParchment;
     }
-    
+
     public static void AddFragment(int newFragment)
     {
         fragmentsNotes += newFragment;
