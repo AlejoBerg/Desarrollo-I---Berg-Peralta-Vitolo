@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6537318}
   m_Layer: 0
   m_Name: Building_f
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66,6 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -89,5 +90,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8382514, y: 1.7647212, z: 3.9356217}
-  m_Center: {x: 0, y: 0.73530036, z: 1.7069862}
+  m_Size: {x: 1.8382514, y: 1.7647212, z: 11.776801}
+  m_Center: {x: 1.0595227e-14, y: 0.7353081, z: 5.627609}
