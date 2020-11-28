@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3305382}
   - component: {fileID: 2389710}
   - component: {fileID: 13687634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tree02
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59, y: 0, z: 15.86}
-  m_LocalScale: {x: 2, y: 3, z: 2}
+  m_LocalPosition: {x: 4.59, y: 5.8, z: 15.86}
+  m_LocalScale: {x: 2, y: 2.1734498, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 399
-  materialHash: 5957b2d37e67fdb9fd0c49e55078a082215482368
+  materialHash: 9e2770508b00ecd6e03f08b65c6ea411215482368
   root:
     _uniqueID: 1
     seed: 1234

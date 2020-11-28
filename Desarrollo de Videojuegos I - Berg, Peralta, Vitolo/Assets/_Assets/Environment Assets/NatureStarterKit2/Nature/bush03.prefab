@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 19375756}
   - component: {fileID: 3343124}
   - component: {fileID: 2322364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bush03
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 193742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.9171157, y: 4.9171157, z: 4.9171157}
+  m_LocalScale: {x: 6.266372, y: 6.266372, z: 6.266372}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,7 +49,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193742}
-  m_Mesh: {fileID: 4305580}
+  m_Mesh: {fileID: 193}
 --- !u!23 &2322364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67,8 +67,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2114920}
-  - {fileID: 2174254}
+  - {fileID: 41}
+  - {fileID: 47}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,7 +89,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!21 &2114920
+--- !u!21 &41
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ Material:
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &2174254
+--- !u!21 &47
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ Material:
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
---- !u!43 &4305580
+--- !u!43 &193
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 107
-  materialHash: 06627137db5a35bef4dc871e2d7cabae215482368
+  materialHash: a3e2936b8f361297fdbc81c664d88201215482368
   root:
     _uniqueID: 1
     seed: 1234
@@ -2854,7 +2854,7 @@ MonoBehaviour:
     parentID: 4
     groupID: 5
     _uniqueID: 106
-  mesh: {fileID: 4305580}
-  optimizedSolidMaterial: {fileID: 2114920}
-  optimizedCutoutMaterial: {fileID: 2174254}
+  mesh: {fileID: 193}
+  optimizedSolidMaterial: {fileID: 41}
+  optimizedCutoutMaterial: {fileID: 47}
   isInPreviewMode: 0
