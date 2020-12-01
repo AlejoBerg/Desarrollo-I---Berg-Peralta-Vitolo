@@ -8,7 +8,9 @@ public class PlatformsPuzzle3 : MonoBehaviour
 {
     private Vector3 initialPosition;
     private bool active = false;
+    //private float time;
     [SerializeField] private float valueToPush;
+    [SerializeField] private AudioSource activeButtonSFX;
     
     private void Awake()
     {
@@ -33,14 +35,17 @@ public class PlatformsPuzzle3 : MonoBehaviour
         {
             Puzzle3New.ItemsSelected.Add(this.gameObject);
             Puzzle3New.AmountItemsSelected++;
+            Puzzle3New.MustCheck = true;
             PlatformAnimation();
+            activeButtonSFX.Play();
             active = true;
         }
     }
 
     private void PlatformAnimation()
     {
-        transform.Translate(-transform.forward / valueToPush);
+       transform.Translate(-transform.forward / valueToPush);
+      // transform.Translate(Vector3.Lerp(-transform.forward, -transform.forward / valueToPush, 0.1f));
     }
     
     public void ResetPositionOfPlattforms()

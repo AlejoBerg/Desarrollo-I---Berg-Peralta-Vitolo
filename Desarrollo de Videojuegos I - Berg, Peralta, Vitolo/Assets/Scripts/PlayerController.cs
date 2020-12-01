@@ -26,9 +26,10 @@ public class PlayerController : MonoBehaviour
     private bool wallDetected = false;
     [HideInInspector]public bool pickUpItem = false;
     [HideInInspector]public bool pickUpTorch = false;
-    protected static bool doSuperJump = false;
+    //public ParticleSystem particles;
+   // protected static bool doSuperJump = false;
     
-    public static bool DoSuperJump { get => doSuperJump; set => doSuperJump = value;}
+    //public static bool DoSuperJump { get => doSuperJump; set => doSuperJump = value;}
     
     void Awake() 
     { 
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
         mainCamera = Camera.main;
+      //  particles = GetComponentInChildren<ParticleSystem>();
     }
     
     void Update()
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z); ;
+        rb.velocity = new Vector3(playerInput.x, coordsY, playerInput.z);
 
        if(wallDetected)
        {
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
         coordsY = rb.velocity.y;
         playerInput = new Vector3(horizontalMove, 0,verticalMove).normalized * playerSpeed;
-        
+
         if (horizontalMove != 0 || verticalMove != 0)
         {
             playerSpeedForAnimation = 0.2f; 
@@ -122,7 +124,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
             playerAnimator.SetBool("IsGrounded", false);
             isGrounded = false;
-            if(jumpForce == 7f){doSuperJump = true;}
+            //if(jumpForce == 7f){doSuperJump = true;}
         }
     }
 
