@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 108544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4229, y: 1.4229, z: 1.4229}
+  m_LocalScale: {x: 4.216157, y: 4.216157, z: 4.216157}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 1328
-  materialHash: c172a23ea8dafaa5b2fe3a4c554a384e215482368
+  materialHash: 06627137db5a35bef4dc871e2d7cabae215482368
   root:
     _uniqueID: 1
     seed: 1234
