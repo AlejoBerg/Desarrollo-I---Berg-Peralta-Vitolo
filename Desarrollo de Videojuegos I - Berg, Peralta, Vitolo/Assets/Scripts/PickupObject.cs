@@ -65,6 +65,13 @@ public class PickupObject : MonoBehaviour
             GameManager.ActiveFade = true;
             cont++;
           }
+
+          if (itemToPickUp.GetComponent<Puzzle2>().canShowAgain)
+          {
+            itemToPickUp.GetComponent<Puzzle2>().FadeText2();
+            itemToPickUp.GetComponent<Puzzle2>().canShowAgain = false;
+            pickedObject = null;
+          }
         }
         
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Parchments"))

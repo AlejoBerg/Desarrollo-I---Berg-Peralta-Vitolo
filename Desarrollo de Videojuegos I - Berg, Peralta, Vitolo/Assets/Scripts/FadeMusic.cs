@@ -48,7 +48,6 @@ public class FadeMusic : MonoBehaviour
 
         while (musicToFadeOut.volume > 0)
         {
-            print("fading music");
             counter += Time.deltaTime;
             musicToFadeOut.volume = Mathf.Lerp(initialVolume, endVolume, counter / fadeTime);
             yield return null;

@@ -18,10 +18,10 @@ public class Puzzle2 : MonoBehaviour
     private int cont = 0;
     private bool activeFadeAgain = true;
     private bool notAtStart = false;
-    private float time = 20f;
-    private float currentTime = 0;
     private float timeToMoveBrush;
-
+    public bool finished = false;
+    public bool canShowAgain = false;
+    
     private void Update()
     {
         if (GameManager.FragmentsNotes == 10 && cont == 0)
@@ -37,22 +37,32 @@ public class Puzzle2 : MonoBehaviour
     {
         letterComplete.GetComponent<TextFader>().Fade();
         textToCloseLetter.GetComponent<TextFader>().Fade();
-        currentTime = 0;
         notAtStart = true;
         wallOut.SetActive(false);
+        cont++;
+    }
+    
+    public void FadeText2()
+    {
+        letterComplete.GetComponent<TextFader>().Fade();
+        textToCloseLetter.GetComponent<TextFader>().Fade();
+        activeFadeAgain = true;
+        cont++;
     }
     
     void OccultPanel()
     {
         if (Input.GetKey(KeyCode.Tab) && activeFadeAgain && notAtStart)
         {
-            OnPuzzle2Victory();
+            if(cont <= 2){OnPuzzle2Victory();}
             letterComplete.GetComponent<TextFader>().Fade();
             textToCloseLetter.GetComponent<TextFader>().Fade();
             activeFadeAgain = false;
             colliderOut.SetActive(false);
+            this.gameObject.GetComponent<PickeableObject>().isPickeable = true;
+            canShowAgain = true;
         }
-    } 
+    }
 
     private void OnPuzzle2Victory()
     {

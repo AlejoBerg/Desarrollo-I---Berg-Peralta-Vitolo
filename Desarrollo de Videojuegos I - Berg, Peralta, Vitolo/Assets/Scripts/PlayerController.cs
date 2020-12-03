@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private bool wallDetected = false;
     [HideInInspector]public bool pickUpItem = false;
     [HideInInspector]public bool pickUpTorch = false;
+    private float currentJumpTime = 0f;
+    [SerializeField] private float delayJumpTime = 1.3f;
     //public ParticleSystem particles;
    // protected static bool doSuperJump = false;
     
@@ -118,14 +120,25 @@ public class PlayerController : MonoBehaviour
         playerInput = playerInput.x * camRight + playerInput.z * camForward;
         transform.LookAt(transform.position + playerInput);
        
-        if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
-        {
-            jumpSFX.Play();
-            rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
-            playerAnimator.SetBool("IsGrounded", false);
-            isGrounded = false;
+       
+            
+            if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
+            {
+                if (currentJumpTime >= delayJumpTime)
+                {
+                jumpSFX.Play();
+                rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
+                playerAnimator.SetBool("IsGrounded", false);
+                isGrounded = false;
+                currentJumpTime = 0;
+                }
+            }
             //if(jumpForce == 7f){doSuperJump = true;}
-        }
+            else 
+            {
+             currentJumpTime += Time.deltaTime;
+            }
+       
     }
 
     void CamDirection()
