@@ -21,6 +21,7 @@ public class GameManager
     private static bool loadNextLevel = false;
     private static bool playerCreated = false;
     private static int parchmentsAmount = 0;
+    private static int itemsAmount2 = 0;
     private static int fragmentsNotes = 0;
     private static int itemsToRepairTheBridge = 0;
     private static bool activeFade = false;
@@ -34,6 +35,7 @@ public class GameManager
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
     public static int FragmentsNotes => fragmentsNotes;
+    public static int ItemsAmount2 => itemsAmount2;
     public static int ItemsToRepairTheBridge => itemsToRepairTheBridge;
     public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
     public static bool CanDestroyDirectly { get => canDestroyDirectly; set => canDestroyDirectly = value; }
@@ -168,5 +170,9 @@ public class GameManager
     public static void AddItems(int newItem)
     {
         itemsToRepairTheBridge += newItem;
+    }
+    public static void AddItems2(int newItem)
+    {
+        itemsAmount2 += newItem;
     }
 }

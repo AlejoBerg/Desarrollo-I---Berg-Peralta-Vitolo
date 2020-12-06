@@ -17,6 +17,7 @@ TagManager:
   - Poster
   - ItemsBridge
   - Bridge
+  - Items3D
   layers:
   - Default
   - TransparentFX

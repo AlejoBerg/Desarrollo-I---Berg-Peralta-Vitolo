@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class Puzzle4 : MonoBehaviour
 {
-    
     [SerializeField] private GameObject []bridge;
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
+    [SerializeField] private GameObject activeComponent;
     private int index;
     private int cont = 0;
     private bool stop = false;
@@ -40,13 +40,16 @@ public class Puzzle4 : MonoBehaviour
 
     IEnumerator Repair()
     {
-        stop = true;
         GameManager.ActiveFade = true;
+        stop = true;
         for (int i = 0; i < bridge.Length; i++)
         {
             bridge[i].SetActive(true);
-            Debug.Log("Se agregaron placas");
         }
+        yield return new WaitForSeconds(1f);
+        gameObject.GetComponent<ActiveFade>().enabled = false;
+        yield return new WaitForSeconds(1f);
+        activeComponent.GetComponent<ActiveFade>().enabled = true;
         yield return null;
     }
     

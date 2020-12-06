@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class PickupItemsAndShowTexts : MonoBehaviour
+public class Fragments : MonoBehaviour
 {
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
@@ -13,8 +13,7 @@ public class PickupItemsAndShowTexts : MonoBehaviour
     [SerializeField] private float TextExitTime;
     [HideInInspector]public bool activeMision = false;
     [HideInInspector]public bool isPickup = false;
-
-
+    
     private void Update()
     {
        if (activeMision)

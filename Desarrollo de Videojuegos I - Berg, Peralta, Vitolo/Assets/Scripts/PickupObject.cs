@@ -14,7 +14,9 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] private Vector3 torchPosition;
     [SerializeField] private Vector3 torchAngleRotation;
+  
     private int cont = 0;
+    private int cont2 = 0;
  
   private void Update()
   {
@@ -41,14 +43,32 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
-          pickedObject.GetComponent<PickupItemsAndShowTexts>().isPickup = true;
+          pickedObject.GetComponent<Fragments>().isPickup = true;
           if (cont != 1)
           {
             GameManager.ActiveFade = true;
-            pickedObject.GetComponent<PickupItemsAndShowTexts>().activeMision = true;
+            pickedObject.GetComponent<Fragments>().activeMision = true;
             cont++;
           }
           GameManager.AddFragment(1);
+        }
+        
+        if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Items3D"))
+        {
+          pickedObject = itemToPickUp;
+          if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
+          pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<MeshRenderer>().enabled = false;
+          //pickedObject.GetComponent<Fragments>().isPickup = true;
+          pickedObject.GetComponent<ItemsPuzzle2LVL3>().activeMision = true;
+          
+          if (cont2 != 1)
+          {
+            GameManager.ActiveFade = true;
+            cont2++;
+          }
+          GameManager.AddItems2(1);
         }
         
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("ItemsBridge"))
@@ -76,6 +96,7 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           Puzzle4.CanRepair = true;
+          pickedObject = null;
         }
         
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Poster"))
