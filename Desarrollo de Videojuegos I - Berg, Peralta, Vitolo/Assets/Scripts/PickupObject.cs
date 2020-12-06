@@ -120,7 +120,7 @@ public class PickupObject : MonoBehaviour
             itemToPickUp.GetComponent<Puzzle2>().canShowAgain = false;
             pickedObject = null;
           }
-        
+        }
         
           if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Parchments"))
           {
@@ -146,7 +146,7 @@ public class PickupObject : MonoBehaviour
               pickedObject.GetComponent<Rigidbody>().useGravity = false;
               pickedObject.GetComponent<Rigidbody>().isKinematic = true;
               pickedObject.GetComponent<BoxCollider>().enabled = false;
-              }
+            }
           }
         }
       }
@@ -206,5 +206,4 @@ public class PickupObject : MonoBehaviour
       Destroy(torchObject);
     }
   }
- }
 }
