@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Puzzle3New : MonoBehaviour
+public class Puzzle3 : MonoBehaviour
 {
   [SerializeField] private GameObject wallToEliminate;
   [SerializeField] private List<GameObject> conditionToFinish = new List<GameObject>();
@@ -24,7 +24,7 @@ public class Puzzle3New : MonoBehaviour
   private int index;
   private int cont = 0;
   private int j = 0;
-  private GameObject instanciatedTraill;
+  //private GameObject instanciatedTraill;
   
   public static List<GameObject> ItemsSelected { get => itemsSelected; set => itemsSelected = value; }
   public static List<GameObject> PlayerResult { get => playerResult; set => playerResult = value; }
@@ -143,7 +143,7 @@ public class Puzzle3New : MonoBehaviour
   IEnumerator ResetWallAndTraill()
   {
     yield return new WaitForSeconds(1.8f);
-    instanciatedTraill.SetActive(false);
+    //instanciatedTraill.SetActive(false);
     yield return new WaitForSeconds(1.2f);
     wallToEliminate.SetActive(true);
   }

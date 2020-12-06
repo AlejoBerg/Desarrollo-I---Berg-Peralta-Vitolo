@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Fragments : MonoBehaviour
+public class PickupItemsAndShowTexts : MonoBehaviour
 {
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
     private int index;
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
-    public bool activeMision = false;
-    public bool isPickup = false;
+    [HideInInspector]public bool activeMision = false;
+    [HideInInspector]public bool isPickup = false;
 
 
     private void Update()

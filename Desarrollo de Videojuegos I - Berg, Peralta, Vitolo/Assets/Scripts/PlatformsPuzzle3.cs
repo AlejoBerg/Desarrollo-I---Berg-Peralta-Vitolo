@@ -19,7 +19,7 @@ public class PlatformsPuzzle3 : MonoBehaviour
 
     private void Update()
     {
-        if (Puzzle3New.ActiveFalse)
+        if (Puzzle3.ActiveFalse)
         {
             active = true;
         }
@@ -33,9 +33,9 @@ public class PlatformsPuzzle3 : MonoBehaviour
     {
         if (!active)
         {
-            Puzzle3New.ItemsSelected.Add(this.gameObject);
-            Puzzle3New.AmountItemsSelected++;
-            Puzzle3New.MustCheck = true;
+            Puzzle3.ItemsSelected.Add(this.gameObject);
+            Puzzle3.AmountItemsSelected++;
+            Puzzle3.MustCheck = true;
             PlatformAnimation();
             activeButtonSFX.Play();
             active = true;
@@ -52,6 +52,6 @@ public class PlatformsPuzzle3 : MonoBehaviour
     {
         transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
         active = false;
-        Puzzle3New.ActiveFalse = false;
+        Puzzle3.ActiveFalse = false;
     }
 }

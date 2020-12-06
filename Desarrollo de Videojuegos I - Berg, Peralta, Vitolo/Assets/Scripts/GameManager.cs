@@ -22,17 +22,19 @@ public class GameManager
     private static bool playerCreated = false;
     private static int parchmentsAmount = 0;
     private static int fragmentsNotes = 0;
+    private static int itemsToRepairTheBridge = 0;
     private static bool activeFade = false;
-    private Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
-    //private  Vector3 spawnPointLvl1 = new Vector3(-34f, 1f, -11f); //Seba Scene Coords
     private static bool canDestroyDirectly = false;
+    //private Vector3 spawnPointLvl1 = new Vector3(-167.4f, -4.983f, -205.785f);
+    private  Vector3 spawnPointLvl1 = new Vector3(-26f, 1f, -7f); //Seba Scene Coords
     private Vector3 spawnPointLvl2 = new Vector3(-1363f, -703f, 574);
-    private Vector3 spawnPointLvl3 = new Vector3(-22f, 1.5f, 80f);
+    private Vector3 spawnPointLvl3 = new Vector3(111f, 50f, 8f);
     private static List<GameObject> gameObjects = new List<GameObject>();
 
     public static int Score => score;
     public static int ParchmentsAmount => parchmentsAmount;
     public static int FragmentsNotes => fragmentsNotes;
+    public static int ItemsToRepairTheBridge => itemsToRepairTheBridge;
     public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
     public static bool CanDestroyDirectly { get => canDestroyDirectly; set => canDestroyDirectly = value; }
     public static bool ActiveFade { get => activeFade; set => activeFade = value; }
@@ -121,6 +123,13 @@ public class GameManager
                 {
                     SceneManager.LoadScene(3);
                     gameObjects[0].transform.position = spawnPointLvl3;
+                    gameObjects[0].transform.eulerAngles = new Vector3(0, 0, 0);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(2f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeJumpForce(4f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(true);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(20f, -270f);
                     parchmentsAmount = 0;
                     playerIsAlive = true;
                 }
@@ -154,5 +163,10 @@ public class GameManager
     public static void AddFragment(int newFragment)
     {
         fragmentsNotes += newFragment;
+    }
+    
+    public static void AddItems(int newItem)
+    {
+        itemsToRepairTheBridge += newItem;
     }
 }

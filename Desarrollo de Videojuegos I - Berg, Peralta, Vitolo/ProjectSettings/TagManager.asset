@@ -15,7 +15,8 @@ TagManager:
   - Walls
   - Fragments
   - Poster
-  - Traill
+  - ItemsBridge
+  - Bridge
   layers:
   - Default
   - TransparentFX
