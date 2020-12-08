@@ -12,6 +12,7 @@ public class ItemsPuzzle2LVL3 : MonoBehaviour
     [SerializeField] private float TextExitTime;
     [HideInInspector]public bool activeMision = false;
     [HideInInspector]public bool isPickup = false;
+    private bool doFade = true;
     
     private void Update()
     {
@@ -20,6 +21,12 @@ public class ItemsPuzzle2LVL3 : MonoBehaviour
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
             activeMision = false;
+        }
+
+        if (GameManager.ItemsAmount2 == 5 && doFade)
+        {
+            GameManager.ActiveFade = true;
+            doFade = false;
         }
     }
 

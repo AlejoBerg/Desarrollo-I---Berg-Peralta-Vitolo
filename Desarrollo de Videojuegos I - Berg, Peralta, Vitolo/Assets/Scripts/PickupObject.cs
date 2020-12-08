@@ -60,7 +60,6 @@ public class PickupObject : MonoBehaviour
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
           pickedObject.GetComponent<MeshRenderer>().enabled = false;
-          //pickedObject.GetComponent<Fragments>().isPickup = true;
           pickedObject.GetComponent<ItemsPuzzle2LVL3>().activeMision = true;
           
           if (cont2 != 1)

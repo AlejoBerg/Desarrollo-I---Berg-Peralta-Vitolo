@@ -34,7 +34,7 @@ public class FadeOutParticles : MonoBehaviour
 
     public void ExecuteFadeParticle()
     {
-        StartCoroutine("FadeParticle");
+        StartCoroutine(FadeParticle());
     }
 
     private IEnumerator FadeParticle()

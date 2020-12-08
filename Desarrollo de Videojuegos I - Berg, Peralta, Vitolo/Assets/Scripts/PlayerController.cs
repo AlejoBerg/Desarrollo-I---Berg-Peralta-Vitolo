@@ -128,6 +128,8 @@ public class PlayerController : MonoBehaviour
                 {
                 jumpSFX.Play();
                 rb.AddForce((Vector3.up)* jumpForce,ForceMode.Impulse);
+                Debug.Log("velocidad en y" + rb.velocity.y);
+                //rb.velocity = new Vector3(playerInput.x, jumpForce, playerInput.z);
                 playerAnimator.SetBool("IsGrounded", false);
                 isGrounded = false;
                 currentJumpTime = 0;
