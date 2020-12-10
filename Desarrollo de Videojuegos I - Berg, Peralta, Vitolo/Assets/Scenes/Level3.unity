@@ -1826,10 +1826,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 150757874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87c9d05269da2d40b6938459b7a7fd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a27837b9abc37a4d843d75b6dc37c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsPicked: {fileID: 1047172636}
+  textBoxToShowValues: {fileID: 1047172636}
+  scorePuzzle1LVL2: 0
+  scorePuzzle1LVL3: 1
+  scorePuzzle2LVL3: 0
+  amountOfItems: 3
 --- !u!114 &150757877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2378,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b21be590f33e0d4ba19fec73ce555da, type: 3}
+--- !u!23 &165825013 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23000013687971544, guid: 9b21be590f33e0d4ba19fec73ce555da,
+    type: 3}
+  m_PrefabInstance: {fileID: 165825012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166600738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4915,6 +4925,8 @@ MonoBehaviour:
   textDisplay: {fileID: 1387874397}
   sentences:
   - Texto de prueba
+  _renderer1: {fileID: 0}
+  _renderer2: {fileID: 0}
   typingSpeed: 0.1
   TextExitTime: 2
   activeMision: 0
@@ -6801,7 +6813,7 @@ GameObject:
   - component: {fileID: 418870554}
   m_Layer: 0
   m_Name: Plataforma1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7469,6 +7481,8 @@ MonoBehaviour:
   textDisplay: {fileID: 1387874397}
   sentences:
   - Texto de prueba
+  _renderer1: {fileID: 0}
+  _renderer2: {fileID: 0}
   typingSpeed: 0.1
   TextExitTime: 2
   activeMision: 0
@@ -9031,6 +9045,8 @@ MonoBehaviour:
   textDisplay: {fileID: 1387874397}
   sentences:
   - Texto de prueba
+  _renderer1: {fileID: 0}
+  _renderer2: {fileID: 0}
   typingSpeed: 0.1
   TextExitTime: 2
   activeMision: 0
@@ -9250,6 +9266,8 @@ MonoBehaviour:
   textDisplay: {fileID: 1387874397}
   sentences:
   - Texto de prueba
+  _renderer1: {fileID: 650322481}
+  _renderer2: {fileID: 650322480}
   typingSpeed: 0.1
   TextExitTime: 2
   activeMision: 0
@@ -9421,6 +9439,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &650322480 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: cd3a6a05b35c3aa4ba89adbcd9f7cc32,
+    type: 3}
+  m_PrefabInstance: {fileID: 650322472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &650322481 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: cd3a6a05b35c3aa4ba89adbcd9f7cc32,
+    type: 3}
+  m_PrefabInstance: {fileID: 650322472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658508579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13547,7 +13577,7 @@ GameObject:
   - component: {fileID: 1011467768}
   m_Layer: 0
   m_Name: Plataforma2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13620,7 +13650,7 @@ GameObject:
   - component: {fileID: 1015979115}
   m_Layer: 0
   m_Name: Plataforma3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15049,6 +15079,8 @@ MonoBehaviour:
   textDisplay: {fileID: 1387874397}
   sentences:
   - Texto de prueba
+  _renderer1: {fileID: 165825013}
+  _renderer2: {fileID: 0}
   typingSpeed: 0.1
   TextExitTime: 2
   activeMision: 0
@@ -15735,16 +15767,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.9475794
       objectReference: {fileID: 0}
-    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: prewarm
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
-        type: 3}
-      propertyPath: pickUpTextToShow
-      value: 
-      objectReference: {fileID: 1189593415}
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: TextExitTime
@@ -15760,9 +15787,14 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Texto Prueba
       objectReference: {fileID: 0}
-    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1189593415}
+    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16615,6 +16647,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1231091396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231091398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9030702140978882349, guid: da40c5e4c4d108946b23719077b6a6b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1231091396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231091399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231091398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5d6041d03a9cf46a79726250973339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1243700829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17009,16 +17059,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.8165987
       objectReference: {fileID: 0}
-    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: prewarm
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
-        type: 3}
-      propertyPath: pickUpTextToShow
-      value: 
-      objectReference: {fileID: 1189593415}
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: TextExitTime
@@ -17034,9 +17079,14 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Texto Prueba
       objectReference: {fileID: 0}
-    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1189593415}
+    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17225,16 +17275,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2.915641
       objectReference: {fileID: 0}
-    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: prewarm
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
-        type: 3}
-      propertyPath: pickUpTextToShow
-      value: 
-      objectReference: {fileID: 1189593415}
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: TextExitTime
@@ -17250,9 +17295,14 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Texto Prueba
       objectReference: {fileID: 0}
-    - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
+    - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: pickUpTextToShow
+      value: 
+      objectReference: {fileID: 1189593415}
+    - target: {fileID: 9019074282072378503, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -19121,6 +19171,7 @@ MonoBehaviour:
   typingSpeed: 0.1
   TextExitTime: 2
   activeComponent: {fileID: 1709397284}
+  colliderOut: {fileID: 5452182530294582571}
 --- !u!114 &1436062045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30795,10 +30846,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928580069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7848535f147fd54b87b3f200dec7313, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a27837b9abc37a4d843d75b6dc37c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsPicked: {fileID: 494694752}
+  textBoxToShowValues: {fileID: 494694752}
+  scorePuzzle1LVL2: 0
+  scorePuzzle1LVL3: 0
+  scorePuzzle2LVL3: 1
+  amountOfItems: 5
 --- !u!114 &1928580072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31551,10 +31606,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform1: {fileID: 418870552}
   platform2: {fileID: 1011467766}
-  platform3: {fileID: 1015979113}
   newPosPlat1: {fileID: 156755200}
   newPosPlat1b: {fileID: 687302855}
   newPosPlat2: {fileID: 803913300}
+  bridgeParticles0: {fileID: 1231091398}
   bridgeParticles1: {fileID: 1593637460}
   bridgeParticles2: {fileID: 1895034478}
   bridgeParticles3: {fileID: 1435878797}
@@ -31562,7 +31617,9 @@ MonoBehaviour:
   parchment2: {fileID: 1145542569}
   parchment3: {fileID: 1274645406}
   wallOut: {fileID: 2053591476}
+  particlesOut: {fileID: 1610695693}
   platformsSpeed: 3
+  itemsToPickUp: 5
 --- !u!4 &1999796576
 Transform:
   m_ObjectHideFlags: 0
@@ -34349,6 +34406,12 @@ PrefabInstance:
 --- !u!4 &5452182530294582570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5848503358052259543, guid: 5a02fd54b456e6b4d8ea896ae43fdabf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5452182530294582569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5452182530294582571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6431589413327575725, guid: 5a02fd54b456e6b4d8ea896ae43fdabf,
     type: 3}
   m_PrefabInstance: {fileID: 5452182530294582569}
   m_PrefabAsset: {fileID: 0}

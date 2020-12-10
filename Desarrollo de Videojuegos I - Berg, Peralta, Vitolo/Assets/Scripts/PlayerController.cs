@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag.Equals("Floor"))
+        if (other.gameObject.tag.Equals("Floor") || other.gameObject.tag.Equals("Bridge") )
         {
             playerAnimator.SetBool("IsGrounded", true);
             isGrounded = true;

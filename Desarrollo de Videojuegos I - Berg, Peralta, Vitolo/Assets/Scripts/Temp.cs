@@ -31,6 +31,12 @@ public class Temp : MonoBehaviour
             GameManager.Instance.ChangeCurrentState(State.Level3);
             GameManager.PlayerIsAlive = false;
         }
+        
+        if (Input.GetKey(KeyCode.F4))
+        {
+            GameManager.Instance.ChangeCurrentState(State.Level4);
+            GameManager.PlayerIsAlive = false;
+        }
     }
 
     void QuitGame()

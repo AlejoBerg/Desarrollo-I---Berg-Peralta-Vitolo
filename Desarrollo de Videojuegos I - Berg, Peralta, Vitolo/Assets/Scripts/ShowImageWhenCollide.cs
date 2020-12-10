@@ -12,8 +12,11 @@ public class ShowImageWhenCollide : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            imageToShow.SetActive(true);
-            StartCoroutine(HideImage());
+            if(imageToShow != null)
+            {
+                imageToShow.SetActive(true);
+                StartCoroutine(HideImage());
+            }
         }
     }
 

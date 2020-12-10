@@ -10,6 +10,7 @@ public enum State
     Level1,
     Level2,
     Level3,
+    Level4,
 }
 
 public class GameManager
@@ -30,6 +31,7 @@ public class GameManager
     //private  Vector3 spawnPointLvl1 = new Vector3(-26f, 1f, -7f); //Seba Scene Coords
     private Vector3 spawnPointLvl2 = new Vector3(-1363f, -703f, 574);
     private Vector3 spawnPointLvl3 = new Vector3(111f, 50f, 8f);
+    private Vector3 spawnPointLvl4 = new Vector3(100f, 235f, 23f);
     private static List<GameObject> gameObjects = new List<GameObject>();
 
     public static int Score => score;
@@ -75,6 +77,13 @@ public class GameManager
         if (parchmentsAmount == 7 && currenState == State.Level2 && loadNextLevel)
         {
             instance.ChangeCurrentState(State.Level3);
+            playerIsAlive = false;
+            loadNextLevel = false;
+        }
+        
+        if (parchmentsAmount == 3 && currenState == State.Level3 && loadNextLevel)
+        {
+            instance.ChangeCurrentState(State.Level4);
             playerIsAlive = false;
             loadNextLevel = false;
         }
@@ -131,7 +140,25 @@ public class GameManager
                     gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(true);
                     gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
                     gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
-                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(20f, -270f);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(10f, -360f);
+                    parchmentsAmount = 0;
+                    playerIsAlive = true;
+                }
+                break;
+            
+            case State.Level4:
+
+                if (!playerIsAlive)
+                {
+                    SceneManager.LoadScene(4);
+                    gameObjects[0].transform.position = spawnPointLvl4;
+                    gameObjects[0].transform.eulerAngles = new Vector3(0, 0, 0); // REVISAR
+                    gameObjects[0].GetComponent<PlayerController>().ChangeWalkPlayerSpeed(2f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeJumpForce(4f);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToRun(true);
+                    gameObjects[0].GetComponent<PlayerController>().ChangeConditionToJump(true);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeDistanceToPlayer(4.4f);
+                    gameObjects[1].GetComponent<ThirdCameraController>().ChangeCameraPos(11f, 0f); // REVISAR
                     parchmentsAmount = 0;
                     playerIsAlive = true;
                 }

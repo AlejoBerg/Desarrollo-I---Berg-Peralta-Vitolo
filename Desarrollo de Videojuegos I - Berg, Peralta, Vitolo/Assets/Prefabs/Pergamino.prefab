@@ -130,6 +130,8 @@ MonoBehaviour:
   _renderer1: {fileID: 5458449282461280841}
   _renderer2: {fileID: 7213152675482110084}
   _renderer3: {fileID: 5304887298019722585}
+  fadePetals: {fileID: 2348490136423031976}
+  soundArea: {fileID: 6853651832087610932}
 --- !u!114 &4742057864739695090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,7 @@ MonoBehaviour:
   _parchments: {fileID: 0}
   _collectionables: {fileID: 0}
   audioSFX: {fileID: 3933793721745313850}
+  messageMissingNotes: {fileID: 0}
 --- !u!1 &1549174933901656543
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +206,7 @@ GameObject:
   - component: {fileID: 6894304077477184093}
   - component: {fileID: 769248747051236397}
   - component: {fileID: 8444485940426009844}
+  - component: {fileID: 2348490136423031976}
   m_Layer: 0
   m_Name: Particles
   m_TagString: Untagged
@@ -4945,6 +4949,21 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2348490136423031976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305343589678717181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f62e11b3312c4a4fa4329060eb3925f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeWhenCollide: 0
+  particlesToFade: {fileID: 769248747051236397}
+  fadeOutTime: 0.1
 --- !u!1 &6833646891708576576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837020583503307889}
   - component: {fileID: 4962135566004920358}
+  - component: {fileID: 6853651832087610932}
   m_Layer: 0
   m_Name: Parchment SFX
   m_TagString: Untagged
@@ -5116,6 +5136,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6853651832087610932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6927148899994810404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec68f254192412e4f9fcca248c5fc834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeWhenCollide: 0
+  initialVolume: 0.0015
+  endVolume: 0
+  musicToFadeOut: {fileID: 4962135566004920358}
+  fadeTime: 10
 --- !u!1 &8594261768912546165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,6 +5725,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5314d9ee7c47b546ae08bbdb635b664, type: 3}
+--- !u!23 &5304887298019722585 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4196040851096478221, guid: a5314d9ee7c47b546ae08bbdb635b664,
+    type: 3}
+  m_PrefabInstance: {fileID: 8333324006460532564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7213152675482110084 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1711277887553122256, guid: a5314d9ee7c47b546ae08bbdb635b664,
+    type: 3}
+  m_PrefabInstance: {fileID: 8333324006460532564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &5458449282461280841 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4063835366044962077, guid: a5314d9ee7c47b546ae08bbdb635b664,
@@ -5703,18 +5752,6 @@ Transform:
 --- !u!1 &37162523922792029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a5314d9ee7c47b546ae08bbdb635b664,
-    type: 3}
-  m_PrefabInstance: {fileID: 8333324006460532564}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &5304887298019722585 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4196040851096478221, guid: a5314d9ee7c47b546ae08bbdb635b664,
-    type: 3}
-  m_PrefabInstance: {fileID: 8333324006460532564}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7213152675482110084 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1711277887553122256, guid: a5314d9ee7c47b546ae08bbdb635b664,
     type: 3}
   m_PrefabInstance: {fileID: 8333324006460532564}
   m_PrefabAsset: {fileID: 0}

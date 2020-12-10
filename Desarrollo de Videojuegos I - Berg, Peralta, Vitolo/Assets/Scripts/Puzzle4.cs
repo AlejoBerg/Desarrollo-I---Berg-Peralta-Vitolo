@@ -12,6 +12,7 @@ public class Puzzle4 : MonoBehaviour
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
     [SerializeField] private GameObject activeComponent;
+    [SerializeField] private GameObject colliderOut;
     private int index;
     private int cont = 0;
     private bool stop = false;
@@ -46,6 +47,7 @@ public class Puzzle4 : MonoBehaviour
         {
             bridge[i].SetActive(true);
         }
+        colliderOut.SetActive(false);
         yield return new WaitForSeconds(1f);
         gameObject.GetComponent<ActiveFade>().enabled = false;
         yield return new WaitForSeconds(1f);

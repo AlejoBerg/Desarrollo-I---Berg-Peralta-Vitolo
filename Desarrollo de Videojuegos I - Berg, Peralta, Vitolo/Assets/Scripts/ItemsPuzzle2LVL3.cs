@@ -7,17 +7,21 @@ public class ItemsPuzzle2LVL3 : MonoBehaviour
 {
     [SerializeField] private GameObject textDisplay;
     [SerializeField] private string[] sentences;
-    private int index;
+    [SerializeField] private MeshRenderer _renderer1;
+    [SerializeField] private MeshRenderer _renderer2;
     [SerializeField] private float typingSpeed = 0f;
     [SerializeField] private float TextExitTime;
     [HideInInspector]public bool activeMision = false;
     [HideInInspector]public bool isPickup = false;
+    private int index;
     private bool doFade = true;
     
     private void Update()
     {
         if (activeMision)
         {
+            if (_renderer1 != null){_renderer1.enabled = false;}
+            if(_renderer2 != null){_renderer2.enabled = false;}
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
             activeMision = false;

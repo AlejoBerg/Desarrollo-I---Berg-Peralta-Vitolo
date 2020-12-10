@@ -98,6 +98,18 @@ public class PickupObject : MonoBehaviour
           pickedObject = null;
         }
         
+        if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Puzzle6"))
+        {
+          pickedObject = itemToPickUp;
+          if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
+          pickedObject.GetComponent<PickeableObject>().isPickeable = false;
+          pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
+          pickedObject.GetComponent<activegameobject>().startPuzzle = true;
+          
+          //pickedObject.GetComponent<activegameobject>().startPuzzle = false;
+          pickedObject = null;
+        }
+        
         if (itemToPickUp.GetComponent<PickeableObject>().CompareTag("Poster"))
         {
           pickedObject = itemToPickUp;

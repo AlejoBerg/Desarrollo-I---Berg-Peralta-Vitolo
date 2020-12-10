@@ -31,7 +31,7 @@ public class LoadNextLevel : MonoBehaviour
         {
             imageToShow.SetActive(true);
             if (colliderToHide != null) { colliderToHide.SetActive(false); }
-            StartCoroutine(HideImage());
+            if(imageToShow != null) {StartCoroutine(HideImage());}
         }
     }
 

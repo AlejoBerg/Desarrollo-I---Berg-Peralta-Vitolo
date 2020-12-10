@@ -14,6 +14,8 @@ public class Parchments : MonoBehaviour
     [SerializeField] private MeshRenderer _renderer1;
     [SerializeField] private MeshRenderer _renderer2;
     [SerializeField] private MeshRenderer _renderer3;
+    [SerializeField] private FadeOutParticles fadePetals;
+    [SerializeField] private FadeMusic soundArea;
     private int index;
 
     private void Update()
@@ -23,6 +25,8 @@ public class Parchments : MonoBehaviour
             _renderer1.enabled = false;
             _renderer2.enabled = false;
             _renderer3.enabled = false;
+            if(fadePetals != null){fadePetals.ExecuteFadeParticle();}
+            soundArea.ExecuteFadeOutMusic();
             StartCoroutine(Type());
             textDisplay.GetComponent<TextFader>().Fade();
             activeType = false;

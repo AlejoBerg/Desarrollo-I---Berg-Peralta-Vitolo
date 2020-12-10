@@ -18,6 +18,7 @@ TagManager:
   - ItemsBridge
   - Bridge
   - Items3D
+  - Puzzle6
   layers:
   - Default
   - TransparentFX
