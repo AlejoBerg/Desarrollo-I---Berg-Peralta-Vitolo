@@ -41,6 +41,7 @@ public class Puzzle6 : MonoBehaviour
         {
             camera.SetActive(false);
             MessagePressTAB.Fade();
+            win = false;
         }
     }
 
