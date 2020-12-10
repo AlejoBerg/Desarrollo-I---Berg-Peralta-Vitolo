@@ -59,7 +59,7 @@ public class PickupObject : MonoBehaviour
           if(pickedObject.GetComponent<AudioSource>() != null){pickedObject.GetComponent<PickeableObject>().audioSFX.Play();}
           pickedObject.GetComponent<PickeableObject>().isPickeable = false;
           pickedObject.GetComponent<PickeableObject>().pickUpTextToShow.SetActive(false);
-          pickedObject.GetComponent<MeshRenderer>().enabled = false;
+          //pickedObject.GetComponent<MeshRenderer>().enabled = false;
           pickedObject.GetComponent<ItemsPuzzle2LVL3>().activeMision = true;
           
           if (cont2 != 1)

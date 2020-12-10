@@ -10,8 +10,9 @@ public class Puzzle6 : MonoBehaviour
     public float defaultMoveDuration = .2f;
     public float shuffleMoveDuration = .1f;
     private int cont = 0;
-    public TextFader MessagePressTAB;
-    public GameObject camera;
+    [SerializeField] private TextFader MessagePressTAB;
+    [SerializeField] private GameObject camera;
+    [SerializeField] private GameObject colliderToActivate;
     
     enum PuzzleState { Solved, Shuffling, InPlay };
     PuzzleState state;
@@ -176,6 +177,7 @@ public class Puzzle6 : MonoBehaviour
 
         state = PuzzleState.Solved;
         emptyBlock.gameObject.SetActive(true);
+        if(colliderToActivate != null){colliderToActivate.SetActive(true);}
         MessagePressTAB.Fade();
     }
 }
