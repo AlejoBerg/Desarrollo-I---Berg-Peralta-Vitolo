@@ -16,19 +16,14 @@ public class ExecuteCutscene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("triggereo");
         if(other.gameObject.tag == "Player")
         {
             _npcRef.SetActive(true);
             _cinematicCamera.SetActive(true);
             other.gameObject.SetActive(false);
 
-            Transform refTransform = _npcRef.GetComponent<Transform>();
-            WaypointsController wpRef = _npcRef.GetComponent<WaypointsController>();
-            Rigidbody rbRef = _npcRef.GetComponent<Rigidbody>();
-            Animator animatorRef = _npcRef.GetComponent<Animator>();
-
-            cutsceneRef.AssignReferences(refTransform, wpRef, rbRef, animatorRef);
+            GameObject cameraRef = GameManager.GameObjects[0];
+            cutsceneRef.AssignReferences(_npcRef ,cameraRef);
 
             cutsceneRef.ExecuteCutscene = true;
         }

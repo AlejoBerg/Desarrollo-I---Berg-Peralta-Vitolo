@@ -31,4 +31,11 @@ public class CanvasFade : MonoBehaviour
             yield return null;
         }
     }
+
+    public void ChangeStartEndAlpha(int _startAlpha, int _endAlpha)
+    {
+        startAlpha = _startAlpha;
+        endAlpha = _endAlpha;
+        print("startAlpha = " + startAlpha + "endAlpha = " + endAlpha);
+    }
 }
