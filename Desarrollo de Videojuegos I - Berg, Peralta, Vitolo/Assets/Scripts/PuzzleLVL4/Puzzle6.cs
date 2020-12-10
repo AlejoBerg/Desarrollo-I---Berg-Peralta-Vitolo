@@ -10,6 +10,7 @@ public class Puzzle6 : MonoBehaviour
     public float defaultMoveDuration = .2f;
     public float shuffleMoveDuration = .1f;
     private int cont = 0;
+    private bool win = false;
     [SerializeField] private TextFader MessagePressTAB;
     [SerializeField] private GameObject camera;
     [SerializeField] private GameObject colliderToActivate;
@@ -36,10 +37,7 @@ public class Puzzle6 : MonoBehaviour
             StartShuffle();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {MessagePressTAB.Fade();}
-        
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && win)
         {
             camera.SetActive(false);
             MessagePressTAB.Fade();
@@ -179,5 +177,6 @@ public class Puzzle6 : MonoBehaviour
         emptyBlock.gameObject.SetActive(true);
         if(colliderToActivate != null){colliderToActivate.SetActive(true);}
         MessagePressTAB.Fade();
+        win = true;
     }
 }
