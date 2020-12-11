@@ -7278,7 +7278,7 @@ MonoBehaviour:
     through my window while I was sleeping. '
   renderers:
   - {fileID: 306946112}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -7312,7 +7312,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -7837,7 +7837,7 @@ MonoBehaviour:
   renderers:
   - {fileID: 317355844}
   - {fileID: 971025668}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -7852,7 +7852,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -9817,7 +9817,7 @@ MonoBehaviour:
   renderers:
   - {fileID: 416060931}
   - {fileID: 1332573664}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -9832,7 +9832,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -10914,7 +10914,7 @@ MonoBehaviour:
     of him. '
   renderers:
   - {fileID: 454663413}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -10929,7 +10929,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -11208,7 +11208,7 @@ MonoBehaviour:
   - 'I don''t remember what this means. Maybe I should keep looking elsewhere. '
   renderers:
   - {fileID: 479075539}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -11242,7 +11242,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -11855,7 +11855,7 @@ RectTransform:
   m_GameObject: {fileID: 526300940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90636575, y: 0.90636575, z: 0.90636575}
+  m_LocalScale: {x: 0.951684, y: 0.951684, z: 0.90636575}
   m_Children: []
   m_Father: {fileID: 1820366725}
   m_RootOrder: 5
@@ -13723,7 +13723,7 @@ MonoBehaviour:
     me aside.
   renderers:
   - {fileID: 628255583}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -13757,7 +13757,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -13953,7 +13953,7 @@ MonoBehaviour:
   - {fileID: 650322474}
   - {fileID: 1856848221}
   - {fileID: 1902443875}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -13987,7 +13987,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -15490,7 +15490,7 @@ MonoBehaviour:
   - 'Tony was my favorite toy. I was very sad when I lost it in that fire. '
   renderers:
   - {fileID: 728359263}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -15505,7 +15505,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -16523,9 +16523,9 @@ MonoBehaviour:
   - 'I remember writing stories of happy children and believing that I was one of
     them. '
   renderers:
-  - {fileID: 416060931}
-  - {fileID: 1332573664}
-  typingSpeed: 0.1
+  - {fileID: 824654190}
+  - {fileID: 824654189}
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -16559,7 +16559,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -16644,6 +16644,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &824654189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1832049472115158, guid: 00931e932c93cef48ae2d8cc87408c66,
+    type: 3}
+  m_PrefabInstance: {fileID: 824654183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &824654190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1182431919570870, guid: 00931e932c93cef48ae2d8cc87408c66,
+    type: 3}
+  m_PrefabInstance: {fileID: 824654183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &824813680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16654,6 +16666,10 @@ PrefabInstance:
     - target: {fileID: 149536, guid: 10002675cafa69647a631734c4c318f5, type: 3}
       propertyPath: m_Name
       value: Rock_1_v3
+      objectReference: {fileID: 0}
+    - target: {fileID: 149536, guid: 10002675cafa69647a631734c4c318f5, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 497124, guid: 10002675cafa69647a631734c4c318f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22638,6 +22654,11 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Love for a mother will overcome any barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: typingSpeed
+      value: 0.065
+      objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: pickUpTextToShow
@@ -24343,17 +24364,17 @@ PrefabInstance:
     - target: {fileID: 5738036478517864336, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.816599
+      value: 1.3788531
       objectReference: {fileID: 0}
     - target: {fileID: 5738036478517864336, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.8165992
+      value: 1.3788533
       objectReference: {fileID: 0}
     - target: {fileID: 5738036478517864336, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8165987
+      value: 1.3788528
       objectReference: {fileID: 0}
     - target: {fileID: 7261821482411290939, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
@@ -24374,6 +24395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sentences.Array.data[0]
       value: ' I''m here to show that despite everything I want to continue living.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: typingSpeed
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
@@ -24792,6 +24818,11 @@ PrefabInstance:
       propertyPath: sentences.Array.data[0]
       value: Courage is a virtue that keeps us motivated
       objectReference: {fileID: 0}
+    - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
+        type: 3}
+      propertyPath: typingSpeed
+      value: 0.065
+      objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: pickUpTextToShow
@@ -24883,7 +24914,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.7591
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3207182521635312502, guid: 2d8a662c7d04e15478181f97844f155a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d8a662c7d04e15478181f97844f155a, type: 3}
 --- !u!4 &1303589737 stripped
 Transform:
@@ -40214,7 +40246,7 @@ MonoBehaviour:
   - {fileID: 1716177761}
   - {fileID: 773834934}
   - {fileID: 1005868486}
-  typingSpeed: 0.1
+  typingSpeed: 0.065
   TextExitTime: 2
   activeMision: 0
   isPickup: 0
@@ -40229,7 +40261,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
@@ -41172,7 +41204,7 @@ MonoBehaviour:
   scorePuzzle1LVL2: 0
   scorePuzzle1LVL3: 0
   scorePuzzle2LVL3: 1
-  amountOfItems: 9
+  amountOfItems: 10
 --- !u!114 &1928580072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43443,7 +43475,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5e2c5ed7daf4d84787f0e5b42cf1ccb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
