@@ -13,6 +13,7 @@ public class Puzzle4 : MonoBehaviour
     [SerializeField] private float TextExitTime;
     [SerializeField] private GameObject activeComponent;
     [SerializeField] private GameObject colliderOut;
+    [SerializeField] private AudioSource musicLVL;
     private int index;
     private int cont = 0;
     private bool stop = false;
@@ -52,6 +53,7 @@ public class Puzzle4 : MonoBehaviour
         gameObject.GetComponent<ActiveFade>().enabled = false;
         yield return new WaitForSeconds(1f);
         activeComponent.GetComponent<ActiveFade>().enabled = true;
+        musicLVL.Play();
         yield return null;
     }
     

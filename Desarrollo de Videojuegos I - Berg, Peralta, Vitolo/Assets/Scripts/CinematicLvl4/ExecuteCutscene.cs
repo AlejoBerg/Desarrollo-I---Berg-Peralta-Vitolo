@@ -7,6 +7,7 @@ public class ExecuteCutscene : MonoBehaviour
     [SerializeField] private CutscenePlayerLvl4 cutsceneRef;
     [SerializeField] private GameObject _cinematicCamera;
     [SerializeField] private GameObject _npcRef;
+    [SerializeField] private AudioSource _musicLvl;
     private Camera _mainCameraRef;
 
     private void Awake()
@@ -26,6 +27,7 @@ public class ExecuteCutscene : MonoBehaviour
             cutsceneRef.AssignReferences(_npcRef ,cameraRef);
 
             cutsceneRef.ExecuteCutscene = true;
+            _musicLvl.Play();
         }
     }
 }
