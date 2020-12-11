@@ -7311,9 +7311,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7851,9 +7851,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8450,7 +8450,7 @@ GameObject:
   - component: {fileID: 349483968}
   - component: {fileID: 349483967}
   m_Layer: 5
-  m_Name: ColliderMedioImagen
+  m_Name: ColliderParedParticulas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8472,7 +8472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 845.13, y: -991}
+  m_AnchoredPosition: {x: 798, y: -991}
   m_SizeDelta: {x: 2945.1929, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349483967
@@ -8495,7 +8495,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 09ef9d4084a7c684d9d41175d01125bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7ec4749ad0690c49a08325ecd6d582a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9831,9 +9831,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9927,6 +9927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418870553}
   - component: {fileID: 418870554}
+  - component: {fileID: 418870555}
   m_Layer: 0
   m_Name: Plataforma1
   m_TagString: Floor
@@ -9990,6 +9991,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &418870555
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418870552}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9e124681565811f469cf0e87aca922d9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &421915911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10831,9 +10928,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11144,9 +11241,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13659,9 +13756,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13889,9 +13986,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15407,9 +15504,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16328,6 +16425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle_Item2
       objectReference: {fileID: 0}
+    - target: {fileID: 1884156196641044, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
+      propertyPath: m_TagString
+      value: Items3D
+      objectReference: {fileID: 0}
     - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 86.083
@@ -16457,9 +16558,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -20069,6 +20170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011467767}
   - component: {fileID: 1011467768}
+  - component: {fileID: 1011467769}
   m_Layer: 0
   m_Name: Plataforma2
   m_TagString: Floor
@@ -20132,6 +20234,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &1011467769
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011467766}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9e124681565811f469cf0e87aca922d9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1015979113
 GameObject:
   m_ObjectHideFlags: 0
@@ -22438,7 +22636,7 @@ PrefabInstance:
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Texto Prueba
+      value: Love for a mother will overcome any barrier
       objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
@@ -24175,7 +24373,7 @@ PrefabInstance:
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Texto Prueba
+      value: ' I''m here to show that despite everything I want to continue living.'
       objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
@@ -24592,7 +24790,7 @@ PrefabInstance:
     - target: {fileID: 57630227499185778, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Texto Prueba
+      value: Courage is a virtue that keeps us motivated
       objectReference: {fileID: 0}
     - target: {fileID: 8144317744802584856, guid: 1601d4d9b37d474469afb43a879fc82a,
         type: 3}
@@ -40030,9 +40228,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 32a0c586f0089384282385f4b9ba74c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.015
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -42215,7 +42413,9 @@ MonoBehaviour:
   wallOut: {fileID: 2053591476}
   particlesOut: {fileID: 1610695693}
   platformsSpeed: 3
-  itemsToPickUp: 9
+  itemsToPickUp: 10
+  platform1Sound: {fileID: 418870555}
+  platform2Sound: {fileID: 1011467769}
 --- !u!4 &1999796576
 Transform:
   m_ObjectHideFlags: 0
@@ -43703,7 +43903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aec33c343bb28c448ce9a6b88d5c859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageToShow: {fileID: 0}
+  imageToShow: {fileID: 349483965}
   imageToShowTimer: 1
 --- !u!65 &2053591479
 BoxCollider:
@@ -46077,7 +46277,7 @@ MonoBehaviour:
   - {fileID: 5617132581229958611}
   textDisplay: {fileID: 195474582}
   sentences:
-  - Tengo que reparar el puente
+  - I must get the necessary materials to repair the bridge.
   typingSpeed: 0.1
   TextExitTime: 2
   activeComponent: {fileID: 1709397284}
