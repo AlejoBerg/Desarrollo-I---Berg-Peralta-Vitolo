@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7093924899711212722}
   m_Layer: 0
   m_Name: Prefab_SmallCrate02_color01
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

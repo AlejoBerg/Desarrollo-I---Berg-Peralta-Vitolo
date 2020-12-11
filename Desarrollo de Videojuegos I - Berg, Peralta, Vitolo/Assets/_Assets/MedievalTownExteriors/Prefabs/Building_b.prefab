@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 435462}
   - component: {fileID: 3333374}
   - component: {fileID: 2331272}
-  - component: {fileID: 6411784}
-  m_Layer: 0
+  - component: {fileID: 3553199134390132344}
+  - component: {fileID: 4945491718971503591}
+  m_Layer: 8
   m_Name: Building_b
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6411784
-MeshCollider:
+--- !u!65 &3553199134390132344
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,7 +90,19 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 190601c6ad4761d45b65274b5f33fb3d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.7921567, y: 10.36704, z: 14.669008}
+  m_Center: {x: 0.11084008, y: 4.783632, z: 6.924641}
+--- !u!65 &4945491718971503591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.598295, y: 7.051655, z: 14.396538}
+  m_Center: {x: 0.091609, y: 6.4412622, z: 6.788358}
