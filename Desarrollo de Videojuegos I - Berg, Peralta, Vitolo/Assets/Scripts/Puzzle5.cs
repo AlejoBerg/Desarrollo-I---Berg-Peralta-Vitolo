@@ -7,7 +7,6 @@ public class Puzzle5 : MonoBehaviour
 {
     [SerializeField] private GameObject platform1;
     [SerializeField] private GameObject platform2;
-    //[SerializeField] private GameObject platform3;
     [SerializeField] private GameObject newPosPlat1;
     [SerializeField] private GameObject newPosPlat1b;
     [SerializeField] private GameObject newPosPlat2;
@@ -22,6 +21,8 @@ public class Puzzle5 : MonoBehaviour
     [SerializeField] private FadeOutParticles particlesOut;
     [SerializeField] private float platformsSpeed;
     [SerializeField] private int itemsToPickUp;
+    [SerializeField] private AudioSource platform1Sound;
+    [SerializeField] private AudioSource platform2Sound;
     private bool doOnce = true;
     private Rigidbody platform1RB;
     private Rigidbody platform2RB;
@@ -33,6 +34,7 @@ public class Puzzle5 : MonoBehaviour
     {
         platform1RB = platform1.GetComponent<Rigidbody>();
         platform2RB = platform2.GetComponent<Rigidbody>();
+        GameManager.ItemsToFinishPuzzle2LVL3 = itemsToPickUp;
     }
 
     private void Start()
@@ -70,6 +72,7 @@ public class Puzzle5 : MonoBehaviour
     {
         bridgeParticles0.GetComponent<ChangeValueOfParticles>().SetMinMaxParticles(2000);
         platform1RB.MovePosition(Vector3.MoveTowards(platform1RB.position, newPosPlat1.transform.position, platformsSpeed * Time.deltaTime));
+        platform1Sound.Play();
 
         if (platform1RB.position == newPosPlat1.transform.position)
         {
@@ -82,6 +85,7 @@ public class Puzzle5 : MonoBehaviour
     {
         bridgeParticles0.GetComponent<ChangeValueOfParticles>().SetMinMaxParticles(0);
         platform1RB.MovePosition(Vector3.MoveTowards(platform1RB.position, newPosPlat1b.transform.position, platformsSpeed * Time.deltaTime));
+        platform1Sound.Play();
         
         if (platform1RB.position == newPosPlat1b.transform.position)
         {
@@ -95,7 +99,8 @@ public class Puzzle5 : MonoBehaviour
     {
         bridgeParticles1.GetComponent<ChangeValueOfParticles>().SetMinMaxParticles(0);
         platform2RB.MovePosition(Vector3.MoveTowards(platform2RB.position, newPosPlat2.transform.position, platformsSpeed * Time.deltaTime));
-
+        platform2Sound.Play();
+        
         if (platform2RB.position == newPosPlat2.transform.position)
         {
             bridgeParticles2.GetComponent<ChangeValueOfParticles>().SetMinMaxParticles(2000);

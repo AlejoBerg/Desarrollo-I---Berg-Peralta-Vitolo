@@ -24,6 +24,7 @@ public class GameManager
     private static int parchmentsAmount = 0;
     private static int itemsAmount2 = 0;
     private static int fragmentsNotes = 0;
+    private static int itemsToFinishPuzzle2LVL3 = 0;
     private static int itemsToRepairTheBridge = 0;
     private static bool activeFade = false;
     private static bool canDestroyDirectly = false;
@@ -39,6 +40,7 @@ public class GameManager
     public static int FragmentsNotes => fragmentsNotes;
     public static int ItemsAmount2 => itemsAmount2;
     public static int ItemsToRepairTheBridge => itemsToRepairTheBridge;
+    public static int ItemsToFinishPuzzle2LVL3 { get => itemsToFinishPuzzle2LVL3; set => itemsToFinishPuzzle2LVL3 = value; }
     public static bool PlayerIsAlive { get => playerIsAlive; set => playerIsAlive = value; }
     public static bool CanDestroyDirectly { get => canDestroyDirectly; set => canDestroyDirectly = value; }
     public static bool ActiveFade { get => activeFade; set => activeFade = value; }
